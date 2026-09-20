@@ -222,7 +222,7 @@ public partial class Main
         _pauseBadge.Visible = _speed == 0 && !_city.IsOpen && !_leader.IsOpen && !(_tab == "Politics" && _drawerOpen);
         var construction = _engine.GetConstructionStatus();
         _constructionReadout.Text = $"{construction.WeeklyProgress:0.#} / {construction.WeeklyCapacity:0.#} 建造力 / 周\n{p.Construction.Count}座建筑处于建造中";
-        _status.Text = (_speed == 0 ? "已暂停" : $"每秒{_speed}天") + "  ·  万国纪元 0.10  ·  " + (p.Id == "QNG" ? "大清篇" : Localization.Tr(p.Name));
+        _status.Text = (_speed == 0 ? "已暂停" : $"每秒{_speed}天") + "  ·  万国纪元 0.14  ·  " + (p.Id == "QNG" ? "大清篇" : Localization.Tr(p.Name));
         for (int i = 0; i < _speedButtons.Count; i++) _speedButtons[i].Modulate = new[] { 0, 1, 2, 4, 8, 12 }[i] == _speed ? Gold : Colors.White;
         foreach (string good in Catalog.Goods)
         {

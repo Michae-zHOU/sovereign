@@ -1,0 +1,1234 @@
+{
+  "baseline": {
+    "buffer_memory_bytes": null,
+    "draw_calls": null,
+    "nodes": 3,
+    "orphan_nodes": 0,
+    "resources": 1,
+    "static_memory_bytes": 21970142,
+    "texture_memory_bytes": null,
+    "video_memory_bytes": null
+  },
+  "expected_models": 21,
+  "failures": [],
+  "final": {
+    "buffer_memory_bytes": null,
+    "draw_calls": null,
+    "nodes": 3,
+    "orphan_nodes": 0,
+    "resources": 1,
+    "static_memory_bytes": 22530210,
+    "texture_memory_bytes": null,
+    "video_memory_bytes": null
+  },
+  "memory_note": "Native renderer counters describe this process; headless counters are unavailable, not zero. They are not an isolated VRAM allocation benchmark.",
+  "models": [
+    {
+      "blink_geometry": {
+        "affected_vertices": 1856,
+        "maximum_delta_m": 0.0120718814432621,
+        "vertices": 23564
+      },
+      "blink_max": 1.00000095367432,
+      "blink_min": -0.00000173074420217745,
+      "bones": 9,
+      "bounds_max": [
+        0.434039562940598,
+        2.257479429245,
+        0.232756733894348
+      ],
+      "bounds_min": [
+        -0.434039503335953,
+        0.00183433515485376,
+        -0.155205130577087
+      ],
+      "head_motion_rad": 0.0431907214224339,
+      "height_m": 2.25564503669739,
+      "identity": "william_iv",
+      "idle": "idle",
+      "idle_seconds": 8.03333377838135,
+      "load_ms": 244,
+      "loaded_counters": {
+        "buffer_memory_bytes": null,
+        "draw_calls": null,
+        "nodes": 23,
+        "orphan_nodes": 0,
+        "resources": 7,
+        "static_memory_bytes": 90110975,
+        "texture_memory_bytes": null,
+        "video_memory_bytes": null
+      },
+      "mesh_nodes": 15,
+      "neck_motion_rad": 0.00647779414430261,
+      "nodes": 19,
+      "released_counters": {
+        "buffer_memory_bytes": null,
+        "draw_calls": null,
+        "nodes": 3,
+        "orphan_nodes": 0,
+        "resources": 1,
+        "static_memory_bytes": 22416830,
+        "texture_memory_bytes": null,
+        "video_memory_bytes": null
+      },
+      "skinned_meshes": 15,
+      "speech_geometry": {
+        "affected_vertices": 1956,
+        "maximum_delta_m": 0.00450348434969783,
+        "vertices": 23564
+      },
+      "status": "pass",
+      "triangles": 238850
+    },
+    {
+      "blink_geometry": {
+        "affected_vertices": 1856,
+        "maximum_delta_m": 0.0132262045517564,
+        "vertices": 23434
+      },
+      "blink_max": 1.00000095367432,
+      "blink_min": -0.00000173074420217745,
+      "bones": 9,
+      "bounds_max": [
+        0.435598492622375,
+        2.27449417114258,
+        0.309424877166748
+      ],
+      "bounds_min": [
+        -0.437758922576904,
+        0.00183433515485376,
+        -0.338468670845032
+      ],
+      "head_motion_rad": 0.0431907214224339,
+      "height_m": 2.27265977859497,
+      "identity": "victoria",
+      "idle": "idle",
+      "idle_seconds": 8.03333377838135,
+      "load_ms": 197,
+      "loaded_counters": {
+        "buffer_memory_bytes": null,
+        "draw_calls": null,
+        "nodes": 21,
+        "orphan_nodes": 0,
+        "resources": 7,
+        "static_memory_bytes": 87750843,
+        "texture_memory_bytes": null,
+        "video_memory_bytes": null
+      },
+      "mesh_nodes": 13,
+      "neck_motion_rad": 0.00647779414430261,
+      "nodes": 17,
+      "released_counters": {
+        "buffer_memory_bytes": null,
+        "draw_calls": null,
+        "nodes": 3,
+        "orphan_nodes": 0,
+        "resources": 1,
+        "static_memory_bytes": 22424002,
+        "texture_memory_bytes": null,
+        "video_memory_bytes": null
+      },
+      "skinned_meshes": 13,
+      "speech_geometry": {
+        "affected_vertices": 1964,
+        "maximum_delta_m": 0.00493396632373333,
+        "vertices": 23434
+      },
+      "status": "pass",
+      "triangles": 202862
+    },
+    {
+      "blink_geometry": {
+        "affected_vertices": 1858,
+        "maximum_delta_m": 0.0120718814432621,
+        "vertices": 23525
+      },
+      "blink_max": 1.00000095367432,
+      "blink_min": -0.00000173074420217745,
+      "bones": 9,
+      "bounds_max": [
+        0.434391409158707,
+        2.26306414604187,
+        0.233183532953262
+      ],
+      "bounds_min": [
+        -0.434391409158707,
+        0.00183433515485376,
+        -0.155205130577087
+      ],
+      "head_motion_rad": 0.0431907214224339,
+      "height_m": 2.26122975349426,
+      "identity": "frederick_william_iii",
+      "idle": "idle",
+      "idle_seconds": 8.03333377838135,
+      "load_ms": 200,
+      "loaded_counters": {
+        "buffer_memory_bytes": null,
+        "draw_calls": null,
+        "nodes": 20,
+        "orphan_nodes": 0,
+        "resources": 7,
+        "static_memory_bytes": 90058227,
+        "texture_memory_bytes": null,
+        "video_memory_bytes": null
+      },
+      "mesh_nodes": 12,
+      "neck_motion_rad": 0.00647779414430261,
+      "nodes": 16,
+      "released_counters": {
+        "buffer_memory_bytes": null,
+        "draw_calls": null,
+        "nodes": 3,
+        "orphan_nodes": 0,
+        "resources": 1,
+        "static_memory_bytes": 22429558,
+        "texture_memory_bytes": null,
+        "video_memory_bytes": null
+      },
+      "skinned_meshes": 12,
+      "speech_geometry": {
+        "affected_vertices": 1956,
+        "maximum_delta_m": 0.00450372230261564,
+        "vertices": 23525
+      },
+      "status": "pass",
+      "triangles": 247718
+    },
+    {
+      "blink_geometry": {
+        "affected_vertices": 1856,
+        "maximum_delta_m": 0.0120718814432621,
+        "vertices": 23415
+      },
+      "blink_max": 1.00000095367432,
+      "blink_min": -0.00000173074420217745,
+      "bones": 9,
+      "bounds_max": [
+        0.435805082321167,
+        2.27028465270996,
+        0.235619634389877
+      ],
+      "bounds_min": [
+        -0.435805082321167,
+        0.00183433515485376,
+        -0.155205130577087
+      ],
+      "head_motion_rad": 0.0431907214224339,
+      "height_m": 2.26845026016235,
+      "identity": "frederick_william_iv",
+      "idle": "idle",
+      "idle_seconds": 8.03333377838135,
+      "load_ms": 202,
+      "loaded_counters": {
+        "buffer_memory_bytes": null,
+        "draw_calls": null,
+        "nodes": 20,
+        "orphan_nodes": 0,
+        "resources": 7,
+        "static_memory_bytes": 90172247,
+        "texture_memory_bytes": null,
+        "video_memory_bytes": null
+      },
+      "mesh_nodes": 12,
+      "neck_motion_rad": 0.00647779414430261,
+      "nodes": 16,
+      "released_counters": {
+        "buffer_memory_bytes": null,
+        "draw_calls": null,
+        "nodes": 3,
+        "orphan_nodes": 0,
+        "resources": 1,
+        "static_memory_bytes": 22435146,
+        "texture_memory_bytes": null,
+        "video_memory_bytes": null
+      },
+      "skinned_meshes": 12,
+      "speech_geometry": {
+        "affected_vertices": 1956,
+        "maximum_delta_m": 0.00450372230261564,
+        "vertices": 23415
+      },
+      "status": "pass",
+      "triangles": 250428
+    },
+    {
+      "blink_geometry": {
+        "affected_vertices": 1856,
+        "maximum_delta_m": 0.0120721189305186,
+        "vertices": 23564
+      },
+      "blink_max": 1.00000095367432,
+      "blink_min": -0.00000173074420217745,
+      "bones": 9,
+      "bounds_max": [
+        0.463374048471451,
+        2.28608536720276,
+        0.210358500480652
+      ],
+      "bounds_min": [
+        -0.463374048471451,
+        0.00183433515485376,
+        -0.196298912167549
+      ],
+      "head_motion_rad": 0.0431907214224339,
+      "height_m": 2.28425097465515,
+      "identity": "tokugawa_ienari",
+      "idle": "idle",
+      "idle_seconds": 8.03333377838135,
+      "load_ms": 204,
+      "loaded_counters": {
+        "buffer_memory_bytes": null,
+        "draw_calls": null,
+        "nodes": 19,
+        "orphan_nodes": 0,
+        "resources": 6,
+        "static_memory_bytes": 80269583,
+        "texture_memory_bytes": null,
+        "video_memory_bytes": null
+      },
+      "mesh_nodes": 11,
+      "neck_motion_rad": 0.00647779414430261,
+      "nodes": 15,
+      "released_counters": {
+        "buffer_memory_bytes": null,
+        "draw_calls": null,
+        "nodes": 3,
+        "orphan_nodes": 0,
+        "resources": 1,
+        "static_memory_bytes": 22440670,
+        "texture_memory_bytes": null,
+        "video_memory_bytes": null
+      },
+      "skinned_meshes": 11,
+      "speech_geometry": {
+        "affected_vertices": 1956,
+        "maximum_delta_m": 0.00450372230261564,
+        "vertices": 23564
+      },
+      "status": "pass",
+      "triangles": 216368
+    },
+    {
+      "blink_geometry": {
+        "affected_vertices": 1856,
+        "maximum_delta_m": 0.0120723582804203,
+        "vertices": 23436
+      },
+      "blink_max": 1.00000095367432,
+      "blink_min": -0.00000173074420217745,
+      "bones": 9,
+      "bounds_max": [
+        0.463374048471451,
+        2.28608536720276,
+        0.210358500480652
+      ],
+      "bounds_min": [
+        -0.463374048471451,
+        0.00183433515485376,
+        -0.196298912167549
+      ],
+      "head_motion_rad": 0.0431907214224339,
+      "height_m": 2.28425097465515,
+      "identity": "tokugawa_ieyoshi",
+      "idle": "idle",
+      "idle_seconds": 8.03333377838135,
+      "load_ms": 173,
+      "loaded_counters": {
+        "buffer_memory_bytes": null,
+        "draw_calls": null,
+        "nodes": 19,
+        "orphan_nodes": 0,
+        "resources": 6,
+        "static_memory_bytes": 80275171,
+        "texture_memory_bytes": null,
+        "video_memory_bytes": null
+      },
+      "mesh_nodes": 11,
+      "neck_motion_rad": 0.00647779414430261,
+      "nodes": 15,
+      "released_counters": {
+        "buffer_memory_bytes": null,
+        "draw_calls": null,
+        "nodes": 3,
+        "orphan_nodes": 0,
+        "resources": 1,
+        "static_memory_bytes": 22446194,
+        "texture_memory_bytes": null,
+        "video_memory_bytes": null
+      },
+      "skinned_meshes": 11,
+      "speech_geometry": {
+        "affected_vertices": 1956,
+        "maximum_delta_m": 0.00450348434969783,
+        "vertices": 23436
+      },
+      "status": "pass",
+      "triangles": 215920
+    },
+    {
+      "blink_geometry": {
+        "affected_vertices": 1856,
+        "maximum_delta_m": 0.0120721189305186,
+        "vertices": 23525
+      },
+      "blink_max": 1.00000095367432,
+      "blink_min": -0.00000173074420217745,
+      "bones": 9,
+      "bounds_max": [
+        0.434598952531815,
+        2.27220177650452,
+        0.235378444194794
+      ],
+      "bounds_min": [
+        -0.43459889292717,
+        0.00183433515485376,
+        -0.155331209301949
+      ],
+      "head_motion_rad": 0.0431907214224339,
+      "height_m": 2.27036738395691,
+      "identity": "louis_philippe",
+      "idle": "idle",
+      "idle_seconds": 8.03333377838135,
+      "load_ms": 216,
+      "loaded_counters": {
+        "buffer_memory_bytes": null,
+        "draw_calls": null,
+        "nodes": 23,
+        "orphan_nodes": 0,
+        "resources": 7,
+        "static_memory_bytes": 90795735,
+        "texture_memory_bytes": null,
+        "video_memory_bytes": null
+      },
+      "mesh_nodes": 15,
+      "neck_motion_rad": 0.00647779414430261,
+      "nodes": 19,
+      "released_counters": {
+        "buffer_memory_bytes": null,
+        "draw_calls": null,
+        "nodes": 3,
+        "orphan_nodes": 0,
+        "resources": 1,
+        "static_memory_bytes": 22451846,
+        "texture_memory_bytes": null,
+        "video_memory_bytes": null
+      },
+      "skinned_meshes": 15,
+      "speech_geometry": {
+        "affected_vertices": 1956,
+        "maximum_delta_m": 0.00450348434969783,
+        "vertices": 23525
+      },
+      "status": "pass",
+      "triangles": 240572
+    },
+    {
+      "blink_geometry": {
+        "affected_vertices": 1856,
+        "maximum_delta_m": 0.0120723582804203,
+        "vertices": 23415
+      },
+      "blink_max": 1.00000095367432,
+      "blink_min": -0.00000173074420217745,
+      "bones": 9,
+      "bounds_max": [
+        0.435933291912079,
+        2.2626895904541,
+        0.240362957119942
+      ],
+      "bounds_min": [
+        -0.435933291912079,
+        0.00183433515485376,
+        -0.155205130577087
+      ],
+      "head_motion_rad": 0.0431907214224339,
+      "height_m": 2.26085519790649,
+      "identity": "ferdinand_i",
+      "idle": "idle",
+      "idle_seconds": 8.03333377838135,
+      "load_ms": 246,
+      "loaded_counters": {
+        "buffer_memory_bytes": null,
+        "draw_calls": null,
+        "nodes": 20,
+        "orphan_nodes": 0,
+        "resources": 7,
+        "static_memory_bytes": 87545751,
+        "texture_memory_bytes": null,
+        "video_memory_bytes": null
+      },
+      "mesh_nodes": 12,
+      "neck_motion_rad": 0.00647779414430261,
+      "nodes": 16,
+      "released_counters": {
+        "buffer_memory_bytes": null,
+        "draw_calls": null,
+        "nodes": 3,
+        "orphan_nodes": 0,
+        "resources": 1,
+        "static_memory_bytes": 22457370,
+        "texture_memory_bytes": null,
+        "video_memory_bytes": null
+      },
+      "skinned_meshes": 12,
+      "speech_geometry": {
+        "affected_vertices": 1956,
+        "maximum_delta_m": 0.00450348434969783,
+        "vertices": 23415
+      },
+      "status": "pass",
+      "triangles": 202370
+    },
+    {
+      "blink_geometry": {
+        "affected_vertices": 1856,
+        "maximum_delta_m": 0.0120721189305186,
+        "vertices": 23415
+      },
+      "blink_max": 1.00000095367432,
+      "blink_min": -0.00000173074420217745,
+      "bones": 9,
+      "bounds_max": [
+        0.43612352013588,
+        2.25405883789063,
+        0.241895526647568
+      ],
+      "bounds_min": [
+        -0.436123460531235,
+        0.00183433515485376,
+        -0.155205130577087
+      ],
+      "head_motion_rad": 0.0431907214224339,
+      "height_m": 2.25222444534302,
+      "identity": "nicholas_i",
+      "idle": "idle",
+      "idle_seconds": 8.03333377838135,
+      "load_ms": 203,
+      "loaded_counters": {
+        "buffer_memory_bytes": null,
+        "draw_calls": null,
+        "nodes": 21,
+        "orphan_nodes": 0,
+        "resources": 7,
+        "static_memory_bytes": 90115559,
+        "texture_memory_bytes": null,
+        "video_memory_bytes": null
+      },
+      "mesh_nodes": 13,
+      "neck_motion_rad": 0.00647779414430261,
+      "nodes": 17,
+      "released_counters": {
+        "buffer_memory_bytes": null,
+        "draw_calls": null,
+        "nodes": 3,
+        "orphan_nodes": 0,
+        "resources": 1,
+        "static_memory_bytes": 22462894,
+        "texture_memory_bytes": null,
+        "video_memory_bytes": null
+      },
+      "skinned_meshes": 13,
+      "speech_geometry": {
+        "affected_vertices": 1956,
+        "maximum_delta_m": 0.00450348434969783,
+        "vertices": 23415
+      },
+      "status": "pass",
+      "triangles": 248434
+    },
+    {
+      "blink_geometry": {
+        "affected_vertices": 1856,
+        "maximum_delta_m": 0.0120716420933604,
+        "vertices": 23564
+      },
+      "blink_max": 1.00000095367432,
+      "blink_min": -0.00000173074420217745,
+      "bones": 9,
+      "bounds_max": [
+        0.434181213378906,
+        2.29462480545044,
+        0.235735654830933
+      ],
+      "bounds_min": [
+        -0.434181213378906,
+        0.00183433515485376,
+        -0.155522629618645
+      ],
+      "head_motion_rad": 0.0431907214224339,
+      "height_m": 2.29279041290283,
+      "identity": "andrew_jackson",
+      "idle": "idle",
+      "idle_seconds": 8.03333377838135,
+      "load_ms": 195,
+      "loaded_counters": {
+        "buffer_memory_bytes": null,
+        "draw_calls": null,
+        "nodes": 21,
+        "orphan_nodes": 0,
+        "resources": 7,
+        "static_memory_bytes": 86893067,
+        "texture_memory_bytes": null,
+        "video_memory_bytes": null
+      },
+      "mesh_nodes": 13,
+      "neck_motion_rad": 0.00647779414430261,
+      "nodes": 17,
+      "released_counters": {
+        "buffer_memory_bytes": null,
+        "draw_calls": null,
+        "nodes": 3,
+        "orphan_nodes": 0,
+        "resources": 1,
+        "static_memory_bytes": 22468418,
+        "texture_memory_bytes": null,
+        "video_memory_bytes": null
+      },
+      "skinned_meshes": 13,
+      "speech_geometry": {
+        "affected_vertices": 1956,
+        "maximum_delta_m": 0.00450372230261564,
+        "vertices": 23564
+      },
+      "status": "pass",
+      "triangles": 193244
+    },
+    {
+      "blink_geometry": {
+        "affected_vertices": 1858,
+        "maximum_delta_m": 0.0120721198618412,
+        "vertices": 23463
+      },
+      "blink_max": 1.00000095367432,
+      "blink_min": -0.00000173074420217745,
+      "bones": 9,
+      "bounds_max": [
+        0.435146123170853,
+        2.25571393966675,
+        0.233719885349274
+      ],
+      "bounds_min": [
+        -0.435146123170853,
+        0.00183433515485376,
+        -0.155522629618645
+      ],
+      "head_motion_rad": 0.0431907214224339,
+      "height_m": 2.25387954711914,
+      "identity": "martin_van_buren",
+      "idle": "idle",
+      "idle_seconds": 8.03333377838135,
+      "load_ms": 215,
+      "loaded_counters": {
+        "buffer_memory_bytes": null,
+        "draw_calls": null,
+        "nodes": 22,
+        "orphan_nodes": 0,
+        "resources": 7,
+        "static_memory_bytes": 95712843,
+        "texture_memory_bytes": null,
+        "video_memory_bytes": null
+      },
+      "mesh_nodes": 14,
+      "neck_motion_rad": 0.00647779414430261,
+      "nodes": 18,
+      "released_counters": {
+        "buffer_memory_bytes": null,
+        "draw_calls": null,
+        "nodes": 3,
+        "orphan_nodes": 0,
+        "resources": 1,
+        "static_memory_bytes": 22473942,
+        "texture_memory_bytes": null,
+        "video_memory_bytes": null
+      },
+      "skinned_meshes": 14,
+      "speech_geometry": {
+        "affected_vertices": 1956,
+        "maximum_delta_m": 0.00450348434969783,
+        "vertices": 23463
+      },
+      "status": "pass",
+      "triangles": 297526
+    },
+    {
+      "blink_geometry": {
+        "affected_vertices": 1856,
+        "maximum_delta_m": 0.0120718805119395,
+        "vertices": 23564
+      },
+      "blink_max": 1.00000095367432,
+      "blink_min": -0.00000173074420217745,
+      "bones": 9,
+      "bounds_max": [
+        0.434181213378906,
+        2.26263952255249,
+        0.232846707105637
+      ],
+      "bounds_min": [
+        -0.434181213378906,
+        0.00183433515485376,
+        -0.155522629618645
+      ],
+      "head_motion_rad": 0.0431907214224339,
+      "height_m": 2.26080513000488,
+      "identity": "william_henry_harrison",
+      "idle": "idle",
+      "idle_seconds": 8.03333377838135,
+      "load_ms": 191,
+      "loaded_counters": {
+        "buffer_memory_bytes": null,
+        "draw_calls": null,
+        "nodes": 21,
+        "orphan_nodes": 0,
+        "resources": 7,
+        "static_memory_bytes": 86799971,
+        "texture_memory_bytes": null,
+        "video_memory_bytes": null
+      },
+      "mesh_nodes": 13,
+      "neck_motion_rad": 0.00647779414430261,
+      "nodes": 17,
+      "released_counters": {
+        "buffer_memory_bytes": null,
+        "draw_calls": null,
+        "nodes": 3,
+        "orphan_nodes": 0,
+        "resources": 1,
+        "static_memory_bytes": 22479722,
+        "texture_memory_bytes": null,
+        "video_memory_bytes": null
+      },
+      "skinned_meshes": 13,
+      "speech_geometry": {
+        "affected_vertices": 1956,
+        "maximum_delta_m": 0.00450348434969783,
+        "vertices": 23564
+      },
+      "status": "pass",
+      "triangles": 190950
+    },
+    {
+      "blink_geometry": {
+        "affected_vertices": 1858,
+        "maximum_delta_m": 0.0120723582804203,
+        "vertices": 23436
+      },
+      "blink_max": 1.00000095367432,
+      "blink_min": -0.00000173074420217745,
+      "bones": 9,
+      "bounds_max": [
+        0.435346871614456,
+        2.26373648643494,
+        0.23885115981102
+      ],
+      "bounds_min": [
+        -0.435346931219101,
+        0.00183433515485376,
+        -0.155522629618645
+      ],
+      "head_motion_rad": 0.0431907214224339,
+      "height_m": 2.26190209388733,
+      "identity": "john_tyler",
+      "idle": "idle",
+      "idle_seconds": 8.03333377838135,
+      "load_ms": 195,
+      "loaded_counters": {
+        "buffer_memory_bytes": null,
+        "draw_calls": null,
+        "nodes": 21,
+        "orphan_nodes": 0,
+        "resources": 7,
+        "static_memory_bytes": 86797239,
+        "texture_memory_bytes": null,
+        "video_memory_bytes": null
+      },
+      "mesh_nodes": 13,
+      "neck_motion_rad": 0.00647779414430261,
+      "nodes": 17,
+      "released_counters": {
+        "buffer_memory_bytes": null,
+        "draw_calls": null,
+        "nodes": 3,
+        "orphan_nodes": 0,
+        "resources": 1,
+        "static_memory_bytes": 22485246,
+        "texture_memory_bytes": null,
+        "video_memory_bytes": null
+      },
+      "skinned_meshes": 13,
+      "speech_geometry": {
+        "affected_vertices": 1956,
+        "maximum_delta_m": 0.00450348434969783,
+        "vertices": 23436
+      },
+      "status": "pass",
+      "triangles": 190646
+    },
+    {
+      "blink_geometry": {
+        "affected_vertices": 1856,
+        "maximum_delta_m": 0.0120718814432621,
+        "vertices": 23436
+      },
+      "blink_max": 1.00000095367432,
+      "blink_min": -0.00000173074420217745,
+      "bones": 9,
+      "bounds_max": [
+        0.435479283332825,
+        2.25971221923828,
+        0.237058788537979
+      ],
+      "bounds_min": [
+        -0.435479283332825,
+        0.00183433515485376,
+        -0.155522629618645
+      ],
+      "head_motion_rad": 0.0431907214224339,
+      "height_m": 2.25787782669067,
+      "identity": "james_polk",
+      "idle": "idle",
+      "idle_seconds": 8.03333377838135,
+      "load_ms": 182,
+      "loaded_counters": {
+        "buffer_memory_bytes": null,
+        "draw_calls": null,
+        "nodes": 21,
+        "orphan_nodes": 0,
+        "resources": 7,
+        "static_memory_bytes": 86802763,
+        "texture_memory_bytes": null,
+        "video_memory_bytes": null
+      },
+      "mesh_nodes": 13,
+      "neck_motion_rad": 0.00647779414430261,
+      "nodes": 17,
+      "released_counters": {
+        "buffer_memory_bytes": null,
+        "draw_calls": null,
+        "nodes": 3,
+        "orphan_nodes": 0,
+        "resources": 1,
+        "static_memory_bytes": 22490770,
+        "texture_memory_bytes": null,
+        "video_memory_bytes": null
+      },
+      "skinned_meshes": 13,
+      "speech_geometry": {
+        "affected_vertices": 1956,
+        "maximum_delta_m": 0.00450372230261564,
+        "vertices": 23436
+      },
+      "status": "pass",
+      "triangles": 190630
+    },
+    {
+      "blink_geometry": {
+        "affected_vertices": 6626,
+        "maximum_delta_m": 0.0122133819386363,
+        "vertices": 81019
+      },
+      "blink_max": 1.00000095367432,
+      "blink_min": -0.00000173074420217745,
+      "bones": 11,
+      "bounds_max": [
+        0.436340540647507,
+        2.43579983711243,
+        0.223566338419914
+      ],
+      "bounds_min": [
+        -0.436340540647507,
+        0.00402726139873266,
+        -0.137231737375259
+      ],
+      "eye_motion_rad": {
+        "LeftEye": 0.0135845066979527,
+        "RightEye": 0.0135845066979527
+      },
+      "face_normal_connected": true,
+      "head_motion_rad": 0.0431907214224339,
+      "height_m": 2.43177247047424,
+      "identity": "daoguang",
+      "idle": "idle",
+      "idle_seconds": 8.03333377838135,
+      "load_ms": 366,
+      "loaded_counters": {
+        "buffer_memory_bytes": null,
+        "draw_calls": null,
+        "nodes": 33,
+        "orphan_nodes": 0,
+        "resources": 9,
+        "static_memory_bytes": 141554765,
+        "texture_memory_bytes": null,
+        "video_memory_bytes": null
+      },
+      "mesh_nodes": 25,
+      "neck_motion_rad": 0.00647779414430261,
+      "nodes": 29,
+      "released_counters": {
+        "buffer_memory_bytes": null,
+        "draw_calls": null,
+        "nodes": 3,
+        "orphan_nodes": 0,
+        "resources": 1,
+        "static_memory_bytes": 22498258,
+        "texture_memory_bytes": null,
+        "video_memory_bytes": null
+      },
+      "skinned_meshes": 25,
+      "speech_geometry": {
+        "affected_vertices": 6707,
+        "maximum_delta_m": 0.00450396118685603,
+        "vertices": 81019
+      },
+      "status": "pass",
+      "triangles": 506288
+    },
+    {
+      "blink_geometry": {
+        "affected_vertices": 1858,
+        "maximum_delta_m": 0.0120721189305186,
+        "vertices": 23436
+      },
+      "blink_max": 1.00000095367432,
+      "blink_min": -0.00000173074420217745,
+      "bones": 9,
+      "bounds_max": [
+        0.435413241386414,
+        2.3399453163147,
+        0.236806333065033
+      ],
+      "bounds_min": [
+        -0.435413241386414,
+        0.00183433515485376,
+        -0.155331209301949
+      ],
+      "head_motion_rad": 0.0431907214224339,
+      "height_m": 2.33811092376709,
+      "identity": "mahmud_ii",
+      "idle": "idle",
+      "idle_seconds": 8.03333377838135,
+      "load_ms": 220,
+      "loaded_counters": {
+        "buffer_memory_bytes": null,
+        "draw_calls": null,
+        "nodes": 22,
+        "orphan_nodes": 0,
+        "resources": 7,
+        "static_memory_bytes": 103238451,
+        "texture_memory_bytes": null,
+        "video_memory_bytes": null
+      },
+      "mesh_nodes": 14,
+      "neck_motion_rad": 0.00647779414430261,
+      "nodes": 18,
+      "released_counters": {
+        "buffer_memory_bytes": null,
+        "draw_calls": null,
+        "nodes": 3,
+        "orphan_nodes": 0,
+        "resources": 1,
+        "static_memory_bytes": 22502606,
+        "texture_memory_bytes": null,
+        "video_memory_bytes": null
+      },
+      "skinned_meshes": 14,
+      "speech_geometry": {
+        "affected_vertices": 1956,
+        "maximum_delta_m": 0.00450348434969783,
+        "vertices": 23436
+      },
+      "status": "pass",
+      "triangles": 403498
+    },
+    {
+      "blink_geometry": {
+        "affected_vertices": 1856,
+        "maximum_delta_m": 0.0117934532463551,
+        "vertices": 23501
+      },
+      "blink_max": 1.00000095367432,
+      "blink_min": -0.00000173074420217745,
+      "bones": 9,
+      "bounds_max": [
+        0.419273734092712,
+        2.2113311290741,
+        0.226315334439278
+      ],
+      "bounds_min": [
+        -0.419273734092712,
+        0.00172145303804427,
+        -0.149595901370049
+      ],
+      "head_motion_rad": 0.0431907214224339,
+      "height_m": 2.20960974693298,
+      "identity": "abdulmejid_i",
+      "idle": "idle",
+      "idle_seconds": 8.03333377838135,
+      "load_ms": 178,
+      "loaded_counters": {
+        "buffer_memory_bytes": null,
+        "draw_calls": null,
+        "nodes": 21,
+        "orphan_nodes": 0,
+        "resources": 7,
+        "static_memory_bytes": 86783067,
+        "texture_memory_bytes": null,
+        "video_memory_bytes": null
+      },
+      "mesh_nodes": 13,
+      "neck_motion_rad": 0.0076272152364254,
+      "nodes": 17,
+      "released_counters": {
+        "buffer_memory_bytes": null,
+        "draw_calls": null,
+        "nodes": 3,
+        "orphan_nodes": 0,
+        "resources": 1,
+        "static_memory_bytes": 22508130,
+        "texture_memory_bytes": null,
+        "video_memory_bytes": null
+      },
+      "skinned_meshes": 13,
+      "speech_geometry": {
+        "affected_vertices": 1956,
+        "maximum_delta_m": 0.00439970009028912,
+        "vertices": 23501
+      },
+      "status": "pass",
+      "triangles": 191666
+    },
+    {
+      "blink_geometry": {
+        "affected_vertices": 1858,
+        "maximum_delta_m": 0.0125246262177825,
+        "vertices": 23734
+      },
+      "blink_max": 1.00000095367432,
+      "blink_min": -0.00000173074420217745,
+      "bones": 9,
+      "bounds_max": [
+        0.298154264688492,
+        1.45050311088562,
+        0.187693193554878
+      ],
+      "bounds_min": [
+        -0.298154264688492,
+        0.00110060104634613,
+        -0.209688737988472
+      ],
+      "head_motion_rad": 0.0431852005422115,
+      "height_m": 1.4494024515152,
+      "identity": "isabella_ii",
+      "idle": "idle",
+      "idle_seconds": 8.03333377838135,
+      "load_ms": 183,
+      "loaded_counters": {
+        "buffer_memory_bytes": null,
+        "draw_calls": null,
+        "nodes": 21,
+        "orphan_nodes": 0,
+        "resources": 7,
+        "static_memory_bytes": 88037679,
+        "texture_memory_bytes": null,
+        "video_memory_bytes": null
+      },
+      "mesh_nodes": 13,
+      "neck_motion_rad": 0.00621481565758586,
+      "nodes": 17,
+      "released_counters": {
+        "buffer_memory_bytes": null,
+        "draw_calls": null,
+        "nodes": 3,
+        "orphan_nodes": 0,
+        "resources": 1,
+        "static_memory_bytes": 22513654,
+        "texture_memory_bytes": null,
+        "video_memory_bytes": null
+      },
+      "skinned_meshes": 13,
+      "speech_geometry": {
+        "affected_vertices": 1968,
+        "maximum_delta_m": 0.00467239879071712,
+        "vertices": 23734
+      },
+      "status": "pass",
+      "triangles": 203918
+    },
+    {
+      "blink_geometry": {
+        "affected_vertices": 1858,
+        "maximum_delta_m": 0.012920948676765,
+        "vertices": 23595
+      },
+      "blink_max": 1.00000095367432,
+      "blink_min": -0.00000173074420217745,
+      "bones": 9,
+      "bounds_max": [
+        0.419514834880829,
+        2.14434957504272,
+        0.297999978065491
+      ],
+      "bounds_min": [
+        -0.421595513820648,
+        0.00172145303804427,
+        -0.325971364974976
+      ],
+      "head_motion_rad": 0.0431907214224339,
+      "height_m": 2.14262819290161,
+      "identity": "maria_ii",
+      "idle": "idle",
+      "idle_seconds": 8.03333377838135,
+      "load_ms": 196,
+      "loaded_counters": {
+        "buffer_memory_bytes": null,
+        "draw_calls": null,
+        "nodes": 21,
+        "orphan_nodes": 0,
+        "resources": 7,
+        "static_memory_bytes": 88171251,
+        "texture_memory_bytes": null,
+        "video_memory_bytes": null
+      },
+      "mesh_nodes": 13,
+      "neck_motion_rad": 0.0076272152364254,
+      "nodes": 17,
+      "released_counters": {
+        "buffer_memory_bytes": null,
+        "draw_calls": null,
+        "nodes": 3,
+        "orphan_nodes": 0,
+        "resources": 1,
+        "static_memory_bytes": 22519178,
+        "texture_memory_bytes": null,
+        "video_memory_bytes": null
+      },
+      "skinned_meshes": 13,
+      "speech_geometry": {
+        "affected_vertices": 1966,
+        "maximum_delta_m": 0.00482028070837259,
+        "vertices": 23595
+      },
+      "status": "pass",
+      "triangles": 203246
+    },
+    {
+      "blink_geometry": {
+        "affected_vertices": 1856,
+        "maximum_delta_m": 0.0120721198618412,
+        "vertices": 23415
+      },
+      "blink_max": 1.00000095367432,
+      "blink_min": -0.00000173074420217745,
+      "bones": 9,
+      "bounds_max": [
+        0.435740500688553,
+        2.27510452270508,
+        0.238400980830193
+      ],
+      "bounds_min": [
+        -0.435740500688553,
+        0.00183433515485376,
+        -0.155331209301949
+      ],
+      "head_motion_rad": 0.0431907214224339,
+      "height_m": 2.27327013015747,
+      "identity": "leopold_i",
+      "idle": "idle",
+      "idle_seconds": 8.03333377838135,
+      "load_ms": 177,
+      "loaded_counters": {
+        "buffer_memory_bytes": null,
+        "draw_calls": null,
+        "nodes": 23,
+        "orphan_nodes": 0,
+        "resources": 7,
+        "static_memory_bytes": 90077679,
+        "texture_memory_bytes": null,
+        "video_memory_bytes": null
+      },
+      "mesh_nodes": 15,
+      "neck_motion_rad": 0.00647779414430261,
+      "nodes": 19,
+      "released_counters": {
+        "buffer_memory_bytes": null,
+        "draw_calls": null,
+        "nodes": 3,
+        "orphan_nodes": 0,
+        "resources": 1,
+        "static_memory_bytes": 22524702,
+        "texture_memory_bytes": null,
+        "video_memory_bytes": null
+      },
+      "skinned_meshes": 15,
+      "speech_geometry": {
+        "affected_vertices": 1956,
+        "maximum_delta_m": 0.00450348434969783,
+        "vertices": 23415
+      },
+      "status": "pass",
+      "triangles": 231660
+    },
+    {
+      "blink_geometry": {
+        "affected_vertices": 1856,
+        "maximum_delta_m": 0.0124630639329553,
+        "vertices": 23733
+      },
+      "blink_max": 1.00000095367432,
+      "blink_min": -0.00000173074420217745,
+      "bones": 9,
+      "bounds_max": [
+        0.395389407873154,
+        1.94940161705017,
+        0.280862629413605
+      ],
+      "bounds_min": [
+        -0.397350400686264,
+        0.00155212974641472,
+        -0.307225406169891
+      ],
+      "head_motion_rad": 0.0431741550564766,
+      "height_m": 1.94784951210022,
+      "identity": "isabella_ii_adolescent",
+      "idle": "idle",
+      "idle_seconds": 8.03333377838135,
+      "load_ms": 202,
+      "loaded_counters": {
+        "buffer_memory_bytes": null,
+        "draw_calls": null,
+        "nodes": 21,
+        "orphan_nodes": 0,
+        "resources": 7,
+        "static_memory_bytes": 88125339,
+        "texture_memory_bytes": null,
+        "video_memory_bytes": null
+      },
+      "mesh_nodes": 13,
+      "neck_motion_rad": 0.00793365202844143,
+      "nodes": 17,
+      "released_counters": {
+        "buffer_memory_bytes": null,
+        "draw_calls": null,
+        "nodes": 3,
+        "orphan_nodes": 0,
+        "resources": 1,
+        "static_memory_bytes": 22530226,
+        "texture_memory_bytes": null,
+        "video_memory_bytes": null
+      },
+      "skinned_meshes": 13,
+      "speech_geometry": {
+        "affected_vertices": 1971,
+        "maximum_delta_m": 0.00464897882193327,
+        "vertices": 23733
+      },
+      "status": "pass",
+      "triangles": 203886
+    }
+  ],
+  "passed": true,
+  "render_memory_available": false,
+  "renderer": "forward_plus",
+  "schema": 1,
+  "tested_models": 21
+}

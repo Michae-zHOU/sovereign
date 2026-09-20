@@ -1,0 +1,3 @@
+Godot Engine v4.5.1.stable.mono.official.f62fdbde1 - https://godotengine.org
+
+SOVEREIGN_MECHANICS_UI_PASS market-import=True population=True diplomacy-focus=True production-method=True government=True law-deliberation=True institution-budget=True fiscal-tax=True private-toggle=True railway-queue=True chinese-audit=True save-load=True

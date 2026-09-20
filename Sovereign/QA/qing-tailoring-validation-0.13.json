@@ -1,0 +1,29 @@
+{
+  "version": "0.13",
+  "baseline": {
+    "version": "0.12",
+    "robe_panels": 2,
+    "cape_panels": 4,
+    "sleeves": 2,
+    "cuffs": 2,
+    "shaped_boots": 2,
+    "original_uvs_preserved": true,
+    "original_weights_preserved": true
+  },
+  "original_uvs_preserved": true,
+  "original_weights_preserved": true,
+  "sleeves_cuffs_hands_unchanged": true,
+  "side_cape_shape_unchanged": true,
+  "tassels": {
+    "fibres": 624,
+    "projection_misses": 0,
+    "max_surface_lift_m": 0.00031
+  },
+  "side_surface_samples_unchanged": true,
+  "mesh_count": 176,
+  "mesh_vertices": 67432,
+  "packed_textile_images": 4,
+  "mesh_weights_valid": true,
+  "consolidated_mesh_count": 26,
+  "post_consolidation_vertices": 123430
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "file": "Sovereign-Windows-0.13-zh-CN.zip",
+    "bytes": 449053993,
+    "sha256": "a99da46a553fd9d827ca2fc5ed6b195f2f236523de39fd5958af57bf670c6cb0"
+  },
+  {
+    "file": "Sovereign-Windows-0.13/Sovereign.exe",
+    "bytes": 497967720,
+    "sha256": "73a9d2cfe0ccdaae57af666bc74cff3ffc81029f6cbea977f745f0491eec27af"
+  },
+  {
+    "file": "Sovereign/Assets/leaders/model-manifest.json",
+    "bytes": 15695,
+    "sha256": "0a8f1ba90a3ef71faa6c03080ac0c1add95747b2f8765bbf849e4bba89a6bfb0"
+  }
+]

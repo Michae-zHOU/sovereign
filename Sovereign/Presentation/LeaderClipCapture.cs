@@ -16,13 +16,15 @@ public partial class Main
             await ToSignal(GetTree().CreateTimer(1.5), SceneTreeTimer.SignalName.Timeout);
             _leader.AnimationCaptureStepSeconds = 1d / 30;
             _toast.Text = ""; _toastTime = 0;
+            bool detail = Array.IndexOf(OS.GetCmdlineUserArgs(), "--leader-clip-detail") >= 0;
             for (int frame = 0; frame < 180; frame++)
             {
                 if (frame == 0) _leader.TriggerGesture("greeting");
+                if (detail && frame == 60) _leader.SetFraming("face", true);
                 if (frame == 65) _leader.TriggerGesture("talk");
                 if (frame == 155) _leader.TriggerGesture("agree");
                 // Show actual garment depth from the front through a three-quarter turn.
-                _leader.SetViewAngle(-.10f + .72f * (frame / 179f));
+                _leader.SetViewAngle(-.10f + (detail ? .38f : .72f) * (frame / 179f));
                 await ToSignal(RenderingServer.Singleton, RenderingServer.SignalName.FramePostDraw);
                 var image = GetViewport().GetTexture().GetImage();
                 var result = image.SavePng(Path.Combine(folder, $"frame-{frame:0000}.png")); image.Dispose();

@@ -255,9 +255,16 @@ public partial class Main
                 _map.Visible = false;
                 _leader.ShowLeader(leader.AppearanceKey, leader.CountryId, leader.AgeOn(leader.StartDate) ?? -1);
                 await ToSignal(GetTree(), SceneTree.SignalName.ProcessFrame);
-                if (!_leader.IsOpen) throw new Exception("Leader scene failed: " + leader.Id);
+                if (!_leader.IsOpen || !_leader.UsesAuthoredModel || !_leader.HasSkeletalAnimation || !_leader.HasFacialAnimation || !_leader.HasFullFigure)
+                    throw new Exception("Full animated leader scene failed: " + leader.Id);
+                int builds = _leader.ModelBuildCount;
+                _leader.ShowLeader(leader.AppearanceKey, leader.CountryId, leader.AgeOn(leader.StartDate) ?? -1);
+                if (_leader.ModelBuildCount != builds) throw new Exception("Repeated portrait rebuilt the model: " + leader.Id);
                 leaders++;
             }
+            _leader.ShowLeader("isabella_ii", "SPA", 13);
+            if (_leader.LoadedModelKey != "isabella_ii_adolescent" || !_leader.HasFullFigure)
+                throw new Exception("Adolescent Isabella model transition failed");
             CloseCity();
             GD.Print($"SOVEREIGN_CONTENT_PASS cities={cities} leaders={leaders} districts={cities * 5}");
             RequestQuit(0);

@@ -4,3 +4,17 @@ obj/
 .vs/
 *.user
 *.suo
+
+# Built Windows distributions and release archives belong outside source control.
+/Sovereign-Windows/
+/Sovereign-Windows-*/
+/Sovereign-Windows*.zip
+/Sovereign-Source*.zip
+
+# Local authoring caches and backup copies; keep source assets and import settings.
+__pycache__/
+*.pyc
+*.pyo
+*.blend[0-9]
+*.bak
+*.tmp

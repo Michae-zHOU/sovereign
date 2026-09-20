@@ -1,0 +1,14 @@
+{
+  "startedAtUtc": "2026-09-20T21:45:44.9383629Z",
+  "completedAtUtc": "2026-09-20T21:45:58.7624131Z",
+  "workingDirectory": "<workspace>/outputs/Sovereign",
+  "childPath": "<workspace>/work/toolchain/dotnet;C:\\WINDOWS\\System32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem",
+  "expectedDotnetPath": "<workspace>/work/toolchain/dotnet/dotnet.exe",
+  "actualDotnetPath": "<workspace>/work/toolchain/dotnet/dotnet.EXE",
+  "godotExitCode": 0,
+  "releaseExe": "<workspace>/outputs/Sovereign-Windows-0.13/Sovereign.exe",
+  "verified": true,
+  "runtimeDirectory": "<workspace>/outputs/Sovereign-Windows-0.13/data_Sovereign_windows_x86_64",
+  "runtimeFileCount": 186,
+  "releaseExeSha256": "73A9D2CFE0CCDAAE57AF666BC74CFF3FFC81029F6CBEA977F745F0491EEC27AF"
+}

@@ -25,6 +25,7 @@ public partial class Main
     {
         var country = _engine.State.Countries.First(c => c.Id == _foreignCountry);
         var leader = HistoricalLeaders.Get(country.Id, _engine.State.Date);
+        IllustratedHeader(_right, "diplomacy", "使节与交涉", Localization.Tr(_engine.Player.Name) + " · " + Localization.Tr(country.Name), 120);
         CountryIdentity(_right, country.Id, country.Name);
         _right.AddChild(Para(leader.Title + " · " + leader.Name, 16));
         var tabs = Row(_right, 2);

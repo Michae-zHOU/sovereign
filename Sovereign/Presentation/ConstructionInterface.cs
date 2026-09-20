@@ -97,12 +97,11 @@ public partial class Main
     {
         var country = _engine.Player;
         _right.AddChild(ConstructionButton("← 返回建筑列表", () => { _constructionType = ""; _rightScroll.ScrollVertical = 0; RefreshPanels(); }));
-        var header = CabinetPanel(_right, "cabinet-row", 6); var hero = Row(header, 10);
-        hero.AddChild(ConstructionThumbnail(_constructionType));
-        var detail = VBox(hero, 5); detail.SizeFlagsHorizontal = Control.SizeFlags.ExpandFill;
+        var header = CabinetPanel(_right, "cabinet-row", 6); var detail = VBox(header, 7);
+        detail.AddChild(ConstructionScene(_constructionType, 134));
         detail.AddChild(ConstructionText(ConstructionCatalog.Name(_constructionType), 17, Cream, true, true));
         detail.AddChild(ConstructionText($"{ConstructionCatalog.Costs[_constructionType]:0} 建造点 / 级", 14, Gold));
-        detail.AddChild(ConstructionText(_constructionType == ConstructionCatalog.SectorId ? "每级 1,000 个营建岗位" : "基础方式每级 2,500 岗位；生产方式会改变用工", 12, Muted));
+        detail.AddChild(Para(_constructionType == ConstructionCatalog.SectorId ? "每级 1,000 个营建岗位" : "基础方式每级 2,500 岗位；生产方式会改变用工", 12, Muted));
         ConstructionScopeSelector();
         var sorting = Row(_right, 4); sorting.AddChild(ConstructionText("比较建设地点", 13, Gold, expand: true));
         foreach (var (id, name) in new[] { ("labor", "劳工 ↓"), ("population", "人口 ↓") })
@@ -180,7 +179,7 @@ public partial class Main
             var project = country.Construction[index]; var forecast = forecasts[project.Id];
             var city = country.Cities.First(c => c.Id == project.CityId);
             var card = CabinetPanel((Control)parent, "cabinet-row", 3); var box = VBox(card, 3); var row = Row(box, 7);
-            row.AddChild(ConstructionThumbnail(project.IndustryId, controls ? 70 : 54, controls ? 54 : 46));
+            row.AddChild(ConstructionThumbnail(project.IndustryId, controls ? 88 : 64, controls ? 62 : 48));
             var detail = VBox(row, 2); detail.SizeFlagsHorizontal = Control.SizeFlags.ExpandFill;
             var title = Row(detail, 4); title.AddChild(ConstructionText($"{index + 1}  {Localization.Tr(project.Name)}", 15, Cream, true, true)); title.AddChild(ConstructionText("＋1级", 11, Gold));
             string state = forecast.Paused ? "已暂停" : forecast.WeeklyProgress == 0 ? "等待建造力" : $"{forecast.WeeklyProgress:0.#} 点/周";
@@ -205,9 +204,8 @@ public partial class Main
     private void ConstructionSectorsPanel(ConstructionStatus status)
     {
         var country = _engine.Player;
-        var overview = CabinetPanel(_right, "cabinet-row", 6); var top = Row(overview, 10);
-        top.AddChild(ConstructionThumbnail(ConstructionCatalog.SectorId));
-        var totals = VBox(top, 4); totals.SizeFlagsHorizontal = Control.SizeFlags.ExpandFill;
+        var overview = CabinetPanel(_right, "cabinet-row", 6); var totals = VBox(overview, 7);
+        totals.AddChild(ConstructionScene(ConstructionCatalog.SectorId, 118));
         totals.AddChild(ConstructionText($"营建部门  ·  {country.Cities.Sum(city => city.ConstructionSectors)} 级", 18, Cream, true, true));
         totals.AddChild(ConstructionText($"在岗工人 {Compact(country.Cities.Sum(city => city.ConstructionWorkers))}", 12, Muted));
         totals.AddChild(ConstructionButton("＋ 选择地点扩建营建部门", () => ChooseConstructionLocations(ConstructionCatalog.SectorId)));
@@ -226,7 +224,7 @@ public partial class Main
             var method = ConstructionCatalog.Method(city.ConstructionMethodId);
             decimal staffed = city.ConstructionWorkers / (decimal)ConstructionCatalog.WorkersPerSector;
             var card = CabinetPanel(_right, "cabinet-row", 3); var row = Row(card, 7);
-            row.AddChild(ConstructionThumbnail(ConstructionCatalog.SectorId));
+            row.AddChild(ConstructionThumbnail(ConstructionCatalog.SectorId, 106, 78));
             var body = VBox(row, 2); body.SizeFlagsHorizontal = Control.SizeFlags.ExpandFill;
             var heading = Row(body, 5);
             heading.AddChild(ConstructionText($"{Localization.Tr(city.Name)} · {city.ConstructionSectors}级", 15, Cream, true, true));

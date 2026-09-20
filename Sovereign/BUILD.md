@@ -1,6 +1,6 @@
-# 构建 Sovereign 0.10
+# 构建 Sovereign 0.14
 
-Sovereign 是 Godot 4.5.1 .NET / C# 的 Windows 原生开发原型。0.10 新增订单经济、地区价格、人口阶层、生产方式、建筑经营、私人投资和政治过程；目录范围仍为12国、60地区、128城、6商品及1836—1846。参见 [README.md](README.md)和 [RELEASE-0.10.md](RELEASE-0.10.md)。
+Godot 4.5.1 .NET / C# Windows原型。0.14重做政治、人口、外交与建筑图文页面，人物资源沿用0.13。下文流程用于重建；实际执行结果见[TEST-REPORT.md](TEST-REPORT.md)。源树包含完整模型与制作配方，首次克隆和资源导入体积较大。
 
 ## 工具要求
 
@@ -59,17 +59,20 @@ foreach ($Mode in @('--smoke', '--construction-smoke', '--world-smoke', '--provi
 ## Windows导出与打包
 
 ```powershell
-$BuildPath = Join-Path (Split-Path $ProjectPath -Parent) 'Sovereign-Windows-0.10'
+$BuildPath = Join-Path (Split-Path $ProjectPath -Parent) 'Sovereign-Windows-0.14'
 New-Item -ItemType Directory -Force -Path $BuildPath | Out-Null
 & $GodotExe --headless --path $ProjectPath --export-release 'Windows Desktop' (Join-Path $BuildPath 'Sovereign.exe')
 if ($LASTEXITCODE -ne 0) { throw 'Windows export failed.' }
+if (!(Test-Path (Join-Path $BuildPath 'data_Sovereign_windows_x86_64/Sovereign.dll'))) {
+    throw 'The .NET runtime output is missing. Inspect the Godot export and MSBuild logs.'
+}
 ```
 
-使用版本化目录保留旧发行包。资源包嵌入exe，托管代码和运行时放在`data_Sovereign_windows_x86_64`；必须分发整个目录。保留`.json`、`.geojson`、`.bin`导出包含规则及导入后的纹理、字体。源包排除生成缓存，并包括相邻的测试项目与固定存档样本。
+使用版本化目录保留旧发行包。资源包嵌入exe，托管代码和运行时放在`data_Sovereign_windows_x86_64`；必须分发整个目录。Godot的导出进程可能在.NET发布失败时仍返回0，须检查错误日志、运行时目录和导出exe的实际启动。保留`.json`、`.geojson`、`.bin`导出包含规则及导入后的纹理、字体。源包排除生成缓存，并包括相邻的测试项目与固定存档样本。
 
 导出器不会自动创建全部可读说明，打包时还应复制：
 
-- `README.md`、`开始游戏.md`、`BUILD.md`、`RELEASE-0.10.md`、`MECHANICS-PARITY.md`及最终`TEST-REPORT.md`。
+- `README.md`、`开始游戏.md`、`BUILD.md`、`RELEASE-0.13.md`、`RELEASE-0.12.md`、`RELEASE-0.11.md`、`RELEASE-0.10.md`、`MECHANICS-PARITY.md`及最终`TEST-REPORT.md`。
 - `HISTORY-SOURCES.md`、`QING-DESIGN.md`、`QING-SETTLEMENT-SOURCES.md`、`CONSTRUCTION-REFERENCE.md`、`INTERFACE-REFERENCE-0.9.md`与`THIRD_PARTY_NOTICES.md`；带版本的旧文档保留为历史证据，当前规则以0.10说明为准。
 - `Assets/interface`、`illustrations`、`flags`、`portraits`、`leaders`的来源说明、生成记录和许可；国旗的单独署名与许可条件必须保留。
 - `Assets/map/historical`完整来源、原始/派生资料、README和GPL-3.0许可；自然地理说明和其他资源许可。
@@ -105,8 +108,41 @@ if ($LASTEXITCODE -ne 0) { throw 'Windows export failed.' }
 
 ## 美术与原工作区工具
 
-人物及地图沿用先前版本。道光源文件在`Assets/leaders/source`，可用Blender4.5.3执行`build_leaders.py -- daoguang`重建，再导入GLB。详细模型来源与重建要求见`Assets/leaders/README.zh-CN.md`。不要把仅在Blender中存在的着色效果当作已导出的运行时效果。
+人物源文件在`Assets/leaders/source`，使用Blender4.5.3。**0.13道光使用`build_leaders_13.py`；其余人物使用`build_leaders_11.py`。** 13脚本只生成道光，内部依赖11、12脚本、共用模块及`qing_tailoring_12.py`／`qing_tailoring_13.py`；不能用它生成21个模型。0.12制作入口继续保留，可独立重建旧配方。
+
+```powershell
+# 只生成0.13道光候选，并输出Blender检查图
+blender --background --python Assets/leaders/source/build_leaders_13.py -- --out-dir ../../work/leader13-candidate --render
+# 重建指定的其他人物
+blender --background --python Assets/leaders/source/build_leaders_11.py -- william_iv victoria
+# 需要比较时，单独重建0.12道光配方，避免覆盖正式资源
+blender --background --python Assets/leaders/source/build_leaders_12.py -- --out-dir ../../work/leader12-reference --render
+```
+
+若从源资产全量重建，先运行`build_leaders_11.py -- all`，最后运行`build_leaders_13.py`覆盖其生成的旧道光；顺序为11→13，无需先执行12脚本。12与13脚本的`--out-dir <目录>`均将候选GLB、blend与可选检查图写入独立目录，省略该参数才更新项目中的道光资源。13脚本的`--legacy-clothes`仅用于隔离皮肤与胡须的比较，沿用0.12服饰；最终0.13组合候选不要带此参数。候选确认后更新正式资源，再重新执行Godot导入。
+
+道光骨架继承0.12的11骨骼，即原有9骨骼加`LeftEye`、`RightEye`；其余20个模型仍为9骨骼。两眼微视线并入`idle`，应检查导出后眼骨动画、眨眼及会谈表情是否共同正常。0.13继续保留复制材质前连接法线的修复，替换皮肤底色并降低法线强度；须根使用较轻的顶点颜色过渡。帽带和领口的新织纹与法线打包到GLB，仍须核对Godot实际导入。共用肖像灯光本轮沿用0.12，面容、全身和嵌入肖像都应检查，不能以Blender预览替代。
+
+正式道光GLB与blend已重新生成并导入。Debug和ExportRelease构建均为0警告、0错误；[本轮资源检查](QA/leader-model-validation-0.13.json)为21/21、失败0，[Godot原生人物检查](QA/leader-runtime-validation-0.13.txt)仅覆盖道光1/1，不是全部21个模型的原生回归。工作区`work/verify13.ps1`完成导出前检查，`work/leader13-final-authoring.log`记录正式制作；Windows导出确认使用.NET8、运行时目录186个文件。`work/check_release13.ps1`已打印`SOVEREIGN_RELEASE_013_VERIFIED`，三项最终exe烟雾退出0，五张完整界面截图已生成。实机录制为180帧、30fps、6秒；三种视图的本机短程性能采样已完成，数值与局限见[TEST-REPORT.md](TEST-REPORT.md)。日志仍有已知根证书存储诊断，未写成stderr为空。
+
+依赖与许可见`Assets/leaders/README.zh-CN.md`，道光依据见`Assets/leaders/source/DAOGUANG-ART-DIRECTION-0.12.md`，资源与运行时检查入口见`QA/README.zh-CN.md`。这些是构建与验收要求，不是本轮最终QA通过或性能达标记录。地图沿用先前版本。
 
 界面沿用1000单位设计高度、502单位普通抽屉和86单位标题区。比较参考画面时需考虑客户区尺寸和Windows DPI；圆形皮肤与弧形托架不要用不匹配的九宫格边距拉伸。图集顺序契约和原创风景来源见资源README。0.10人口、价格和政治页已改用新模拟，不应恢复0.9的全国一价、三项即时改革文案。
 
-原工作区`work/toolchain/Environment.ps1`仅用于寻找本机SDK与Godot，不是发行依赖。复制源码只需前述标准工具。旧`Export.ps1`可能指向较早目录，使用本文件明确的`Sovereign-Windows-0.10`路径。
+原工作区`work/toolchain/Environment.ps1`仅用于寻找本机SDK与Godot，不是发行依赖。复制源码只需前述标准工具。旧`Export.ps1`可能指向较早目录，0.13导出使用本文件明确的`Sovereign-Windows-0.14`路径。
+
+
+## 0.14界面截图与回归
+
+在Godot项目目录可运行：
+
+```powershell
+& $GodotExe --headless --path $ProjectPath -- --preview --mechanics-smoke
+& $GodotExe --headless --path $ProjectPath -- --preview --construction-smoke
+& $GodotExe --path $ProjectPath --resolution 1600x1000 -- --capture 'C:/Temp/sovereign-politics.png' --political-page overview
+& $GodotExe --path $ProjectPath --resolution 1600x1000 -- --capture 'C:/Temp/sovereign-population.png' --population-overview
+& $GodotExe --path $ProjectPath --resolution 1600x1000 -- --capture 'C:/Temp/sovereign-diplomacy.png' --diplomacy
+& $GodotExe --path $ProjectPath --resolution 1600x1000 -- --capture 'C:/Temp/sovereign-construction.png' --construction
+```
+
+截图目录须提前创建。导出EXE可使用相同用户参数，去掉`--path $ProjectPath`。文档截图目录带`.gdignore`并由导出配置排除，防止展示图占用游戏资源包。新增PNG与`.import`设置需随源代码一起保留；完整提示词见素材目录。

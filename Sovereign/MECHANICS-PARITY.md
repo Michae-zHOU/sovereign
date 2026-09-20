@@ -36,7 +36,7 @@
 | `Diplomacy` | 关系、冷却、贸易协定及 `MobilizedAgainst` 标记；明确无战斗与割地 | 缺外交博弈、战争实体、部队、前线、补给和和平条件。 |
 | `Catalog`、`HistoricalEvents` | 6 种商品、6 种产业、3 改革、3 科技；战役到 1846；5 类硬编码事件 | 尚非 1836–1936 世界内容与科技覆盖。 |
 
-主要文件：[Models.cs](C:/Users/micha/Documents/Codex/2026-09-19/i-x20/outputs/Sovereign/Simulation/Models.cs)、[SimulationEngine.cs](C:/Users/micha/Documents/Codex/2026-09-19/i-x20/outputs/Sovereign/Simulation/SimulationEngine.cs)、[RegionalSimulation.cs](C:/Users/micha/Documents/Codex/2026-09-19/i-x20/outputs/Sovereign/Simulation/RegionalSimulation.cs)、[ConstructionSimulation.cs](C:/Users/micha/Documents/Codex/2026-09-19/i-x20/outputs/Sovereign/Simulation/ConstructionSimulation.cs)、[Catalog.cs](C:/Users/micha/Documents/Codex/2026-09-19/i-x20/outputs/Sovereign/Simulation/Catalog.cs)、[HistoricalEvents.cs](C:/Users/micha/Documents/Codex/2026-09-19/i-x20/outputs/Sovereign/Simulation/HistoricalEvents.cs)。
+主要文件：[Models.cs](Simulation/Models.cs)、[SimulationEngine.cs](Simulation/SimulationEngine.cs)、[RegionalSimulation.cs](Simulation/RegionalSimulation.cs)、[ConstructionSimulation.cs](Simulation/ConstructionSimulation.cs)、[Catalog.cs](Simulation/Catalog.cs)、[HistoricalEvents.cs](Simulation/HistoricalEvents.cs)。
 
 ## 3. 实现对照与验收清单
 
