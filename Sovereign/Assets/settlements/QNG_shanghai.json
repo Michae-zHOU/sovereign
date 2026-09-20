@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "QNG_shanghai",
+  "Name": "Shanghai",
+  "CountryId": "QNG",
+  "RegionId": "QNG_jiangsu",
+  "Latitude": 31.227,
+  "Longitude": 121.491,
+  "ArchitectureProfile": "chinese",
+  "Seed": 668012893,
+  "IsPort": true,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

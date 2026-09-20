@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "SPA_cadiz",
+  "Name": "Cádiz",
+  "CountryId": "SPA",
+  "RegionId": "SPA_atlantic",
+  "Latitude": 36.53,
+  "Longitude": -6.29,
+  "ArchitectureProfile": "iberian",
+  "Seed": 1867847601,
+  "IsPort": true,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

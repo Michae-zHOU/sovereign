@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "QNG_chongqing",
+  "Name": "Chongqing",
+  "CountryId": "QNG",
+  "RegionId": "QNG_sichuan",
+  "Latitude": 29.558,
+  "Longitude": 106.578,
+  "ArchitectureProfile": "chinese",
+  "Seed": 11721142,
+  "IsPort": true,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

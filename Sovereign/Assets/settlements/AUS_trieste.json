@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "AUS_trieste",
+  "Name": "Trieste",
+  "CountryId": "AUS",
+  "RegionId": "AUS_adriatic",
+  "Latitude": 45.65,
+  "Longitude": 13.77,
+  "ArchitectureProfile": "central_european",
+  "Seed": 1002199641,
+  "IsPort": true,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

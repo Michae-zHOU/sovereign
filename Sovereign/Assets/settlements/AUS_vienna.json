@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "AUS_vienna",
+  "Name": "Vienna",
+  "CountryId": "AUS",
+  "RegionId": "AUS_alpine",
+  "Latitude": 48.21,
+  "Longitude": 16.37,
+  "ArchitectureProfile": "central_european",
+  "Seed": 2027144034,
+  "IsPort": false,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

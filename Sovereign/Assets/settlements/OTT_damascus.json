@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "OTT_damascus",
+  "Name": "Damascus",
+  "CountryId": "OTT",
+  "RegionId": "OTT_arab",
+  "Latitude": 33.51,
+  "Longitude": 36.29,
+  "ArchitectureProfile": "ottoman",
+  "Seed": 4982096,
+  "IsPort": false,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

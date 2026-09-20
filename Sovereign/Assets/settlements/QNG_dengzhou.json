@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "QNG_dengzhou",
+  "Name": "Dengzhou",
+  "CountryId": "QNG",
+  "RegionId": "QNG_shandong",
+  "Latitude": 37.824,
+  "Longitude": 120.752,
+  "ArchitectureProfile": "chinese",
+  "Seed": 560945682,
+  "IsPort": true,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

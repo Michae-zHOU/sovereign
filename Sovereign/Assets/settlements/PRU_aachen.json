@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "PRU_aachen",
+  "Name": "Aachen",
+  "CountryId": "PRU",
+  "RegionId": "PRU_west",
+  "Latitude": 50.78,
+  "Longitude": 6.08,
+  "ArchitectureProfile": "central_european",
+  "Seed": 733271253,
+  "IsPort": false,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

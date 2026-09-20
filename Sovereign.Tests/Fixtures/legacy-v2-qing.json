@@ -1,0 +1,4880 @@
+{
+  "Format": "Sovereign.Save",
+  "Version": 2,
+  "Checksum": "108D3047440623DC7FCF83220839A3B8168C07812B5EFA84F97EF2A512ECF794",
+  "State": {
+    "SaveVersion": 2,
+    "PlayerCountryId": "QNG",
+    "Date": "1836-03-01T00:00:00",
+    "DayNumber": 60,
+    "Countries": [
+      {
+        "Id": "GBR",
+        "Name": "United Kingdom",
+        "Adjective": "British",
+        "Population": 24025239,
+        "Treasury": 26812.965730481459653833261023,
+        "Debt": 0,
+        "Gdp": 260324.54976899519643716495825,
+        "LivingStandard": 15.508111414872429099292724132,
+        "Literacy": 54.720,
+        "Unrest": 11.304165486464482762743106060,
+        "DailyBalance": 110.725250458344143997992268,
+        "TaxRevenue": 197.44931045834414399799226765,
+        "Spending": 173.124060,
+        "DailyTradeBalance": 86.40,
+        "HouseholdIncome": 497.75301098263110259712708842,
+        "NeedsFulfilled": 0.8981786116017740180236075701,
+        "Prestige": 70,
+        "TaxRate": 22,
+        "Goods": {
+          "grain": 2196.8240540567320244764844359,
+          "timber": 474.53486345123137527995943117,
+          "coal": 565.46882855257512757022769103,
+          "iron": 333.36227856959474756013688652,
+          "tools": 381.33446331057134746888490285,
+          "clothes": 714.69953692770921333340756320
+        },
+        "Prices": {
+          "grain": 1.8916289245522657369926625618,
+          "timber": 1.4609060672489005617377239037,
+          "coal": 1.9252922210726900168467022049,
+          "iron": 2.4229258702256027898243157847,
+          "tools": 5.9299452657549451383831577971,
+          "clothes": 4.4663379812488057384397341900
+        },
+        "Production": {
+          "grain": 169.29074806500644446929126778,
+          "timber": 16.751470747089002889383784118,
+          "coal": 10.095098886471283964402733640,
+          "iron": 8.620243288370361030178272782,
+          "tools": 6.7876194295562145224922747810,
+          "clothes": 34.527553206055844306995742586
+        },
+        "Consumption": {
+          "grain": 172.62857828922911719601426747,
+          "timber": 13.051825952928891332248316644,
+          "coal": 5.9569297905822262347166846905,
+          "iron": 4.5250796197041430149948498540,
+          "tools": 2.4169287244239091014897019810,
+          "clothes": 34.525715657845823439202853493
+        },
+        "Industries": {
+          "farm": 12,
+          "lumber": 4,
+          "coal_mine": 5,
+          "iron_mine": 4,
+          "toolworks": 3,
+          "textile": 6
+        },
+        "Trade": {
+          "grain": 0,
+          "timber": -1,
+          "coal": -1,
+          "iron": -1,
+          "tools": -1,
+          "clothes": 0
+        },
+        "Construction": [
+          {
+            "CityId": "GBR_manchester",
+            "IndustryId": "coal_mine",
+            "Name": "Coal mines",
+            "DaysRemaining": 15,
+            "TotalDays": 75
+          }
+        ],
+        "Reforms": [
+          "primary_schools"
+        ],
+        "Technologies": [],
+        "ResearchId": "mechanical_tools",
+        "ResearchProgress": 59.61960,
+        "Relations": {
+          "PRU": 10,
+          "JAP": -10,
+          "FRA": 10,
+          "AUS": 10,
+          "RUS": 10,
+          "USA": 10,
+          "QNG": 25,
+          "OTT": 10,
+          "SPA": 10,
+          "POR": 10,
+          "BEL": 10
+        },
+        "DiplomaticCooldowns": {
+          "PRU": 0,
+          "JAP": 0,
+          "FRA": 0,
+          "AUS": 0,
+          "RUS": 0,
+          "USA": 0,
+          "QNG": 0,
+          "OTT": 0,
+          "SPA": 0,
+          "POR": 0,
+          "BEL": 0
+        },
+        "TradePacts": [],
+        "MobilizedAgainst": "",
+        "History": [
+          {
+            "Date": "1836-01-01T00:00:00",
+            "Gdp": 566480,
+            "Treasury": 26000,
+            "LivingStandard": 14
+          },
+          {
+            "Date": "1836-02-01T00:00:00",
+            "Gdp": 273691.88237370098399410466711,
+            "Treasury": 23532.804274967967604352583539,
+            "LivingStandard": 14.930941478470015086360502335
+          },
+          {
+            "Date": "1836-03-01T00:00:00",
+            "Gdp": 260324.54976899519643716495825,
+            "Treasury": 26812.965730481459653833261023,
+            "LivingStandard": 15.508111414872429099292724132
+          }
+        ],
+        "Regions": [
+          {
+            "Id": "GBR_south",
+            "Name": "Southern England",
+            "RuralPopulation": 7016782,
+            "UrbanPopulation": 1815178,
+            "Gdp": 198533.42672526784420587364553
+          },
+          {
+            "Id": "GBR_north",
+            "Name": "Northern Britain",
+            "RuralPopulation": 7018473,
+            "UrbanPopulation": 892458,
+            "Gdp": 41194.082029151568154194208496
+          },
+          {
+            "Id": "GBR_west",
+            "Name": "Wales and Ireland",
+            "RuralPopulation": 7019622,
+            "UrbanPopulation": 262726,
+            "Gdp": 20597.041014575784077097104248
+          }
+        ],
+        "Cities": [
+          {
+            "Id": "GBR_london",
+            "RegionId": "GBR_south",
+            "Name": "London",
+            "Population": 1704904,
+            "Workforce": 767206,
+            "Employed": 442578,
+            "IndustrialWorkers": 67500,
+            "Artisans": 375078,
+            "Dependents": 937698,
+            "MigrationLastMonth": 1561,
+            "LivingStandard": 14.606153856856284817446668867,
+            "Literacy": 57.150974076479810919676813742,
+            "Gdp": 188234.90621797995216732509341,
+            "Industries": {
+              "farm": 5,
+              "lumber": 4,
+              "coal_mine": 5,
+              "iron_mine": 4,
+              "toolworks": 3,
+              "textile": 6
+            },
+            "Production": {
+              "grain": 70.537811693752685195538028243,
+              "timber": 16.751470747089002889383784118,
+              "coal": 10.095098886471283964402733640,
+              "iron": 8.620243288370361030178272782,
+              "tools": 6.7876194295562145224922747810,
+              "clothes": 34.527553206055844306995742586
+            }
+          },
+          {
+            "Id": "GBR_bristol",
+            "RegionId": "GBR_south",
+            "Name": "Bristol",
+            "Population": 110274,
+            "Workforce": 49623,
+            "Employed": 26760,
+            "IndustrialWorkers": 2500,
+            "Artisans": 24260,
+            "Dependents": 60651,
+            "MigrationLastMonth": 100,
+            "LivingStandard": 14.577331765690831268394672503,
+            "Literacy": 57.150974076479810919676813742,
+            "Gdp": 10298.520507287892038548552124,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 14.107562338750537039107605649,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "GBR_manchester",
+            "RegionId": "GBR_north",
+            "Name": "Manchester",
+            "Population": 270746,
+            "Workforce": 121835,
+            "Employed": 62064,
+            "IndustrialWorkers": 2500,
+            "Artisans": 59564,
+            "Dependents": 148911,
+            "MigrationLastMonth": 247,
+            "LivingStandard": 14.554462542556896319003388426,
+            "Literacy": 57.150974076479810919676813742,
+            "Gdp": 10298.520507287892038548552124,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 14.107562338750537039107605649,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "GBR_liverpool",
+            "RegionId": "GBR_north",
+            "Name": "Liverpool",
+            "Population": 250704,
+            "Workforce": 112816,
+            "Employed": 57654,
+            "IndustrialWorkers": 2500,
+            "Artisans": 55154,
+            "Dependents": 137888,
+            "MigrationLastMonth": 229,
+            "LivingStandard": 14.555719689930245522474400687,
+            "Literacy": 57.150974076479810919676813742,
+            "Gdp": 10298.520507287892038548552124,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 14.107562338750537039107605649,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "GBR_glasgow",
+            "RegionId": "GBR_north",
+            "Name": "Glasgow",
+            "Population": 230632,
+            "Workforce": 103784,
+            "Employed": 53239,
+            "IndustrialWorkers": 2500,
+            "Artisans": 50739,
+            "Dependents": 126848,
+            "MigrationLastMonth": 211,
+            "LivingStandard": 14.557196117773940841492657734,
+            "Literacy": 57.150974076479810919676813742,
+            "Gdp": 10298.520507287892038548552124,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 14.107562338750537039107605649,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "GBR_edinburgh",
+            "RegionId": "GBR_north",
+            "Name": "Edinburgh",
+            "Population": 140376,
+            "Workforce": 63169,
+            "Employed": 33382,
+            "IndustrialWorkers": 2500,
+            "Artisans": 30882,
+            "Dependents": 77207,
+            "MigrationLastMonth": 128,
+            "LivingStandard": 14.569060835256089024051015878,
+            "Literacy": 57.150974076479810919676813742,
+            "Gdp": 10298.520507287892038548552124,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 14.107562338750537039107605649,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "GBR_cardiff",
+            "RegionId": "GBR_west",
+            "Name": "Cardiff",
+            "Population": 12022,
+            "Workforce": 5409,
+            "Employed": 5144,
+            "IndustrialWorkers": 2500,
+            "Artisans": 2644,
+            "Dependents": 6613,
+            "MigrationLastMonth": 11,
+            "LivingStandard": 14.892687280190887857897514265,
+            "Literacy": 57.150974076479810919676813742,
+            "Gdp": 10298.520507287892038548552124,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 14.107562338750537039107605649,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "GBR_dublin",
+            "RegionId": "GBR_west",
+            "Name": "Dublin",
+            "Population": 250704,
+            "Workforce": 112816,
+            "Employed": 57654,
+            "IndustrialWorkers": 2500,
+            "Artisans": 55154,
+            "Dependents": 137888,
+            "MigrationLastMonth": 229,
+            "LivingStandard": 14.555719689930245522474400687,
+            "Literacy": 57.150974076479810919676813742,
+            "Gdp": 10298.520507287892038548552124,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 14.107562338750537039107605649,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          }
+        ]
+      },
+      {
+        "Id": "PRU",
+        "Name": "Prussia",
+        "Adjective": "Prussian",
+        "Population": 14014638,
+        "Treasury": 16521.490029614407446849765482,
+        "Debt": 0,
+        "Gdp": 166485.20309334433878522148512,
+        "LivingStandard": 14.349770190791204589757188334,
+        "Literacy": 60.720,
+        "Unrest": 11.220901668238683814765451573,
+        "DailyBalance": 88.414527459382796021114387,
+        "TaxRevenue": 125.08647745938279602111438665,
+        "Spending": 123.07195,
+        "DailyTradeBalance": 86.40,
+        "HouseholdIncome": 314.1151115773548603613131408,
+        "NeedsFulfilled": 0.906858068147244718508902032,
+        "Prestige": 45,
+        "TaxRate": 22,
+        "Goods": {
+          "grain": 1263.4071100664559705488653984,
+          "timber": 295.86948006606016016988941712,
+          "coal": 280.44229096860935055143463948,
+          "iron": 197.07770107912941426431741085,
+          "tools": 330.48562645686072868245206159,
+          "clothes": 341.84994390353354050555045876
+        },
+        "Prices": {
+          "grain": 1.8988305132708061339998085782,
+          "timber": 1.4525958878354668204739225725,
+          "coal": 1.9225818914332979164190812649,
+          "iron": 2.6954520844398946885420634865,
+          "tools": 6.0830424496084402352940894200,
+          "clothes": 5.4745254816861619103787758226
+        },
+        "Production": {
+          "grain": 99.35309390347185944975766785,
+          "timber": 11.997558048218986046950877037,
+          "coal": 8.984826697774998972545271642,
+          "iron": 7.5942391951745609210298891772,
+          "tools": 5.7103770424216734947452600572,
+          "clothes": 20.189521731699134196559803062
+        },
+        "Consumption": {
+          "grain": 101.67250113329651928499177239,
+          "timber": 8.257990334971590286893739126,
+          "coal": 5.1581329549296553691659915712,
+          "iron": 3.8069180282811156631635067048,
+          "tools": 1.4132665212189393937591862143,
+          "clothes": 20.334500226659303856998354477
+        },
+        "Industries": {
+          "farm": 7,
+          "lumber": 3,
+          "coal_mine": 3,
+          "iron_mine": 2,
+          "toolworks": 2,
+          "textile": 3
+        },
+        "Trade": {
+          "grain": 0,
+          "timber": -1,
+          "coal": -1,
+          "iron": -1,
+          "tools": -1,
+          "clothes": 0
+        },
+        "Construction": [
+          {
+            "CityId": "PRU_breslau",
+            "IndustryId": "coal_mine",
+            "Name": "Coal mines",
+            "DaysRemaining": 15,
+            "TotalDays": 75
+          }
+        ],
+        "Reforms": [
+          "primary_schools"
+        ],
+        "Technologies": [],
+        "ResearchId": "mechanical_tools",
+        "ResearchProgress": 63.21960,
+        "Relations": {
+          "GBR": 10,
+          "JAP": -10,
+          "FRA": 10,
+          "AUS": 10,
+          "RUS": 10,
+          "USA": 10,
+          "QNG": 10,
+          "OTT": 10,
+          "SPA": 10,
+          "POR": 10,
+          "BEL": 10
+        },
+        "DiplomaticCooldowns": {
+          "GBR": 0,
+          "JAP": 0,
+          "FRA": 0,
+          "AUS": 0,
+          "RUS": 0,
+          "USA": 0,
+          "QNG": 0,
+          "OTT": 0,
+          "SPA": 0,
+          "POR": 0,
+          "BEL": 0
+        },
+        "TradePacts": [],
+        "MobilizedAgainst": "",
+        "History": [
+          {
+            "Date": "1836-01-01T00:00:00",
+            "Gdp": 329960,
+            "Treasury": 18000,
+            "LivingStandard": 12
+          },
+          {
+            "Date": "1836-02-01T00:00:00",
+            "Gdp": 165627.87378187753855337204260,
+            "Treasury": 13973.419095072820979598738638,
+            "LivingStandard": 13.402210776721124426645662570
+          },
+          {
+            "Date": "1836-03-01T00:00:00",
+            "Gdp": 166485.20309334433878522148512,
+            "Treasury": 16521.490029614407446849765482,
+            "LivingStandard": 14.349770190791204589757188334
+          }
+        ],
+        "Regions": [
+          {
+            "Id": "PRU_central",
+            "Name": "Brandenburg and Pomerania",
+            "RuralPopulation": 4455476,
+            "UrbanPopulation": 320848,
+            "Gdp": 116289.04528928374324573727946
+          },
+          {
+            "Id": "PRU_east",
+            "Name": "Eastern provinces",
+            "RuralPopulation": 4455678,
+            "UrbanPopulation": 210516,
+            "Gdp": 25094.832388022249232826250542
+          },
+          {
+            "Id": "PRU_west",
+            "Name": "Rhineland and Westphalia",
+            "RuralPopulation": 4455850,
+            "UrbanPopulation": 116270,
+            "Gdp": 25101.325416038346306657955129
+          }
+        ],
+        "Cities": [
+          {
+            "Id": "PRU_berlin",
+            "RegionId": "PRU_central",
+            "Name": "Berlin",
+            "Population": 280776,
+            "Workforce": 126349,
+            "Employed": 94270,
+            "IndustrialWorkers": 32500,
+            "Artisans": 61770,
+            "Dependents": 154427,
+            "MigrationLastMonth": 257,
+            "LivingStandard": 12.922130417744234754893246900,
+            "Literacy": 63.150974076479810919676813742,
+            "Gdp": 105927.93692506453504597683696,
+            "Industries": {
+              "farm": 2,
+              "lumber": 2,
+              "coal_mine": 2,
+              "iron_mine": 2,
+              "toolworks": 2,
+              "textile": 3
+            },
+            "Production": {
+              "grain": 28.386598258134816985645047956,
+              "timber": 7.998372032145990697967251358,
+              "coal": 5.9898844651833326483635144280,
+              "iron": 7.5942391951745609210298891772,
+              "tools": 5.7103770424216734947452600572,
+              "clothes": 20.189521731699134196559803062
+            }
+          },
+          {
+            "Id": "PRU_stettin",
+            "RegionId": "PRU_central",
+            "Name": "Stettin",
+            "Population": 40072,
+            "Workforce": 18032,
+            "Employed": 11315,
+            "IndustrialWorkers": 2500,
+            "Artisans": 8815,
+            "Dependents": 22040,
+            "MigrationLastMonth": 36,
+            "LivingStandard": 12.831212360970550330139295209,
+            "Literacy": 63.150974076479810919676813742,
+            "Gdp": 10361.108364219208199760442505,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 14.193299129067408492822523979,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "PRU_breslau",
+            "RegionId": "PRU_east",
+            "Name": "Breslau",
+            "Population": 90224,
+            "Workforce": 40600,
+            "Employed": 22349,
+            "IndustrialWorkers": 2500,
+            "Artisans": 19849,
+            "Dependents": 49624,
+            "MigrationLastMonth": 82,
+            "LivingStandard": 12.772223770681606928551753580,
+            "Literacy": 63.150974076479810919676813742,
+            "Gdp": 10361.108364219208199760442505,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 14.193299129067408492822523979,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "PRU_konigsberg",
+            "RegionId": "PRU_east",
+            "Name": "K\u00F6nigsberg",
+            "Population": 65178,
+            "Workforce": 29330,
+            "Employed": 16839,
+            "IndustrialWorkers": 2500,
+            "Artisans": 14339,
+            "Dependents": 35848,
+            "MigrationLastMonth": 59,
+            "LivingStandard": 12.790355867252166394480656136,
+            "Literacy": 63.150974076479810919676813742,
+            "Gdp": 10361.108364219208199760442505,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 14.193299129067408492822523979,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "PRU_danzig",
+            "RegionId": "PRU_east",
+            "Name": "Danzig",
+            "Population": 55114,
+            "Workforce": 24801,
+            "Employed": 14625,
+            "IndustrialWorkers": 2500,
+            "Artisans": 12125,
+            "Dependents": 30313,
+            "MigrationLastMonth": 50,
+            "LivingStandard": 12.802262255376058975110856005,
+            "Literacy": 63.150974076479810919676813742,
+            "Gdp": 4372.6156595838328333053655324,
+            "Industries": {
+              "farm": 0,
+              "lumber": 0,
+              "coal_mine": 1,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 0,
+              "timber": 0,
+              "coal": 2.9949422325916663241817572140,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "PRU_cologne",
+            "RegionId": "PRU_west",
+            "Name": "Cologne",
+            "Population": 65178,
+            "Workforce": 29330,
+            "Employed": 16839,
+            "IndustrialWorkers": 2500,
+            "Artisans": 14339,
+            "Dependents": 35848,
+            "MigrationLastMonth": 59,
+            "LivingStandard": 12.790355867252166394480656136,
+            "Literacy": 63.150974076479810919676813742,
+            "Gdp": 10361.108364219208199760442505,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 14.193299129067408492822523979,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "PRU_essen",
+            "RegionId": "PRU_west",
+            "Name": "Essen",
+            "Population": 11020,
+            "Workforce": 4959,
+            "Employed": 4924,
+            "IndustrialWorkers": 2500,
+            "Artisans": 2424,
+            "Dependents": 6061,
+            "MigrationLastMonth": 10,
+            "LivingStandard": 13.111164494839486109987323946,
+            "Literacy": 63.150974076479810919676813742,
+            "Gdp": 10361.108364219208199760442505,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 14.193299129067408492822523979,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "PRU_aachen",
+            "RegionId": "PRU_west",
+            "Name": "Aachen",
+            "Population": 40072,
+            "Workforce": 18032,
+            "Employed": 11315,
+            "IndustrialWorkers": 2500,
+            "Artisans": 8815,
+            "Dependents": 22040,
+            "MigrationLastMonth": 36,
+            "LivingStandard": 12.831212360970550330139295209,
+            "Literacy": 63.150974076479810919676813742,
+            "Gdp": 4379.1086875999299071370701189,
+            "Industries": {
+              "farm": 0,
+              "lumber": 1,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 0,
+              "timber": 3.9991860160729953489836256792,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          }
+        ]
+      },
+      {
+        "Id": "JAP",
+        "Name": "Japan",
+        "Adjective": "Japanese",
+        "Population": 31025802,
+        "Treasury": 16755.891113295240230606284546,
+        "Debt": 0,
+        "Gdp": 270235.89676592881178989239016,
+        "LivingStandard": 12.069733014995288433070592818,
+        "Literacy": 38.720,
+        "Unrest": 20.952016685293905466708685062,
+        "DailyBalance": 88.595595480924937738250408,
+        "TaxRevenue": 210.32234548092493773825040780,
+        "Spending": 208.12675,
+        "DailyTradeBalance": 86.40,
+        "HouseholdIncome": 535.69180324066465651794029831,
+        "NeedsFulfilled": 0.7393135782544736331635450743,
+        "Prestige": 25,
+        "TaxRate": 22,
+        "Goods": {
+          "grain": 3634.4151924201281582404714721,
+          "timber": 501.80384440373841526767720184,
+          "coal": 221.92782363426738767678554021,
+          "iron": 184.04662634830664187624481882,
+          "tools": 289.59947997345986503782075054,
+          "clothes": 646.31749242814826228665480029
+        },
+        "Prices": {
+          "grain": 1.6053219162650685914702745610,
+          "timber": 1.4609546476720954417674685826,
+          "coal": 1.9597840453257589602567641966,
+          "iron": 2.9185893694181339218773414573,
+          "tools": 6.9987125241242750698358463156,
+          "clothes": 6.0857264745925223288459746602
+        },
+        "Production": {
+          "grain": 181.78779911500538796827270214,
+          "timber": 17.184856184470412583650411370,
+          "coal": 9.154229946505962137917702014,
+          "iron": 7.9152275792632140657305844286,
+          "tools": 6.4902072953037979500958873836,
+          "clothes": 35.959969285998839297186826914
+        },
+        "Consumption": {
+          "grain": 183.49970020077946827736474537,
+          "timber": 13.632133694316649417367259046,
+          "coal": 5.5556428228807386782022129306,
+          "iron": 4.3268048635358653000639249224,
+          "tools": 2.5171978500199187508030778840,
+          "clothes": 36.699940040155893655472949073
+        },
+        "Industries": {
+          "farm": 15,
+          "lumber": 4,
+          "coal_mine": 2,
+          "iron_mine": 2,
+          "toolworks": 2,
+          "textile": 5
+        },
+        "Trade": {
+          "grain": 0,
+          "timber": -1,
+          "coal": -1,
+          "iron": -1,
+          "tools": -1,
+          "clothes": 0
+        },
+        "Construction": [
+          {
+            "CityId": "JAP_nagoya",
+            "IndustryId": "coal_mine",
+            "Name": "Coal mines",
+            "DaysRemaining": 15,
+            "TotalDays": 75
+          }
+        ],
+        "Reforms": [
+          "primary_schools"
+        ],
+        "Technologies": [],
+        "ResearchId": "mechanical_tools",
+        "ResearchProgress": 50.01960,
+        "Relations": {
+          "GBR": -10,
+          "PRU": -10,
+          "FRA": -10,
+          "AUS": -10,
+          "RUS": -10,
+          "USA": -10,
+          "QNG": -10,
+          "OTT": -10,
+          "SPA": -10,
+          "POR": -10,
+          "BEL": -10
+        },
+        "DiplomaticCooldowns": {
+          "GBR": 0,
+          "PRU": 0,
+          "FRA": 0,
+          "AUS": 0,
+          "RUS": 0,
+          "USA": 0,
+          "QNG": 0,
+          "OTT": 0,
+          "SPA": 0,
+          "POR": 0,
+          "BEL": 0
+        },
+        "TradePacts": [],
+        "MobilizedAgainst": "",
+        "History": [
+          {
+            "Date": "1836-01-01T00:00:00",
+            "Gdp": 484720,
+            "Treasury": 18000,
+            "LivingStandard": 10
+          },
+          {
+            "Date": "1836-02-01T00:00:00",
+            "Gdp": 274474.28904888848793489340575,
+            "Treasury": 14181.994765065706338217034532,
+            "LivingStandard": 11.175121508515070669661675105
+          },
+          {
+            "Date": "1836-03-01T00:00:00",
+            "Gdp": 270235.89676592881178989239016,
+            "Treasury": 16755.891113295240230606284546,
+            "LivingStandard": 12.069733014995288433070592818
+          }
+        ],
+        "Regions": [
+          {
+            "Id": "JAP_east",
+            "Name": "Eastern Honsh\u016B",
+            "RuralPopulation": 9632748,
+            "UrbanPopulation": 1107887,
+            "Gdp": 144720.52217240483142357409701
+          },
+          {
+            "Id": "JAP_central",
+            "Name": "Central Honsh\u016B",
+            "RuralPopulation": 9633216,
+            "UrbanPopulation": 852179,
+            "Gdp": 98974.35592273319372295047863
+          },
+          {
+            "Id": "JAP_west",
+            "Name": "Western Japan",
+            "RuralPopulation": 9634472,
+            "UrbanPopulation": 165300,
+            "Gdp": 26541.018670790786643367814511
+          }
+        ],
+        "Cities": [
+          {
+            "Id": "JAP_edo",
+            "RegionId": "JAP_east",
+            "Name": "Edo",
+            "Population": 1052787,
+            "Workforce": 473754,
+            "Employed": 271613,
+            "IndustrialWorkers": 40000,
+            "Artisans": 231613,
+            "Dependents": 579033,
+            "MigrationLastMonth": 964,
+            "LivingStandard": 10.709493976338651059797435797,
+            "Literacy": 41.150974076479810919676813742,
+            "Gdp": 135873.51594880790254245149217,
+            "Industries": {
+              "farm": 4,
+              "lumber": 3,
+              "coal_mine": 2,
+              "iron_mine": 2,
+              "toolworks": 2,
+              "textile": 3
+            },
+            "Production": {
+              "grain": 48.476746430668103458206053903,
+              "timber": 12.888642138352809437737808527,
+              "coal": 9.154229946505962137917702014,
+              "iron": 7.9152275792632140657305844286,
+              "tools": 6.4902072953037979500958873836,
+              "clothes": 21.575981571599303578312096148
+            }
+          },
+          {
+            "Id": "JAP_sendai",
+            "RegionId": "JAP_east",
+            "Name": "Sendai",
+            "Population": 55100,
+            "Workforce": 24795,
+            "Employed": 14622,
+            "IndustrialWorkers": 2500,
+            "Artisans": 12122,
+            "Dependents": 30305,
+            "MigrationLastMonth": 50,
+            "LivingStandard": 10.722030156171266612258649162,
+            "Literacy": 41.150974076479810919676813742,
+            "Gdp": 8847.006223596928881122604837,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 12.119186607667025864551513475,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "JAP_kyoto",
+            "RegionId": "JAP_central",
+            "Name": "Ky\u014Dto",
+            "Population": 350902,
+            "Workforce": 157905,
+            "Employed": 87198,
+            "IndustrialWorkers": 10000,
+            "Artisans": 77198,
+            "Dependents": 192997,
+            "MigrationLastMonth": 321,
+            "LivingStandard": 10.693324035308890390081765806,
+            "Literacy": 41.150974076479810919676813742,
+            "Gdp": 42711.497659318744698526786839,
+            "Industries": {
+              "farm": 3,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 1
+            },
+            "Production": {
+              "grain": 36.357559823001077593654540428,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 7.1919938571997678594373653830
+            }
+          },
+          {
+            "Id": "JAP_osaka",
+            "RegionId": "JAP_central",
+            "Name": "\u014Csaka",
+            "Population": 401035,
+            "Workforce": 180465,
+            "Employed": 100727,
+            "IndustrialWorkers": 12500,
+            "Artisans": 88227,
+            "Dependents": 220570,
+            "MigrationLastMonth": 367,
+            "LivingStandard": 10.697871881583535488130669265,
+            "Literacy": 41.150974076479810919676813742,
+            "Gdp": 47415.852039817520143301086952,
+            "Industries": {
+              "farm": 3,
+              "lumber": 1,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 1
+            },
+            "Production": {
+              "grain": 36.357559823001077593654540428,
+              "timber": 4.2962140461176031459126028428,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 7.1919938571997678594373653830
+            }
+          },
+          {
+            "Id": "JAP_nagoya",
+            "RegionId": "JAP_central",
+            "Name": "Nagoya",
+            "Population": 100242,
+            "Workforce": 45108,
+            "Employed": 24553,
+            "IndustrialWorkers": 2500,
+            "Artisans": 22053,
+            "Dependents": 55134,
+            "MigrationLastMonth": 91,
+            "LivingStandard": 10.687260133112104079493192219,
+            "Literacy": 41.150974076479810919676813742,
+            "Gdp": 8847.006223596928881122604837,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 12.119186607667025864551513475,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "JAP_hiroshima",
+            "RegionId": "JAP_west",
+            "Name": "Hiroshima",
+            "Population": 55100,
+            "Workforce": 24795,
+            "Employed": 14622,
+            "IndustrialWorkers": 2500,
+            "Artisans": 12122,
+            "Dependents": 30305,
+            "MigrationLastMonth": 50,
+            "LivingStandard": 10.722030156171266612258649162,
+            "Literacy": 41.150974076479810919676813742,
+            "Gdp": 8847.006223596928881122604837,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 12.119186607667025864551513475,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "JAP_nagasaki",
+            "RegionId": "JAP_west",
+            "Name": "Nagasaki",
+            "Population": 60110,
+            "Workforce": 27049,
+            "Employed": 15724,
+            "IndustrialWorkers": 2500,
+            "Artisans": 13224,
+            "Dependents": 33061,
+            "MigrationLastMonth": 55,
+            "LivingStandard": 10.715595385907130528583456268,
+            "Literacy": 41.150974076479810919676813742,
+            "Gdp": 8847.006223596928881122604837,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 12.119186607667025864551513475,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "JAP_kagoshima",
+            "RegionId": "JAP_west",
+            "Name": "Kagoshima",
+            "Population": 50090,
+            "Workforce": 22540,
+            "Employed": 13519,
+            "IndustrialWorkers": 2500,
+            "Artisans": 11019,
+            "Dependents": 27550,
+            "MigrationLastMonth": 45,
+            "LivingStandard": 10.729733426373314574946624115,
+            "Literacy": 41.150974076479810919676813742,
+            "Gdp": 8847.006223596928881122604837,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 12.119186607667025864551513475,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          }
+        ]
+      },
+      {
+        "Id": "FRA",
+        "Name": "France",
+        "Adjective": "French",
+        "Population": 33031824,
+        "Treasury": 30506.045087989655324756630593,
+        "Debt": 0,
+        "Gdp": 319898.62835772978294910564924,
+        "LivingStandard": 12.604898551298708535330388914,
+        "Literacy": 45.720,
+        "Unrest": 12.872682496542025704371064731,
+        "DailyBalance": 113.965705525015896835668264,
+        "TaxRevenue": 245.72217052501589683566826436,
+        "Spending": 218.156465,
+        "DailyTradeBalance": 86.40,
+        "HouseholdIncome": 622.60806399688278173213651744,
+        "NeedsFulfilled": 0.8130147700665874939707208731,
+        "Prestige": 65,
+        "TaxRate": 22,
+        "Goods": {
+          "grain": 3356.6366317872764461968816649,
+          "timber": 662.43848221904182294570910650,
+          "coal": 616.57667482117711619060450311,
+          "iron": 429.34027754902897690482938659,
+          "tools": 418.69676291697336587780932749,
+          "clothes": 894.6058623569365655676434436
+        },
+        "Prices": {
+          "grain": 1.7934254282698124828240318455,
+          "timber": 1.4623876477050903589712655152,
+          "coal": 1.9318504513515544489319176396,
+          "iron": 2.4635809571177056943497512784,
+          "tools": 5.8477868626721089289596616669,
+          "clothes": 5.0237663426100577408857055187
+        },
+        "Production": {
+          "grain": 214.31299948491643923257087136,
+          "timber": 19.696340828477900232448810183,
+          "coal": 10.930211349396277395118103631,
+          "iron": 9.375854885716618129178214303,
+          "tools": 7.2717469027372260426688136670,
+          "clothes": 43.528888636047339100221847538
+        },
+        "Consumption": {
+          "grain": 214.83943266717664818786091664,
+          "timber": 15.851380175944282525964245179,
+          "coal": 6.4421391566957212124421725902,
+          "iron": 4.8478312684914840284458757780,
+          "tools": 3.0470222045233137370155293277,
+          "clothes": 42.967886533435329637572183329
+        },
+        "Industries": {
+          "farm": 16,
+          "lumber": 5,
+          "coal_mine": 5,
+          "iron_mine": 4,
+          "toolworks": 4,
+          "textile": 7
+        },
+        "Trade": {
+          "grain": 0,
+          "timber": -1,
+          "coal": -1,
+          "iron": -1,
+          "tools": -1,
+          "clothes": 0
+        },
+        "Construction": [
+          {
+            "CityId": "FRA_bordeaux",
+            "IndustryId": "coal_mine",
+            "Name": "Coal mines",
+            "DaysRemaining": 15,
+            "TotalDays": 75
+          }
+        ],
+        "Reforms": [
+          "primary_schools"
+        ],
+        "Technologies": [],
+        "ResearchId": "mechanical_tools",
+        "ResearchProgress": 54.21960,
+        "Relations": {
+          "GBR": 10,
+          "PRU": 10,
+          "JAP": -10,
+          "AUS": 10,
+          "RUS": 10,
+          "USA": 10,
+          "QNG": 10,
+          "OTT": 10,
+          "SPA": 10,
+          "POR": 10,
+          "BEL": 10
+        },
+        "DiplomaticCooldowns": {
+          "GBR": 0,
+          "PRU": 0,
+          "JAP": 0,
+          "AUS": 0,
+          "RUS": 0,
+          "USA": 0,
+          "QNG": 0,
+          "OTT": 0,
+          "SPA": 0,
+          "POR": 0,
+          "BEL": 0
+        },
+        "TradePacts": [],
+        "MobilizedAgainst": "",
+        "History": [
+          {
+            "Date": "1836-01-01T00:00:00",
+            "Gdp": 684010,
+            "Treasury": 29000,
+            "LivingStandard": 10
+          },
+          {
+            "Date": "1836-02-01T00:00:00",
+            "Gdp": 344415.48958269824327300710068,
+            "Treasury": 27043.654690872932120198289402,
+            "LivingStandard": 11.566666011073145326663523288
+          },
+          {
+            "Date": "1836-03-01T00:00:00",
+            "Gdp": 319898.62835772978294910564924,
+            "Treasury": 30506.045087989655324756630593,
+            "LivingStandard": 12.604898551298708535330388914
+          }
+        ],
+        "Regions": [
+          {
+            "Id": "FRA_north",
+            "Name": "Northern France",
+            "RuralPopulation": 10453187,
+            "UrbanPopulation": 1067917,
+            "Gdp": 225762.36633347672392092608266
+          },
+          {
+            "Id": "FRA_east",
+            "Name": "Eastern France",
+            "RuralPopulation": 10454682,
+            "UrbanPopulation": 250646,
+            "Gdp": 50820.691189856716089230171135
+          },
+          {
+            "Id": "FRA_south",
+            "Name": "Southern and Atlantic France",
+            "RuralPopulation": 10454498,
+            "UrbanPopulation": 350894,
+            "Gdp": 43315.570834396342938949395444
+          }
+        ],
+        "Cities": [
+          {
+            "Id": "FRA_paris",
+            "RegionId": "FRA_north",
+            "Name": "Paris",
+            "Population": 902497,
+            "Workforce": 406123,
+            "Employed": 271049,
+            "IndustrialWorkers": 72500,
+            "Artisans": 198549,
+            "Dependents": 496374,
+            "MigrationLastMonth": 826,
+            "LivingStandard": 10.923225529468509085693346817,
+            "Literacy": 48.150974076479810919676813742,
+            "Gdp": 206206.30513047809884095399066,
+            "Industries": {
+              "farm": 8,
+              "lumber": 4,
+              "coal_mine": 4,
+              "iron_mine": 4,
+              "toolworks": 4,
+              "textile": 5
+            },
+            "Production": {
+              "grain": 107.15649974245821961628543568,
+              "timber": 15.757072662782320185959048147,
+              "coal": 8.744169079517021916094482905,
+              "iron": 9.375854885716618129178214303,
+              "tools": 7.2717469027372260426688136670,
+              "clothes": 31.092063311462385071587033956
+            }
+          },
+          {
+            "Id": "FRA_lille",
+            "RegionId": "FRA_north",
+            "Name": "Lille",
+            "Population": 75196,
+            "Workforce": 33838,
+            "Employed": 19043,
+            "IndustrialWorkers": 2500,
+            "Artisans": 16543,
+            "Dependents": 41358,
+            "MigrationLastMonth": 68,
+            "LivingStandard": 10.843048913631595930629110033,
+            "Literacy": 48.150974076479810919676813742,
+            "Gdp": 9778.030601499312539986046005,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 13.394562467807277452035679459,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "FRA_rouen",
+            "RegionId": "FRA_north",
+            "Name": "Rouen",
+            "Population": 90224,
+            "Workforce": 40600,
+            "Employed": 22349,
+            "IndustrialWorkers": 2500,
+            "Artisans": 19849,
+            "Dependents": 49624,
+            "MigrationLastMonth": 82,
+            "LivingStandard": 10.833619808927354998117035820,
+            "Literacy": 48.150974076479810919676813742,
+            "Gdp": 9778.030601499312539986046005,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 13.394562467807277452035679459,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "FRA_lyon",
+            "RegionId": "FRA_east",
+            "Name": "Lyon",
+            "Population": 185477,
+            "Workforce": 83464,
+            "Employed": 53304,
+            "IndustrialWorkers": 12500,
+            "Artisans": 40804,
+            "Dependents": 102013,
+            "MigrationLastMonth": 169,
+            "LivingStandard": 10.901182482518541363737551667,
+            "Literacy": 48.150974076479810919676813742,
+            "Gdp": 41042.660588357403549244125130,
+            "Industries": {
+              "farm": 2,
+              "lumber": 1,
+              "coal_mine": 1,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 1
+            },
+            "Production": {
+              "grain": 26.789124935614554904071358919,
+              "timber": 3.9392681656955800464897620364,
+              "coal": 2.1860422698792554790236207260,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 6.2184126622924770143174067910
+            }
+          },
+          {
+            "Id": "FRA_strasbourg",
+            "RegionId": "FRA_east",
+            "Name": "Strasbourg",
+            "Population": 65169,
+            "Workforce": 29326,
+            "Employed": 16837,
+            "IndustrialWorkers": 2500,
+            "Artisans": 14337,
+            "Dependents": 35843,
+            "MigrationLastMonth": 59,
+            "LivingStandard": 10.851757566316237733382570762,
+            "Literacy": 48.150974076479810919676813742,
+            "Gdp": 9778.030601499312539986046005,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 13.394562467807277452035679459,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "FRA_marseille",
+            "RegionId": "FRA_south",
+            "Name": "Marseille",
+            "Population": 150394,
+            "Workforce": 67677,
+            "Employed": 38086,
+            "IndustrialWorkers": 5000,
+            "Artisans": 33086,
+            "Dependents": 82717,
+            "MigrationLastMonth": 137,
+            "LivingStandard": 10.843051655077021103417808133,
+            "Literacy": 48.150974076479810919676813742,
+            "Gdp": 23759.509631397717858977303434,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 1
+            },
+            "Production": {
+              "grain": 13.394562467807277452035679459,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 6.2184126622924770143174067910
+            }
+          },
+          {
+            "Id": "FRA_bordeaux",
+            "RegionId": "FRA_south",
+            "Name": "Bordeaux",
+            "Population": 120294,
+            "Workforce": 54132,
+            "Employed": 28964,
+            "IndustrialWorkers": 2500,
+            "Artisans": 26464,
+            "Dependents": 66162,
+            "MigrationLastMonth": 110,
+            "LivingStandard": 10.821827460697682525595891067,
+            "Literacy": 48.150974076479810919676813742,
+            "Gdp": 9778.030601499312539986046005,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 13.394562467807277452035679459,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "FRA_nantes",
+            "RegionId": "FRA_south",
+            "Name": "Nantes",
+            "Population": 80206,
+            "Workforce": 36092,
+            "Employed": 20145,
+            "IndustrialWorkers": 2500,
+            "Artisans": 17645,
+            "Dependents": 44114,
+            "MigrationLastMonth": 73,
+            "LivingStandard": 10.839513093919977953915380599,
+            "Literacy": 48.150974076479810919676813742,
+            "Gdp": 9778.030601499312539986046005,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 13.394562467807277452035679459,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          }
+        ]
+      },
+      {
+        "Id": "AUS",
+        "Name": "Austrian Empire",
+        "Adjective": "Austrian",
+        "Population": 35032485,
+        "Treasury": 27041.194491897946264743765935,
+        "Debt": 0,
+        "Gdp": 327949.78568134513978953214108,
+        "LivingStandard": 12.380647006204197782573173590,
+        "Literacy": 35.720,
+        "Unrest": 13.469107381555347146357200809,
+        "DailyBalance": 111.175805979804160427321494,
+        "TaxRevenue": 252.93546097980416042732149388,
+        "Spending": 228.159655,
+        "DailyTradeBalance": 86.40,
+        "HouseholdIncome": 641.92601636904492840338261154,
+        "NeedsFulfilled": 0.799729545524732126470239792,
+        "Prestige": 55,
+        "TaxRate": 22,
+        "Goods": {
+          "grain": 3739.1389332676298797126131015,
+          "timber": 674.84745643630200712901489042,
+          "coal": 526.36721628246326289492499235,
+          "iron": 327.54620675006799304676758606,
+          "tools": 362.48051739006554558336725270,
+          "clothes": 909.1311900384340970618383127
+        },
+        "Prices": {
+          "grain": 1.7270094960045438492441386761,
+          "timber": 1.4477219614121186242055242860,
+          "coal": 1.9400461142217882611611358543,
+          "iron": 2.4232762666261462719485042847,
+          "tools": 5.9547667918299165519048156768,
+          "clothes": 5.1957133101957337902874573128
+        },
+        "Production": {
+          "grain": 221.62422956574878177497632391,
+          "timber": 20.078124607275232932133550505,
+          "coal": 10.557962705048426211352000553,
+          "iron": 8.961664933792013835647266015,
+          "tools": 7.4024035545126515468344518708,
+          "clothes": 44.878331178846160322757976586
+        },
+        "Consumption": {
+          "grain": 224.12856205987019718390971157,
+          "timber": 16.475502980246104506272507597,
+          "coal": 6.3081813945579373975555503444,
+          "iron": 4.9349357030084343645563012472,
+          "tools": 3.1414831825192312225930583611,
+          "clothes": 44.825712411974039436781942315
+        },
+        "Industries": {
+          "farm": 17,
+          "lumber": 6,
+          "coal_mine": 4,
+          "iron_mine": 4,
+          "toolworks": 3,
+          "textile": 7
+        },
+        "Trade": {
+          "grain": 0,
+          "timber": -1,
+          "coal": -1,
+          "iron": -1,
+          "tools": -1,
+          "clothes": 0
+        },
+        "Construction": [
+          {
+            "CityId": "AUS_pest",
+            "IndustryId": "coal_mine",
+            "Name": "Coal mines",
+            "DaysRemaining": 15,
+            "TotalDays": 75
+          }
+        ],
+        "Reforms": [
+          "primary_schools"
+        ],
+        "Technologies": [],
+        "ResearchId": "mechanical_tools",
+        "ResearchProgress": 48.21960,
+        "Relations": {
+          "GBR": 10,
+          "PRU": 10,
+          "JAP": -10,
+          "FRA": 10,
+          "RUS": 10,
+          "USA": 10,
+          "QNG": 10,
+          "OTT": 10,
+          "SPA": 10,
+          "POR": 10,
+          "BEL": 10
+        },
+        "DiplomaticCooldowns": {
+          "GBR": 0,
+          "PRU": 0,
+          "JAP": 0,
+          "FRA": 0,
+          "RUS": 0,
+          "USA": 0,
+          "QNG": 0,
+          "OTT": 0,
+          "SPA": 0,
+          "POR": 0,
+          "BEL": 0
+        },
+        "TradePacts": [],
+        "MobilizedAgainst": "",
+        "History": [
+          {
+            "Date": "1836-01-01T00:00:00",
+            "Gdp": 669410,
+            "Treasury": 26000,
+            "LivingStandard": 10
+          },
+          {
+            "Date": "1836-02-01T00:00:00",
+            "Gdp": 344808.69703445059386783487032,
+            "Treasury": 23723.947927500714676504109658,
+            "LivingStandard": 11.404542243351397852824202198
+          },
+          {
+            "Date": "1836-03-01T00:00:00",
+            "Gdp": 327949.78568134513978953214108,
+            "Treasury": 27041.194491897946264743765935,
+            "LivingStandard": 12.380647006204197782573173590
+          }
+        ],
+        "Regions": [
+          {
+            "Id": "AUS_alpine",
+            "Name": "Alpine and Bohemian lands",
+            "RuralPopulation": 11369726,
+            "UrbanPopulation": 491241,
+            "Gdp": 203412.47028130650019252418514
+          },
+          {
+            "Id": "AUS_danube",
+            "Name": "Danubian lands",
+            "RuralPopulation": 11370431,
+            "UrbanPopulation": 105252,
+            "Gdp": 19033.610303881954199497966642
+          },
+          {
+            "Id": "AUS_adriatic",
+            "Name": "Adriatic and Italian lands",
+            "RuralPopulation": 11370031,
+            "UrbanPopulation": 325804,
+            "Gdp": 105503.70509615668539750998930
+          }
+        ],
+        "Cities": [
+          {
+            "Id": "AUS_vienna",
+            "RegionId": "AUS_alpine",
+            "Name": "Vienna",
+            "Population": 330885,
+            "Workforce": 148898,
+            "Employed": 120294,
+            "IndustrialWorkers": 47500,
+            "Artisans": 72794,
+            "Dependents": 181987,
+            "MigrationLastMonth": 303,
+            "LivingStandard": 10.972379875857466312051512426,
+            "Literacy": 38.150974076479810919676813742,
+            "Gdp": 150242.32153983977818641170571,
+            "Industries": {
+              "farm": 6,
+              "lumber": 3,
+              "coal_mine": 2,
+              "iron_mine": 2,
+              "toolworks": 2,
+              "textile": 4
+            },
+            "Production": {
+              "grain": 78.220316317323099449991643731,
+              "timber": 10.039062303637616466066775253,
+              "coal": 5.2789813525242131056760002770,
+              "iron": 4.4808324668960069178236330076,
+              "tools": 4.9349357030084343645563012472,
+              "clothes": 25.644760673626377327290272334
+            }
+          },
+          {
+            "Id": "AUS_prague",
+            "RegionId": "AUS_alpine",
+            "Name": "Prague",
+            "Population": 115274,
+            "Workforce": 51873,
+            "Employed": 40360,
+            "IndustrialWorkers": 15000,
+            "Artisans": 25360,
+            "Dependents": 63401,
+            "MigrationLastMonth": 105,
+            "LivingStandard": 10.949480944744091659176994684,
+            "Literacy": 38.150974076479810919676813742,
+            "Gdp": 43653.343589525744906363496111,
+            "Industries": {
+              "farm": 2,
+              "lumber": 1,
+              "coal_mine": 1,
+              "iron_mine": 1,
+              "toolworks": 0,
+              "textile": 1
+            },
+            "Production": {
+              "grain": 26.073438772441033149997214578,
+              "timber": 3.3463541012125388220222584172,
+              "coal": 2.6394906762621065528380001380,
+              "iron": 2.2404162334480034589118165038,
+              "tools": 0,
+              "clothes": 6.4111901684065943318225680840
+            }
+          },
+          {
+            "Id": "AUS_graz",
+            "RegionId": "AUS_alpine",
+            "Name": "Graz",
+            "Population": 45082,
+            "Workforce": 20286,
+            "Employed": 12418,
+            "IndustrialWorkers": 2500,
+            "Artisans": 9918,
+            "Dependents": 24796,
+            "MigrationLastMonth": 41,
+            "LivingStandard": 10.822357184991884790382312552,
+            "Literacy": 38.150974076479810919676813742,
+            "Gdp": 9516.805151940977099748983321,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 13.036719386220516574998607289,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "AUS_pest",
+            "RegionId": "AUS_danube",
+            "Name": "Pest",
+            "Population": 70188,
+            "Workforce": 31584,
+            "Employed": 17941,
+            "IndustrialWorkers": 2500,
+            "Artisans": 15441,
+            "Dependents": 38604,
+            "MigrationLastMonth": 64,
+            "LivingStandard": 10.788612352014324579519487536,
+            "Literacy": 38.150974076479810919676813742,
+            "Gdp": 9516.805151940977099748983321,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 13.036719386220516574998607289,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "AUS_pressburg",
+            "RegionId": "AUS_danube",
+            "Name": "Pressburg",
+            "Population": 35064,
+            "Workforce": 15778,
+            "Employed": 10214,
+            "IndustrialWorkers": 2500,
+            "Artisans": 7714,
+            "Dependents": 19286,
+            "MigrationLastMonth": 32,
+            "LivingStandard": 10.849321936574931236259311345,
+            "Literacy": 38.150974076479810919676813742,
+            "Gdp": 9516.805151940977099748983321,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 13.036719386220516574998607289,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "AUS_trieste",
+            "RegionId": "AUS_adriatic",
+            "Name": "Trieste",
+            "Population": 65149,
+            "Workforce": 29317,
+            "Employed": 16832,
+            "IndustrialWorkers": 2500,
+            "Artisans": 14332,
+            "Dependents": 35832,
+            "MigrationLastMonth": 59,
+            "LivingStandard": 10.793283258088053981108241416,
+            "Literacy": 38.150974076479810919676813742,
+            "Gdp": 9516.805151940977099748983321,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 13.036719386220516574998607289,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "AUS_venice",
+            "RegionId": "AUS_adriatic",
+            "Name": "Venice",
+            "Population": 110261,
+            "Workforce": 49617,
+            "Employed": 34257,
+            "IndustrialWorkers": 10000,
+            "Artisans": 24257,
+            "Dependents": 60644,
+            "MigrationLastMonth": 100,
+            "LivingStandard": 10.882359113822024188476694212,
+            "Literacy": 38.150974076479810919676813742,
+            "Gdp": 37112.788019355070905282201689,
+            "Industries": {
+              "farm": 2,
+              "lumber": 1,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 1
+            },
+            "Production": {
+              "grain": 26.073438772441033149997214578,
+              "timber": 3.3463541012125388220222584172,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 6.4111901684065943318225680840
+            }
+          },
+          {
+            "Id": "AUS_milan",
+            "RegionId": "AUS_adriatic",
+            "Name": "Milan",
+            "Population": 150394,
+            "Workforce": 67677,
+            "Employed": 53086,
+            "IndustrialWorkers": 20000,
+            "Artisans": 33086,
+            "Dependents": 82717,
+            "MigrationLastMonth": 137,
+            "LivingStandard": 10.954376937366266616331019790,
+            "Literacy": 38.150974076479810919676813742,
+            "Gdp": 58874.111924860637392478804289,
+            "Industries": {
+              "farm": 3,
+              "lumber": 1,
+              "coal_mine": 1,
+              "iron_mine": 1,
+              "toolworks": 1,
+              "textile": 1
+            },
+            "Production": {
+              "grain": 39.110158158661549724995821866,
+              "timber": 3.3463541012125388220222584172,
+              "coal": 2.6394906762621065528380001380,
+              "iron": 2.2404162334480034589118165038,
+              "tools": 2.4674678515042171822781506236,
+              "clothes": 6.4111901684065943318225680840
+            }
+          }
+        ]
+      },
+      {
+        "Id": "RUS",
+        "Name": "Russian Empire",
+        "Adjective": "Russian",
+        "Population": 60053655,
+        "Treasury": 41862.600730494564407898083001,
+        "Debt": 0,
+        "Gdp": 521239.34088411329891601828154,
+        "LivingStandard": 12.052014769776665470833523138,
+        "Literacy": 15.720,
+        "Unrest": 14.100766603045573880058161676,
+        "DailyBalance": 138.997467692473445183670464,
+        "TaxRevenue": 405.86109769247344518367046355,
+        "Spending": 353.263630,
+        "DailyTradeBalance": 86.40,
+        "HouseholdIncome": 1033.9143168353489413627825679,
+        "NeedsFulfilled": 0.7780016480281117840158655547,
+        "Prestige": 65,
+        "TaxRate": 22,
+        "Goods": {
+          "grain": 6694.9243504471416822573350986,
+          "timber": 1093.4346890981704849888737498,
+          "coal": 723.26407398775404892461084608,
+          "iron": 448.44632019452536066904514705,
+          "tools": 372.56214395055344298158629019,
+          "clothes": 1618.4202203294599519768664581
+        },
+        "Prices": {
+          "grain": 1.6705109889859325741916534582,
+          "timber": 1.4480518032163263264694308324,
+          "coal": 1.9287368359685490969618387291,
+          "iron": 2.4295893671379667591764685819,
+          "tools": 5.9023802058275193488312218009,
+          "clothes": 4.9872609336726467031742149328
+        },
+        "Production": {
+          "grain": 368.45150732987329203676720935,
+          "timber": 29.893453686319976564409480428,
+          "coal": 11.989144126209981389521826690,
+          "iron": 10.452257633723166972155033114,
+          "tools": 9.382228327971197439425695937,
+          "clothes": 74.634598192285224623663863964
+        },
+        "Consumption": {
+          "grain": 373.76895837264509810300763047,
+          "timber": 26.487969340947384444579875551,
+          "coal": 7.6069484285384230869226271232,
+          "iron": 6.2548188853141316262837972912,
+          "tools": 5.2244218734599657236564704775,
+          "clothes": 74.753791674529019620601526095
+        },
+        "Industries": {
+          "farm": 29,
+          "lumber": 9,
+          "coal_mine": 6,
+          "iron_mine": 5,
+          "toolworks": 4,
+          "textile": 12
+        },
+        "Trade": {
+          "grain": 0,
+          "timber": -1,
+          "coal": -1,
+          "iron": -1,
+          "tools": -1,
+          "clothes": 0
+        },
+        "Construction": [
+          {
+            "CityId": "RUS_kiev",
+            "IndustryId": "coal_mine",
+            "Name": "Coal mines",
+            "DaysRemaining": 15,
+            "TotalDays": 75
+          }
+        ],
+        "Reforms": [
+          "primary_schools"
+        ],
+        "Technologies": [],
+        "ResearchId": "mechanical_tools",
+        "ResearchProgress": 36.21960,
+        "Relations": {
+          "GBR": 10,
+          "PRU": 10,
+          "JAP": -10,
+          "FRA": 10,
+          "AUS": 10,
+          "USA": 10,
+          "QNG": 10,
+          "OTT": 10,
+          "SPA": 10,
+          "POR": 10,
+          "BEL": 10
+        },
+        "DiplomaticCooldowns": {
+          "GBR": 0,
+          "PRU": 0,
+          "JAP": 0,
+          "FRA": 0,
+          "AUS": 0,
+          "USA": 0,
+          "QNG": 0,
+          "OTT": 0,
+          "SPA": 0,
+          "POR": 0,
+          "BEL": 0
+        },
+        "TradePacts": [],
+        "MobilizedAgainst": "",
+        "History": [
+          {
+            "Date": "1836-01-01T00:00:00",
+            "Gdp": 1062515,
+            "Treasury": 38000,
+            "LivingStandard": 10
+          },
+          {
+            "Date": "1836-02-01T00:00:00",
+            "Gdp": 552961.26956192363756148007328,
+            "Treasury": 37660.818259825857316716748835,
+            "LivingStandard": 11.194061092638515563702257332
+          },
+          {
+            "Date": "1836-03-01T00:00:00",
+            "Gdp": 521239.34088411329891601828154,
+            "Treasury": 41862.600730494564407898083001,
+            "LivingStandard": 12.052014769776665470833523138
+          }
+        ],
+        "Regions": [
+          {
+            "Id": "RUS_baltic",
+            "Name": "Baltic provinces",
+            "RuralPopulation": 19661685,
+            "UrbanPopulation": 531353,
+            "Gdp": 259054.30629825678514416667877
+          },
+          {
+            "Id": "RUS_central",
+            "Name": "Central Russia",
+            "RuralPopulation": 19661887,
+            "UrbanPopulation": 421062,
+            "Gdp": 220376.55728896122932645570800
+          },
+          {
+            "Id": "RUS_south",
+            "Name": "Southern provinces",
+            "RuralPopulation": 19662446,
+            "UrbanPopulation": 115222,
+            "Gdp": 41808.477296895284445395894776
+          }
+        ],
+        "Cities": [
+          {
+            "Id": "RUS_petersburg",
+            "RegionId": "RUS_baltic",
+            "Name": "Saint Petersburg",
+            "Population": 451195,
+            "Workforce": 203037,
+            "Employed": 174262,
+            "IndustrialWorkers": 75000,
+            "Artisans": 99262,
+            "Dependents": 248158,
+            "MigrationLastMonth": 413,
+            "LivingStandard": 10.931684604030721974080483757,
+            "Literacy": 18.150974076479810919676813742,
+            "Gdp": 231229.86488265600895242460331,
+            "Industries": {
+              "farm": 11,
+              "lumber": 5,
+              "coal_mine": 3,
+              "iron_mine": 3,
+              "toolworks": 2,
+              "textile": 6
+            },
+            "Production": {
+              "grain": 139.75746829753814525532549320,
+              "timber": 16.607474270177764758005266904,
+              "coal": 5.9945720631049906947609133450,
+              "iron": 6.2713545802339001832930198685,
+              "tools": 4.6911141639855987197128479684,
+              "clothes": 37.317299096142612311831931982
+            }
+          },
+          {
+            "Id": "RUS_riga",
+            "RegionId": "RUS_baltic",
+            "Name": "Riga",
+            "Population": 65132,
+            "Workforce": 29309,
+            "Employed": 19329,
+            "IndustrialWorkers": 5000,
+            "Artisans": 14329,
+            "Dependents": 35823,
+            "MigrationLastMonth": 59,
+            "LivingStandard": 10.779341653304074009956443935,
+            "Literacy": 18.150974076479810919676813742,
+            "Gdp": 18549.627610400517461161383643,
+            "Industries": {
+              "farm": 2,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 25.410448781370571864604635127,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "RUS_reval",
+            "RegionId": "RUS_baltic",
+            "Name": "Reval",
+            "Population": 15026,
+            "Workforce": 6761,
+            "Employed": 5805,
+            "IndustrialWorkers": 2500,
+            "Artisans": 3305,
+            "Dependents": 8265,
+            "MigrationLastMonth": 13,
+            "LivingStandard": 10.931813723083868557152646458,
+            "Literacy": 18.150974076479810919676813742,
+            "Gdp": 9274.813805200258730580691821,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 12.705224390685285932302317563,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "RUS_moscow",
+            "RegionId": "RUS_central",
+            "Name": "Moscow",
+            "Population": 350936,
+            "Workforce": 157921,
+            "Employed": 142205,
+            "IndustrialWorkers": 65000,
+            "Artisans": 77205,
+            "Dependents": 193015,
+            "MigrationLastMonth": 321,
+            "LivingStandard": 10.964025687815621485756539249,
+            "Literacy": 18.150974076479810919676813742,
+            "Gdp": 201826.92967856071186529432436,
+            "Industries": {
+              "farm": 10,
+              "lumber": 4,
+              "coal_mine": 3,
+              "iron_mine": 2,
+              "toolworks": 2,
+              "textile": 5
+            },
+            "Production": {
+              "grain": 127.05224390685285932302317564,
+              "timber": 13.285979416142211806404213524,
+              "coal": 5.9945720631049906947609133450,
+              "iron": 4.1809030534892667888620132459,
+              "tools": 4.6911141639855987197128479684,
+              "clothes": 31.097749246785510259859943318
+            }
+          },
+          {
+            "Id": "RUS_nizhny",
+            "RegionId": "RUS_central",
+            "Name": "Nizhny Novgorod",
+            "Population": 30054,
+            "Workforce": 13524,
+            "Employed": 9111,
+            "IndustrialWorkers": 2500,
+            "Artisans": 6611,
+            "Dependents": 16530,
+            "MigrationLastMonth": 27,
+            "LivingStandard": 10.790226698811679435613670060,
+            "Literacy": 18.150974076479810919676813742,
+            "Gdp": 9274.813805200258730580691821,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 12.705224390685285932302317563,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "RUS_kazan",
+            "RegionId": "RUS_central",
+            "Name": "Kazan",
+            "Population": 40072,
+            "Workforce": 18032,
+            "Employed": 11315,
+            "IndustrialWorkers": 2500,
+            "Artisans": 8815,
+            "Dependents": 22040,
+            "MigrationLastMonth": 36,
+            "LivingStandard": 10.754843151573479032784382694,
+            "Literacy": 18.150974076479810919676813742,
+            "Gdp": 9274.813805200258730580691821,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 12.705224390685285932302317563,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "RUS_kiev",
+            "RegionId": "RUS_south",
+            "Name": "Kiev",
+            "Population": 50090,
+            "Workforce": 22540,
+            "Employed": 13519,
+            "IndustrialWorkers": 2500,
+            "Artisans": 11019,
+            "Dependents": 27550,
+            "MigrationLastMonth": 45,
+            "LivingStandard": 10.733613023230558791086810280,
+            "Literacy": 18.150974076479810919676813742,
+            "Gdp": 9274.813805200258730580691821,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 12.705224390685285932302317563,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "RUS_odessa",
+            "RegionId": "RUS_south",
+            "Name": "Odessa",
+            "Population": 65132,
+            "Workforce": 29309,
+            "Employed": 21829,
+            "IndustrialWorkers": 7500,
+            "Artisans": 14329,
+            "Dependents": 35823,
+            "MigrationLastMonth": 59,
+            "LivingStandard": 10.844669680223688278071834003,
+            "Literacy": 18.150974076479810919676813742,
+            "Gdp": 32533.663491695025714815202955,
+            "Industries": {
+              "farm": 2,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 1
+            },
+            "Production": {
+              "grain": 25.410448781370571864604635127,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 6.2195498493571020519719886640
+            }
+          }
+        ]
+      },
+      {
+        "Id": "USA",
+        "Name": "United States",
+        "Adjective": "American",
+        "Population": 15017346,
+        "Treasury": 21746.858684312662842857570105,
+        "Debt": 0,
+        "Gdp": 193643.25852480423937791648580,
+        "LivingStandard": 13.596811106434135251011732036,
+        "Literacy": 65.720,
+        "Unrest": 9.275135515943714882821217614,
+        "DailyBalance": 102.676636201456460203345083,
+        "TaxRevenue": 144.36189120145646020334508298,
+        "Spending": 128.085255,
+        "DailyTradeBalance": 86.40,
+        "HouseholdIncome": 361.35107214329850165268189803,
+        "NeedsFulfilled": 1,
+        "Prestige": 40,
+        "TaxRate": 22,
+        "Goods": {
+          "grain": 1239.0223088470254697434560021,
+          "timber": 388.82971992343057642932027584,
+          "coal": 406.09671657716874525747098986,
+          "iron": 298.39359203875840701054187619,
+          "tools": 402.57152142909828143410729532,
+          "clothes": 426.79365182102764110032036268
+        },
+        "Prices": {
+          "grain": 1.9696722682358093731037607524,
+          "timber": 1.4460863668772213414869115261,
+          "coal": 1.9538423106331805520358091257,
+          "iron": 2.4698151095087818899107021526,
+          "tools": 5.8975573499931299524097756938,
+          "clothes": 4.6620218417659793528188444866
+        },
+        "Production": {
+          "grain": 118.15537085899325310481137335,
+          "timber": 13.418524507929390119537575416,
+          "coal": 9.917677390112014224431876952,
+          "iron": 8.299351567690115190335055101,
+          "tools": 6.0764245091083218308929946514,
+          "clothes": 24.113495244976591620080123984
+        },
+        "Consumption": {
+          "grain": 120.136408,
+          "timber": 9.534000336369440610297664884,
+          "coal": 5.5823397939509185490126884986,
+          "iron": 4.0509496727388812205953297676,
+          "tools": 1.6879446671483614134056086788,
+          "clothes": 24.0272816
+        },
+        "Industries": {
+          "farm": 8,
+          "lumber": 4,
+          "coal_mine": 3,
+          "iron_mine": 3,
+          "toolworks": 3,
+          "textile": 4
+        },
+        "Trade": {
+          "grain": 0,
+          "timber": -1,
+          "coal": -1,
+          "iron": -1,
+          "tools": -1,
+          "clothes": 0
+        },
+        "Construction": [
+          {
+            "CityId": "USA_boston",
+            "IndustryId": "coal_mine",
+            "Name": "Coal mines",
+            "DaysRemaining": 15,
+            "TotalDays": 75
+          }
+        ],
+        "Reforms": [
+          "primary_schools"
+        ],
+        "Technologies": [],
+        "ResearchId": "mechanical_tools",
+        "ResearchProgress": 66.21960,
+        "Relations": {
+          "GBR": 10,
+          "PRU": 10,
+          "JAP": -10,
+          "FRA": 10,
+          "AUS": 10,
+          "RUS": 10,
+          "QNG": 10,
+          "OTT": 10,
+          "SPA": 10,
+          "POR": 10,
+          "BEL": 10
+        },
+        "DiplomaticCooldowns": {
+          "GBR": 0,
+          "PRU": 0,
+          "JAP": 0,
+          "FRA": 0,
+          "AUS": 0,
+          "RUS": 0,
+          "QNG": 0,
+          "OTT": 0,
+          "SPA": 0,
+          "POR": 0,
+          "BEL": 0
+        },
+        "TradePacts": [],
+        "MobilizedAgainst": "",
+        "History": [
+          {
+            "Date": "1836-01-01T00:00:00",
+            "Gdp": 420845,
+            "Treasury": 22000,
+            "LivingStandard": 10
+          },
+          {
+            "Date": "1836-02-01T00:00:00",
+            "Gdp": 198838.58965366126853585234934,
+            "Treasury": 18741.934633042019768814178644,
+            "LivingStandard": 12.087355858347333227353329577
+          },
+          {
+            "Date": "1836-03-01T00:00:00",
+            "Gdp": 193643.25852480423937791648580,
+            "Treasury": 21746.858684312662842857570105,
+            "LivingStandard": 13.596811106434135251011732036
+          }
+        ],
+        "Regions": [
+          {
+            "Id": "USA_northeast",
+            "Name": "Atlantic states and federal district",
+            "RuralPopulation": 4761864,
+            "UrbanPopulation": 576592,
+            "Gdp": 156471.62275563365608458419222
+          },
+          {
+            "Id": "USA_south",
+            "Name": "Southern states",
+            "RuralPopulation": 4762723,
+            "UrbanPopulation": 105252,
+            "Gdp": 21563.355181766268691628075636
+          },
+          {
+            "Id": "USA_interior",
+            "Name": "Interior states",
+            "RuralPopulation": 4762829,
+            "UrbanPopulation": 48086,
+            "Gdp": 15608.280587404314601704217935
+          }
+        ],
+        "Cities": [
+          {
+            "Id": "USA_washington",
+            "RegionId": "USA_northeast",
+            "Name": "Washington",
+            "Population": 20036,
+            "Workforce": 9016,
+            "Employed": 6907,
+            "IndustrialWorkers": 2500,
+            "Artisans": 4407,
+            "Dependents": 11020,
+            "MigrationLastMonth": 18,
+            "LivingStandard": 11.205656492339666990181338956,
+            "Literacy": 68.150974076479810919676813742,
+            "Gdp": 10781.677590883134345814037818,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 14.769421357374156638101421668,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "USA_newyork",
+            "RegionId": "USA_northeast",
+            "Name": "New York",
+            "Population": 280813,
+            "Workforce": 126365,
+            "Employed": 86778,
+            "IndustrialWorkers": 25000,
+            "Artisans": 61778,
+            "Dependents": 154448,
+            "MigrationLastMonth": 257,
+            "LivingStandard": 11.144936035361117747748584859,
+            "Literacy": 68.150974076479810919676813742,
+            "Gdp": 66063.288618690055367613013890,
+            "Industries": {
+              "farm": 1,
+              "lumber": 2,
+              "coal_mine": 1,
+              "iron_mine": 2,
+              "toolworks": 2,
+              "textile": 2
+            },
+            "Production": {
+              "grain": 14.769421357374156638101421668,
+              "timber": 6.7092622539646950597687877080,
+              "coal": 3.3058924633706714081439589840,
+              "iron": 5.5329010451267434602233700677,
+              "tools": 4.0509496727388812205953297676,
+              "clothes": 12.056747622488295810040061992
+            }
+          },
+          {
+            "Id": "USA_philadelphia",
+            "RegionId": "USA_northeast",
+            "Name": "Philadelphia",
+            "Population": 190528,
+            "Workforce": 85737,
+            "Employed": 64416,
+            "IndustrialWorkers": 22500,
+            "Artisans": 41916,
+            "Dependents": 104791,
+            "MigrationLastMonth": 174,
+            "LivingStandard": 11.194413619151300095641055746,
+            "Literacy": 68.150974076479810919676813742,
+            "Gdp": 68844.978955177332025343102690,
+            "Industries": {
+              "farm": 2,
+              "lumber": 2,
+              "coal_mine": 1,
+              "iron_mine": 1,
+              "toolworks": 1,
+              "textile": 2
+            },
+            "Production": {
+              "grain": 29.538842714748313276202843335,
+              "timber": 6.7092622539646950597687877080,
+              "coal": 3.3058924633706714081439589840,
+              "iron": 2.7664505225633717301116850335,
+              "tools": 2.0254748363694406102976648838,
+              "clothes": 12.056747622488295810040061992
+            }
+          },
+          {
+            "Id": "USA_boston",
+            "RegionId": "USA_northeast",
+            "Name": "Boston",
+            "Population": 85215,
+            "Workforce": 38346,
+            "Employed": 21247,
+            "IndustrialWorkers": 2500,
+            "Artisans": 18747,
+            "Dependents": 46869,
+            "MigrationLastMonth": 78,
+            "LivingStandard": 11.043290592478990820531621341,
+            "Literacy": 68.150974076479810919676813742,
+            "Gdp": 10781.677590883134345814037818,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 14.769421357374156638101421668,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "USA_charleston",
+            "RegionId": "USA_south",
+            "Name": "Charleston",
+            "Population": 35064,
+            "Workforce": 15778,
+            "Employed": 10214,
+            "IndustrialWorkers": 2500,
+            "Artisans": 7714,
+            "Dependents": 19286,
+            "MigrationLastMonth": 32,
+            "LivingStandard": 11.114696591034173579652109330,
+            "Literacy": 68.150974076479810919676813742,
+            "Gdp": 10781.677590883134345814037818,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 14.769421357374156638101421668,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "USA_neworleans",
+            "RegionId": "USA_south",
+            "Name": "New Orleans",
+            "Population": 70188,
+            "Workforce": 31584,
+            "Employed": 17941,
+            "IndustrialWorkers": 2500,
+            "Artisans": 15441,
+            "Dependents": 38604,
+            "MigrationLastMonth": 64,
+            "LivingStandard": 11.053987006473566922912285526,
+            "Literacy": 68.150974076479810919676813742,
+            "Gdp": 10781.677590883134345814037818,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 14.769421357374156638101421668,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "USA_cincinnati",
+            "RegionId": "USA_interior",
+            "Name": "Cincinnati",
+            "Population": 35064,
+            "Workforce": 15778,
+            "Employed": 10214,
+            "IndustrialWorkers": 2500,
+            "Artisans": 7714,
+            "Dependents": 19286,
+            "MigrationLastMonth": 32,
+            "LivingStandard": 11.114696591034173579652109330,
+            "Literacy": 68.150974076479810919676813742,
+            "Gdp": 4826.6029965211802558901801166,
+            "Industries": {
+              "farm": 0,
+              "lumber": 0,
+              "coal_mine": 1,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 0,
+              "timber": 0,
+              "coal": 3.3058924633706714081439589840,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "USA_stlouis",
+            "RegionId": "USA_interior",
+            "Name": "Saint Louis",
+            "Population": 13022,
+            "Workforce": 5859,
+            "Employed": 5364,
+            "IndustrialWorkers": 2500,
+            "Artisans": 2864,
+            "Dependents": 7163,
+            "MigrationLastMonth": 11,
+            "LivingStandard": 11.320078973456939950620714859,
+            "Literacy": 68.150974076479810919676813742,
+            "Gdp": 10781.677590883134345814037818,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 14.769421357374156638101421668,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          }
+        ]
+      },
+      {
+        "Id": "QNG",
+        "Name": "Qing Empire",
+        "Adjective": "Qing",
+        "Population": 400300567,
+        "Treasury": 151521.02447226900036509504105,
+        "Debt": 0,
+        "Gdp": 2837592.4155441700961476805530,
+        "LivingStandard": 11.545287596654937435345445864,
+        "Literacy": 23.720,
+        "Unrest": 19.357146510736920954734180858,
+        "DailyBalance": 745.24379968183204625414586,
+        "TaxRevenue": 2799.7198796818320462541458580,
+        "Spending": 2054.476080,
+        "DailyTradeBalance": 0.0,
+        "HouseholdIncome": 5331.810652967764887345995689,
+        "NeedsFulfilled": 0.6691763829010241327197534523,
+        "Prestige": 55,
+        "TaxRate": 29,
+        "Goods": {
+          "grain": 53326.923444256333095909353748,
+          "timber": 6600.7954020131059993192747778,
+          "coal": 3485.8058766747886368800842351,
+          "iron": 2318.8329711323353419736156302,
+          "tools": 1383.1186150769333627166136677,
+          "clothes": 11269.872513704422074184028502
+        },
+        "Prices": {
+          "grain": 1.4378863434738606576244941140,
+          "timber": 1.4557173146359786628165974048,
+          "coal": 1.9320447660694329706686196984,
+          "iron": 2.4287873169030653125055367330,
+          "tools": 5.8460421400646070854358993858,
+          "clothes": 4.7458806958024546268928542085
+        },
+        "Production": {
+          "grain": 2139.3644115699094075464910088,
+          "timber": 146.29250476584200942061794134,
+          "coal": 30.393690246274736415743517853,
+          "iron": 27.444197209936051702147543413,
+          "tools": 32.367435566440788322045359786,
+          "clothes": 428.55148509234996410288587771
+        },
+        "Consumption": {
+          "grain": 2142.9448378837132946261310052,
+          "timber": 144.72319755654567702148164109,
+          "coal": 22.550943993071903979697400440,
+          "iron": 21.578290377627192214696906524,
+          "tools": 29.998603956464497487202011439,
+          "clothes": 428.58896757674265892522620105
+        },
+        "Industries": {
+          "farm": 191,
+          "lumber": 42,
+          "coal_mine": 25,
+          "iron_mine": 22,
+          "toolworks": 18,
+          "textile": 72
+        },
+        "Trade": {
+          "grain": 0,
+          "timber": 0,
+          "coal": 0,
+          "iron": 0,
+          "tools": 1,
+          "clothes": 0
+        },
+        "Construction": [
+          {
+            "CityId": "QNG_canton",
+            "IndustryId": "textile",
+            "Name": "Textile mills",
+            "DaysRemaining": 80,
+            "TotalDays": 80
+          }
+        ],
+        "Reforms": [
+          "primary_schools"
+        ],
+        "Technologies": [],
+        "ResearchId": "mechanical_tools",
+        "ResearchProgress": 39.21960,
+        "Relations": {
+          "GBR": 25,
+          "PRU": 10,
+          "JAP": -10,
+          "FRA": 10,
+          "AUS": 10,
+          "RUS": 10,
+          "USA": 10,
+          "OTT": 10,
+          "SPA": 10,
+          "POR": 10,
+          "BEL": 10
+        },
+        "DiplomaticCooldowns": {
+          "GBR": 30,
+          "PRU": 0,
+          "JAP": 0,
+          "FRA": 0,
+          "AUS": 0,
+          "RUS": 0,
+          "USA": 0,
+          "OTT": 0,
+          "SPA": 0,
+          "POR": 0,
+          "BEL": 0
+        },
+        "TradePacts": [],
+        "MobilizedAgainst": "",
+        "History": [
+          {
+            "Date": "1836-01-01T00:00:00",
+            "Gdp": 6007170,
+            "Treasury": 90000,
+            "LivingStandard": 10
+          },
+          {
+            "Date": "1836-02-01T00:00:00",
+            "Gdp": 3163203.0772025078320279463570,
+            "Treasury": 131500.66420668133798859973994,
+            "LivingStandard": 10.862720953924988028752901238
+          },
+          {
+            "Date": "1836-03-01T00:00:00",
+            "Gdp": 2837592.4155441700961476805530,
+            "Treasury": 155621.02447226900036509504105,
+            "LivingStandard": 11.545287596654937435345445864
+          }
+        ],
+        "Regions": [
+          {
+            "Id": "QNG_north",
+            "Name": "Northern China",
+            "RuralPopulation": 131912582,
+            "UrbanPopulation": 1754433,
+            "Gdp": 1091171.8755693233102686429114
+          },
+          {
+            "Id": "QNG_yangtze",
+            "Name": "Yangtze basin",
+            "RuralPopulation": 131912762,
+            "UrbanPopulation": 1654195,
+            "Gdp": 1034845.3759354966126971445885
+          },
+          {
+            "Id": "QNG_south",
+            "Name": "Southern China",
+            "RuralPopulation": 131913680,
+            "UrbanPopulation": 1152915,
+            "Gdp": 711575.16403935017318189305319
+          }
+        ],
+        "Cities": [
+          {
+            "Id": "QNG_beijing",
+            "RegionId": "QNG_north",
+            "Name": "Beijing",
+            "Population": 1102818,
+            "Workforce": 496268,
+            "Employed": 475119,
+            "IndustrialWorkers": 232500,
+            "Artisans": 242619,
+            "Dependents": 606550,
+            "MigrationLastMonth": 1009,
+            "LivingStandard": 10.883260070371702599370300332,
+            "Literacy": 23.150974076479810919676813742,
+            "Gdp": 707555.35354251947149041290750,
+            "Industries": {
+              "farm": 47,
+              "lumber": 11,
+              "coal_mine": 6,
+              "iron_mine": 6,
+              "toolworks": 5,
+              "textile": 18
+            },
+            "Production": {
+              "grain": 526.44045729730755054808941061,
+              "timber": 38.314703629149097705399937017,
+              "coal": 7.2944856591059367397784442850,
+              "iron": 7.4847810572552868278584209312,
+              "tools": 8.990954324011330089457044385,
+              "clothes": 107.13787127308749102572146942
+            }
+          },
+          {
+            "Id": "QNG_tianjin",
+            "RegionId": "QNG_north",
+            "Name": "Tianjin",
+            "Population": 350881,
+            "Workforce": 157896,
+            "Employed": 144693,
+            "IndustrialWorkers": 67500,
+            "Artisans": 77193,
+            "Dependents": 192985,
+            "MigrationLastMonth": 321,
+            "LivingStandard": 10.851841178186669172716025719,
+            "Literacy": 23.150974076479810919676813742,
+            "Gdp": 203527.44502520430943857297579,
+            "Industries": {
+              "farm": 14,
+              "lumber": 3,
+              "coal_mine": 2,
+              "iron_mine": 2,
+              "toolworks": 1,
+              "textile": 5
+            },
+            "Production": {
+              "grain": 156.81205110983629165262237763,
+              "timber": 10.449464626131572101472710096,
+              "coal": 2.4314952197019789132594814280,
+              "iron": 2.4949270190850956092861403104,
+              "tools": 1.7981908648022660178914088768,
+              "clothes": 29.760519798079858618255963729
+            }
+          },
+          {
+            "Id": "QNG_xian",
+            "RegionId": "QNG_north",
+            "Name": "Xi\u0027an",
+            "Population": 300734,
+            "Workforce": 135330,
+            "Employed": 121161,
+            "IndustrialWorkers": 55000,
+            "Artisans": 66161,
+            "Dependents": 165404,
+            "MigrationLastMonth": 275,
+            "LivingStandard": 10.835680967809484209206261919,
+            "Literacy": 23.150974076479810919676813742,
+            "Gdp": 180089.07700159952933965702807,
+            "Industries": {
+              "farm": 12,
+              "lumber": 2,
+              "coal_mine": 1,
+              "iron_mine": 1,
+              "toolworks": 1,
+              "textile": 5
+            },
+            "Production": {
+              "grain": 134.41032952271682141653346654,
+              "timber": 6.9663097507543814009818067304,
+              "coal": 1.2157476098509894566297407140,
+              "iron": 1.2474635095425478046430701552,
+              "tools": 1.7981908648022660178914088768,
+              "clothes": 29.760519798079858618255963729
+            }
+          },
+          {
+            "Id": "QNG_nanjing",
+            "RegionId": "QNG_yangtze",
+            "Name": "Nanjing",
+            "Population": 501274,
+            "Workforce": 225573,
+            "Employed": 210280,
+            "IndustrialWorkers": 100000,
+            "Artisans": 110280,
+            "Dependents": 275701,
+            "MigrationLastMonth": 459,
+            "LivingStandard": 10.863965714891827645741686302,
+            "Literacy": 23.150974076479810919676813742,
+            "Gdp": 310657.83929008458173056143643,
+            "Industries": {
+              "farm": 21,
+              "lumber": 4,
+              "coal_mine": 3,
+              "iron_mine": 2,
+              "toolworks": 2,
+              "textile": 8
+            },
+            "Production": {
+              "grain": 235.21807666475443747893356644,
+              "timber": 13.932619501508762801963613461,
+              "coal": 3.6472428295529683698892221420,
+              "iron": 2.4949270190850956092861403104,
+              "tools": 3.5963817296045320357828177542,
+              "clothes": 47.616831676927773789209541966
+            }
+          },
+          {
+            "Id": "QNG_suzhou",
+            "RegionId": "QNG_yangtze",
+            "Name": "Suzhou",
+            "Population": 651647,
+            "Workforce": 293241,
+            "Employed": 278362,
+            "IndustrialWorkers": 135000,
+            "Artisans": 143362,
+            "Dependents": 358406,
+            "MigrationLastMonth": 596,
+            "LivingStandard": 10.872437911236857253888906006,
+            "Literacy": 23.150974076479810919676813742,
+            "Gdp": 409715.64276678942541898417645,
+            "Industries": {
+              "farm": 28,
+              "lumber": 6,
+              "coal_mine": 4,
+              "iron_mine": 3,
+              "toolworks": 3,
+              "textile": 10
+            },
+            "Production": {
+              "grain": 313.62410221967258330524475524,
+              "timber": 20.898929252263144202945420191,
+              "coal": 4.8629904394039578265189628570,
+              "iron": 3.7423905286276434139292104656,
+              "tools": 5.3945725944067980536742266310,
+              "clothes": 59.521039596159717236511927458
+            }
+          },
+          {
+            "Id": "QNG_hangzhou",
+            "RegionId": "QNG_yangtze",
+            "Name": "Hangzhou",
+            "Population": 501274,
+            "Workforce": 225573,
+            "Employed": 212780,
+            "IndustrialWorkers": 102500,
+            "Artisans": 110280,
+            "Dependents": 275701,
+            "MigrationLastMonth": 459,
+            "LivingStandard": 10.872456191164780880668771897,
+            "Literacy": 23.150974076479810919676813742,
+            "Gdp": 314471.89387862260554759897561,
+            "Industries": {
+              "farm": 21,
+              "lumber": 5,
+              "coal_mine": 3,
+              "iron_mine": 2,
+              "toolworks": 2,
+              "textile": 8
+            },
+            "Production": {
+              "grain": 235.21807666475443747893356644,
+              "timber": 17.415774376885953502454516826,
+              "coal": 3.6472428295529683698892221420,
+              "iron": 2.4949270190850956092861403104,
+              "tools": 3.5963817296045320357828177542,
+              "clothes": 47.616831676927773789209541966
+            }
+          },
+          {
+            "Id": "QNG_canton",
+            "RegionId": "QNG_south",
+            "Name": "Canton",
+            "Population": 802034,
+            "Workforce": 360915,
+            "Employed": 341447,
+            "IndustrialWorkers": 165000,
+            "Artisans": 176447,
+            "Dependents": 441119,
+            "MigrationLastMonth": 734,
+            "LivingStandard": 10.874580649360133580709630728,
+            "Literacy": 23.150974076479810919676813742,
+            "Gdp": 508047.71901414586374332007740,
+            "Industries": {
+              "farm": 34,
+              "lumber": 8,
+              "coal_mine": 4,
+              "iron_mine": 4,
+              "toolworks": 3,
+              "textile": 13
+            },
+            "Production": {
+              "grain": 380.82926698103099401351148851,
+              "timber": 27.865239003017525603927226923,
+              "coal": 4.8629904394039578265189628570,
+              "iron": 4.9898540381701912185722806208,
+              "tools": 5.3945725944067980536742266310,
+              "clothes": 77.377351475007632407465505696
+            }
+          },
+          {
+            "Id": "QNG_fuzhou",
+            "RegionId": "QNG_south",
+            "Name": "Fuzhou",
+            "Population": 350881,
+            "Workforce": 157896,
+            "Employed": 144693,
+            "IndustrialWorkers": 67500,
+            "Artisans": 77193,
+            "Dependents": 192985,
+            "MigrationLastMonth": 321,
+            "LivingStandard": 10.851841178186669172716025719,
+            "Literacy": 23.150974076479810919676813742,
+            "Gdp": 203527.44502520430943857297579,
+            "Industries": {
+              "farm": 14,
+              "lumber": 3,
+              "coal_mine": 2,
+              "iron_mine": 2,
+              "toolworks": 1,
+              "textile": 5
+            },
+            "Production": {
+              "grain": 156.81205110983629165262237763,
+              "timber": 10.449464626131572101472710096,
+              "coal": 2.4314952197019789132594814280,
+              "iron": 2.4949270190850956092861403104,
+              "tools": 1.7981908648022660178914088768,
+              "clothes": 29.760519798079858618255963729
+            }
+          }
+        ]
+      },
+      {
+        "Id": "OTT",
+        "Name": "Ottoman Empire",
+        "Adjective": "Ottoman",
+        "Population": 25023402,
+        "Treasury": 20397.577842768120008727583326,
+        "Debt": 0,
+        "Gdp": 245539.39858372116626340926065,
+        "LivingStandard": 12.278739223408613925429644698,
+        "Literacy": 20.720,
+        "Unrest": 13.288977321942943705978815809,
+        "DailyBalance": 96.599328595879102192643203,
+        "TaxRevenue": 188.31431859587910219264320339,
+        "Spending": 178.114990,
+        "DailyTradeBalance": 86.40,
+        "HouseholdIncome": 476.85464548720522564643564306,
+        "NeedsFulfilled": 0.8176443568023518060404719149,
+        "Prestige": 45,
+        "TaxRate": 22,
+        "Goods": {
+          "grain": 2555.3131718068891128254794701,
+          "timber": 443.54740018616058745365577411,
+          "coal": 357.51861326236141546488457850,
+          "iron": 250.66538127193453746419008770,
+          "tools": 299.78306458420611994292647159,
+          "clothes": 637.47790502359436113068784607
+        },
+        "Prices": {
+          "grain": 1.7658757067116416073546371998,
+          "timber": 1.4531607494174315666965190898,
+          "coal": 1.9374531284758204814005107897,
+          "iron": 2.4257938454376015187401535854,
+          "tools": 6.7108840313724471118563828620,
+          "clothes": 5.2532505252686906942132629058
+        },
+        "Production": {
+          "grain": 160.06924673430922274221127591,
+          "timber": 15.932925358709413793991159991,
+          "coal": 9.413327790660371949878576751,
+          "iron": 8.068966108394241046519735656,
+          "tools": 6.3885211561797320745556528644,
+          "clothes": 32.491420315173543057104904571
+        },
+        "Consumption": {
+          "grain": 163.67930483981228510277693316,
+          "timber": 12.359463604548178510442109278,
+          "coal": 5.5876353842288711400270090933,
+          "iron": 4.2590141041198213830371019096,
+          "tools": 2.2743994220621480139973433200,
+          "clothes": 32.735860967962457020555386633
+        },
+        "Industries": {
+          "farm": 12,
+          "lumber": 4,
+          "coal_mine": 3,
+          "iron_mine": 3,
+          "toolworks": 2,
+          "textile": 5
+        },
+        "Trade": {
+          "grain": 0,
+          "timber": -1,
+          "coal": -1,
+          "iron": -1,
+          "tools": -1,
+          "clothes": 0
+        },
+        "Construction": [
+          {
+            "CityId": "OTT_damascus",
+            "IndustryId": "coal_mine",
+            "Name": "Coal mines",
+            "DaysRemaining": 15,
+            "TotalDays": 75
+          }
+        ],
+        "Reforms": [
+          "primary_schools"
+        ],
+        "Technologies": [],
+        "ResearchId": "mechanical_tools",
+        "ResearchProgress": 39.21960,
+        "Relations": {
+          "GBR": 10,
+          "PRU": 10,
+          "JAP": -10,
+          "FRA": 10,
+          "AUS": 10,
+          "RUS": 10,
+          "USA": 10,
+          "QNG": 10,
+          "SPA": 10,
+          "POR": 10,
+          "BEL": 10
+        },
+        "DiplomaticCooldowns": {
+          "GBR": 0,
+          "PRU": 0,
+          "JAP": 0,
+          "FRA": 0,
+          "AUS": 0,
+          "RUS": 0,
+          "USA": 0,
+          "QNG": 0,
+          "SPA": 0,
+          "POR": 0,
+          "BEL": 0
+        },
+        "TradePacts": [],
+        "MobilizedAgainst": "",
+        "History": [
+          {
+            "Date": "1836-01-01T00:00:00",
+            "Gdp": 472675,
+            "Treasury": 21000,
+            "LivingStandard": 10
+          },
+          {
+            "Date": "1836-02-01T00:00:00",
+            "Gdp": 250386.82822771870143838111478,
+            "Treasury": 17586.510828557325246274147518,
+            "LivingStandard": 11.327476724784167931330499786
+          },
+          {
+            "Date": "1836-03-01T00:00:00",
+            "Gdp": 245539.39858372116626340926065,
+            "Treasury": 20397.577842768120008727583326,
+            "LivingStandard": 12.278739223408613925429644698
+          }
+        ],
+        "Regions": [
+          {
+            "Id": "OTT_balkans",
+            "Name": "Balkan lands",
+            "RuralPopulation": 7926033,
+            "UrbanPopulation": 787120,
+            "Gdp": 172503.38163837106112058321146
+          },
+          {
+            "Id": "OTT_anatolia",
+            "Name": "Anatolia",
+            "RuralPopulation": 7927015,
+            "UrbanPopulation": 250636,
+            "Gdp": 53560.925259342483042523677289
+          },
+          {
+            "Id": "OTT_arab",
+            "Name": "Arab provinces",
+            "RuralPopulation": 7927096,
+            "UrbanPopulation": 205502,
+            "Gdp": 19475.091686007622100302371900
+          }
+        ],
+        "Cities": [
+          {
+            "Id": "OTT_constantinople",
+            "RegionId": "OTT_balkans",
+            "Name": "Constantinople",
+            "Population": 651776,
+            "Workforce": 293299,
+            "Employed": 193390,
+            "IndustrialWorkers": 50000,
+            "Artisans": 143390,
+            "Dependents": 358477,
+            "MigrationLastMonth": 596,
+            "LivingStandard": 10.831154238953941536404084648,
+            "Literacy": 23.150974076479810919676813742,
+            "Gdp": 153028.28995236343902028083956,
+            "Industries": {
+              "farm": 4,
+              "lumber": 4,
+              "coal_mine": 3,
+              "iron_mine": 3,
+              "toolworks": 2,
+              "textile": 4
+            },
+            "Production": {
+              "grain": 53.356415578103074247403758635,
+              "timber": 15.932925358709413793991159991,
+              "coal": 9.413327790660371949878576751,
+              "iron": 8.068966108394241046519735656,
+              "tools": 6.3885211561797320745556528644,
+              "clothes": 25.993136252138834445683923657
+            }
+          },
+          {
+            "Id": "OTT_salonica",
+            "RegionId": "OTT_balkans",
+            "Name": "Salonica",
+            "Population": 65156,
+            "Workforce": 29320,
+            "Employed": 16834,
+            "IndustrialWorkers": 2500,
+            "Artisans": 14334,
+            "Dependents": 35836,
+            "MigrationLastMonth": 59,
+            "LivingStandard": 10.765859648133674001098637980,
+            "Literacy": 23.150974076479810919676813742,
+            "Gdp": 9737.545843003811050151185950,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 13.339103894525768561850939658,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "OTT_adrianople",
+            "RegionId": "OTT_balkans",
+            "Name": "Adrianople",
+            "Population": 70188,
+            "Workforce": 31584,
+            "Employed": 17941,
+            "IndustrialWorkers": 2500,
+            "Artisans": 15441,
+            "Dependents": 38604,
+            "MigrationLastMonth": 64,
+            "LivingStandard": 10.761182215219402582207643724,
+            "Literacy": 23.150974076479810919676813742,
+            "Gdp": 9737.545843003811050151185950,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 13.339103894525768561850939658,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "OTT_smyrna",
+            "RegionId": "OTT_anatolia",
+            "Name": "Smyrna",
+            "Population": 150394,
+            "Workforce": 67677,
+            "Employed": 40586,
+            "IndustrialWorkers": 7500,
+            "Artisans": 33086,
+            "Dependents": 82717,
+            "MigrationLastMonth": 137,
+            "LivingStandard": 10.785444729454910890421584122,
+            "Literacy": 23.150974076479810919676813742,
+            "Gdp": 34085.833573334860942221305389,
+            "Industries": {
+              "farm": 2,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 1
+            },
+            "Production": {
+              "grain": 26.678207789051537123701879318,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 6.4982840630347086114209809140
+            }
+          },
+          {
+            "Id": "OTT_bursa",
+            "RegionId": "OTT_anatolia",
+            "Name": "Bursa",
+            "Population": 70188,
+            "Workforce": 31584,
+            "Employed": 17941,
+            "IndustrialWorkers": 2500,
+            "Artisans": 15441,
+            "Dependents": 38604,
+            "MigrationLastMonth": 64,
+            "LivingStandard": 10.761182215219402582207643724,
+            "Literacy": 23.150974076479810919676813742,
+            "Gdp": 9737.545843003811050151185950,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 13.339103894525768561850939658,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "OTT_ankara",
+            "RegionId": "OTT_anatolia",
+            "Name": "Ankara",
+            "Population": 30054,
+            "Workforce": 13524,
+            "Employed": 9111,
+            "IndustrialWorkers": 2500,
+            "Artisans": 6611,
+            "Dependents": 16530,
+            "MigrationLastMonth": 27,
+            "LivingStandard": 10.842084606609101843818122430,
+            "Literacy": 23.150974076479810919676813742,
+            "Gdp": 9737.545843003811050151185950,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 13.339103894525768561850939658,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "OTT_damascus",
+            "RegionId": "OTT_arab",
+            "Name": "Damascus",
+            "Population": 120287,
+            "Workforce": 54129,
+            "Employed": 28963,
+            "IndustrialWorkers": 2500,
+            "Artisans": 26463,
+            "Dependents": 66158,
+            "MigrationLastMonth": 110,
+            "LivingStandard": 10.735921916246845030170826062,
+            "Literacy": 23.150974076479810919676813742,
+            "Gdp": 9737.545843003811050151185950,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 13.339103894525768561850939658,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "OTT_baghdad",
+            "RegionId": "OTT_arab",
+            "Name": "Baghdad",
+            "Population": 85215,
+            "Workforce": 38346,
+            "Employed": 21247,
+            "IndustrialWorkers": 2500,
+            "Artisans": 18747,
+            "Dependents": 46869,
+            "MigrationLastMonth": 78,
+            "LivingStandard": 10.750485801224826479826979544,
+            "Literacy": 23.150974076479810919676813742,
+            "Gdp": 9737.545843003811050151185950,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 13.339103894525768561850939658,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          }
+        ]
+      },
+      {
+        "Id": "SPA",
+        "Name": "Spain",
+        "Adjective": "Spanish",
+        "Population": 13014443,
+        "Treasury": 18613.255771888735936174832632,
+        "Debt": 0,
+        "Gdp": 166129.73075307794182903591426,
+        "LivingStandard": 13.045966595074334268392178081,
+        "Literacy": 25.0900,
+        "Unrest": 10.019575528316955693852466224,
+        "DailyBalance": 104.294587684824293753801858,
+        "TaxRevenue": 123.96555768482429375380185756,
+        "Spending": 106.070970,
+        "DailyTradeBalance": 86.40,
+        "HouseholdIncome": 310.41717402088932579795202734,
+        "NeedsFulfilled": 0.9811713948872285253000835331,
+        "Prestige": 35,
+        "TaxRate": 22,
+        "Goods": {
+          "grain": 1188.2680720566102898147706609,
+          "timber": 282.39626907857392149638927549,
+          "coal": 280.69058157958170413319577330,
+          "iron": 197.52001505889526600949687506,
+          "tools": 331.48695569271609357581694192,
+          "clothes": 320.89296654580937219856847407
+        },
+        "Prices": {
+          "grain": 1.8714722779876778432410427896,
+          "timber": 1.4507141064937554692420637878,
+          "coal": 1.9225813496169122168029957009,
+          "iron": 2.6887945142731430380467330780,
+          "tools": 6.0803084661552281339811458076,
+          "clothes": 5.3643942668268296905826715375
+        },
+        "Production": {
+          "grain": 99.08989221683404986599450056,
+          "timber": 12.036931875203689979555333263,
+          "coal": 8.990757265089888232886991909,
+          "iron": 7.5995141189893434632401515678,
+          "tools": 5.7042531486790451924230637496,
+          "clothes": 20.097332700570884389237375122
+        },
+        "Consumption": {
+          "grain": 102.15323904250400120471356253,
+          "timber": 8.285995156382848472768952241,
+          "coal": 5.1583523386503527388629909694,
+          "iron": 3.8028354324526967949487091664,
+          "tools": 1.4068132890399619072466162586,
+          "clothes": 20.430647808500800240942712506
+        },
+        "Industries": {
+          "farm": 7,
+          "lumber": 3,
+          "coal_mine": 3,
+          "iron_mine": 2,
+          "toolworks": 2,
+          "textile": 3
+        },
+        "Trade": {
+          "grain": 0,
+          "timber": -1,
+          "coal": -1,
+          "iron": -1,
+          "tools": -1,
+          "clothes": 0
+        },
+        "Construction": [
+          {
+            "CityId": "SPA_seville",
+            "IndustryId": "coal_mine",
+            "Name": "Coal mines",
+            "DaysRemaining": 15,
+            "TotalDays": 75
+          }
+        ],
+        "Reforms": [],
+        "Technologies": [],
+        "ResearchId": "mechanical_tools",
+        "ResearchProgress": 42.027450,
+        "Relations": {
+          "GBR": 10,
+          "PRU": 10,
+          "JAP": -10,
+          "FRA": 10,
+          "AUS": 10,
+          "RUS": 10,
+          "USA": 10,
+          "QNG": 10,
+          "OTT": 10,
+          "POR": 10,
+          "BEL": 10
+        },
+        "DiplomaticCooldowns": {
+          "GBR": 0,
+          "PRU": 0,
+          "JAP": 0,
+          "FRA": 0,
+          "AUS": 0,
+          "RUS": 0,
+          "USA": 0,
+          "QNG": 0,
+          "OTT": 0,
+          "POR": 0,
+          "BEL": 0
+        },
+        "TradePacts": [],
+        "MobilizedAgainst": "",
+        "History": [
+          {
+            "Date": "1836-01-01T00:00:00",
+            "Gdp": 329960,
+            "Treasury": 17000,
+            "LivingStandard": 10
+          },
+          {
+            "Date": "1836-02-01T00:00:00",
+            "Gdp": 163342.20738955399155727728153,
+            "Treasury": 15622.304172882387331621661656,
+            "LivingStandard": 11.769461103270254200378301105
+          },
+          {
+            "Date": "1836-03-01T00:00:00",
+            "Gdp": 166129.73075307794182903591426,
+            "Treasury": 18613.255771888735936174832632,
+            "LivingStandard": 13.045966595074334268392178081
+          }
+        ],
+        "Regions": [
+          {
+            "Id": "SPA_central",
+            "Name": "Central Spain",
+            "RuralPopulation": 4115520,
+            "UrbanPopulation": 250684,
+            "Gdp": 70711.024566312551537669115328
+          },
+          {
+            "Id": "SPA_east",
+            "Name": "Eastern Spain",
+            "RuralPopulation": 4115520,
+            "UrbanPopulation": 250636,
+            "Gdp": 70357.905675662084476778820753
+          },
+          {
+            "Id": "SPA_atlantic",
+            "Name": "Atlantic and southern Spain",
+            "RuralPopulation": 4115674,
+            "UrbanPopulation": 166409,
+            "Gdp": 25060.800511103305814587978187
+          }
+        ],
+        "Cities": [
+          {
+            "Id": "SPA_madrid",
+            "RegionId": "SPA_central",
+            "Name": "Madrid",
+            "Population": 220630,
+            "Workforce": 99283,
+            "Employed": 66038,
+            "IndustrialWorkers": 17500,
+            "Artisans": 48538,
+            "Dependents": 121347,
+            "MigrationLastMonth": 202,
+            "LivingStandard": 11.006730112270969132863957365,
+            "Literacy": 28.018871759559976364959601718,
+            "Gdp": 60377.364377985572051643974555,
+            "Industries": {
+              "farm": 1,
+              "lumber": 1,
+              "coal_mine": 1,
+              "iron_mine": 1,
+              "toolworks": 1,
+              "textile": 2
+            },
+            "Production": {
+              "grain": 14.155698888119149980856357223,
+              "timber": 4.0123106250678966598517777544,
+              "coal": 2.9969190883632960776289973030,
+              "iron": 3.7997570594946717316200757839,
+              "tools": 2.8521265743395225962115318748,
+              "clothes": 13.398221800380589592824916748
+            }
+          },
+          {
+            "Id": "SPA_valladolid",
+            "RegionId": "SPA_central",
+            "Name": "Valladolid",
+            "Population": 30054,
+            "Workforce": 13524,
+            "Employed": 9111,
+            "IndustrialWorkers": 2500,
+            "Artisans": 6611,
+            "Dependents": 16530,
+            "MigrationLastMonth": 27,
+            "LivingStandard": 11.013217848969748718632601460,
+            "Literacy": 28.018871759559976364959601718,
+            "Gdp": 10333.660188326979486025140773,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 14.155698888119149980856357223,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "SPA_barcelona",
+            "RegionId": "SPA_east",
+            "Name": "Barcelona",
+            "Population": 130358,
+            "Workforce": 58661,
+            "Employed": 46178,
+            "IndustrialWorkers": 17500,
+            "Artisans": 28678,
+            "Dependents": 71697,
+            "MigrationLastMonth": 119,
+            "LivingStandard": 11.100241119922013488893598243,
+            "Literacy": 28.018871759559976364959601718,
+            "Gdp": 55648.743618324692717415343918,
+            "Industries": {
+              "farm": 2,
+              "lumber": 1,
+              "coal_mine": 1,
+              "iron_mine": 1,
+              "toolworks": 1,
+              "textile": 1
+            },
+            "Production": {
+              "grain": 28.311397776238299961712714446,
+              "timber": 4.0123106250678966598517777544,
+              "coal": 2.9969190883632960776289973030,
+              "iron": 3.7997570594946717316200757839,
+              "tools": 2.8521265743395225962115318748,
+              "clothes": 6.6991109001902947964124583740
+            }
+          },
+          {
+            "Id": "SPA_valencia",
+            "RegionId": "SPA_east",
+            "Name": "Valencia",
+            "Population": 80206,
+            "Workforce": 36092,
+            "Employed": 20145,
+            "IndustrialWorkers": 2500,
+            "Artisans": 17645,
+            "Dependents": 44114,
+            "MigrationLastMonth": 73,
+            "LivingStandard": 10.924738996435227870014117248,
+            "Literacy": 28.018871759559976364959601718,
+            "Gdp": 10333.660188326979486025140773,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 14.155698888119149980856357223,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "SPA_zaragoza",
+            "RegionId": "SPA_east",
+            "Name": "Zaragoza",
+            "Population": 40072,
+            "Workforce": 18032,
+            "Employed": 11315,
+            "IndustrialWorkers": 2500,
+            "Artisans": 8815,
+            "Dependents": 22040,
+            "MigrationLastMonth": 36,
+            "LivingStandard": 10.977834301731548315803314095,
+            "Literacy": 28.018871759559976364959601718,
+            "Gdp": 4375.5018690104122733383360624,
+            "Industries": {
+              "farm": 0,
+              "lumber": 0,
+              "coal_mine": 1,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 0,
+              "timber": 0,
+              "coal": 2.9969190883632960776289973030,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "SPA_seville",
+            "RegionId": "SPA_atlantic",
+            "Name": "Seville",
+            "Population": 95234,
+            "Workforce": 42855,
+            "Employed": 23451,
+            "IndustrialWorkers": 2500,
+            "Artisans": 20951,
+            "Dependents": 52379,
+            "MigrationLastMonth": 87,
+            "LivingStandard": 10.916364061764728929233909644,
+            "Literacy": 28.018871759559976364959601718,
+            "Gdp": 10333.660188326979486025140773,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 14.155698888119149980856357223,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "SPA_cadiz",
+            "RegionId": "SPA_atlantic",
+            "Name": "C\u00E1diz",
+            "Population": 55147,
+            "Workforce": 24816,
+            "Employed": 14632,
+            "IndustrialWorkers": 2500,
+            "Artisans": 12132,
+            "Dependents": 30331,
+            "MigrationLastMonth": 50,
+            "LivingStandard": 10.948855509093319671546605050,
+            "Literacy": 28.018871759559976364959601718,
+            "Gdp": 10333.660188326979486025140773,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 14.155698888119149980856357223,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "SPA_bilbao",
+            "RegionId": "SPA_atlantic",
+            "Name": "Bilbao",
+            "Population": 16028,
+            "Workforce": 7212,
+            "Employed": 6026,
+            "IndustrialWorkers": 2500,
+            "Artisans": 3526,
+            "Dependents": 8816,
+            "MigrationLastMonth": 14,
+            "LivingStandard": 11.137125680248200150453354511,
+            "Literacy": 28.018871759559976364959601718,
+            "Gdp": 4393.4801344493468425376966410,
+            "Industries": {
+              "farm": 0,
+              "lumber": 1,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 0,
+              "timber": 4.0123106250678966598517777544,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          }
+        ]
+      },
+      {
+        "Id": "POR",
+        "Name": "Portugal",
+        "Adjective": "Portuguese",
+        "Population": 3504080,
+        "Treasury": 11547.508689055300946051424486,
+        "Debt": 0,
+        "Gdp": 67652.877489157712367699666480,
+        "LivingStandard": 13.270062054489997144119104550,
+        "Literacy": 22.0900,
+        "Unrest": 8.883131492360456266843354552,
+        "DailyBalance": 35.130900037910644140520206,
+        "TaxRevenue": 50.450960037910644140520205531,
+        "Spending": 58.520060,
+        "DailyTradeBalance": 43.20,
+        "HouseholdIncome": 119.25938136179477610295299952,
+        "NeedsFulfilled": 1,
+        "Prestige": 25,
+        "TaxRate": 23,
+        "Goods": {
+          "grain": 495.30906841227852672539336462,
+          "timber": 288.26612911116801279447116634,
+          "coal": 210.86876088825483604746993491,
+          "iron": 168.64458303881002913520650504,
+          "tools": 324.69325204872459519032111462,
+          "clothes": 225.45582286279780466774271142
+        },
+        "Prices": {
+          "grain": 1.2832714880383240339536147370,
+          "timber": 1.4563111180775864883828428430,
+          "coal": 2.3677913345777331842240783998,
+          "iron": 3.8503561492034209016956746380,
+          "tools": 7.0891213889464119017125011859,
+          "clothes": 3.3946663984231648281166821800
+        },
+        "Production": {
+          "grain": 31.882396063498218349777959692,
+          "timber": 6.6884400717286616734927114752,
+          "coal": 3.7669826888086775114901342840,
+          "iron": 3.2762347050344344002522818929,
+          "tools": 2.9638244923772836026923532720,
+          "clothes": 9.239715351061541792095340760
+        },
+        "Consumption": {
+          "grain": 28.032096,
+          "timber": 2.7399474974590945342307844240,
+          "coal": 2.3920420853309949914817623781,
+          "iron": 1.9758829949181890684615688480,
+          "tools": 0.6467800745743079254466738532,
+          "clothes": 5.6064192
+        },
+        "Industries": {
+          "farm": 3,
+          "lumber": 2,
+          "coal_mine": 1,
+          "iron_mine": 1,
+          "toolworks": 1,
+          "textile": 2
+        },
+        "Trade": {
+          "grain": -1,
+          "timber": -1,
+          "coal": 0,
+          "iron": 0,
+          "tools": 0,
+          "clothes": -1
+        },
+        "Construction": [
+          {
+            "CityId": "POR_lisbon",
+            "IndustryId": "coal_mine",
+            "Name": "Coal mines",
+            "DaysRemaining": 15,
+            "TotalDays": 75
+          }
+        ],
+        "Reforms": [],
+        "Technologies": [],
+        "ResearchId": "mechanical_tools",
+        "ResearchProgress": 40.227450,
+        "Relations": {
+          "GBR": 10,
+          "PRU": 10,
+          "JAP": -10,
+          "FRA": 10,
+          "AUS": 10,
+          "RUS": 10,
+          "USA": 10,
+          "QNG": 10,
+          "OTT": 10,
+          "SPA": 10,
+          "BEL": 10
+        },
+        "DiplomaticCooldowns": {
+          "GBR": 0,
+          "PRU": 0,
+          "JAP": 0,
+          "FRA": 0,
+          "AUS": 0,
+          "RUS": 0,
+          "USA": 0,
+          "QNG": 0,
+          "OTT": 0,
+          "SPA": 0,
+          "BEL": 0
+        },
+        "TradePacts": [],
+        "MobilizedAgainst": "",
+        "History": [
+          {
+            "Date": "1836-01-01T00:00:00",
+            "Gdp": 170455,
+            "Treasury": 13000,
+            "LivingStandard": 10
+          },
+          {
+            "Date": "1836-02-01T00:00:00",
+            "Gdp": 65773.001006338636687937899066,
+            "Treasury": 10529.512726468925940430572384,
+            "LivingStandard": 11.884702672581905883533846147
+          },
+          {
+            "Date": "1836-03-01T00:00:00",
+            "Gdp": 67652.877489157712367699666480,
+            "Treasury": 11547.508689055300946051424486,
+            "LivingStandard": 13.270062054489997144119104550
+          }
+        ],
+        "Regions": [
+          {
+            "Id": "POR_central",
+            "Name": "Central Portugal",
+            "RuralPopulation": 1051111,
+            "UrbanPopulation": 238723,
+            "Gdp": 36212.858673306339262135304507
+          },
+          {
+            "Id": "POR_north",
+            "Name": "Northern Portugal",
+            "RuralPopulation": 1051383,
+            "UrbanPopulation": 89270,
+            "Gdp": 19549.003662595496715686437670
+          },
+          {
+            "Id": "POR_south",
+            "Name": "Southern Portugal",
+            "RuralPopulation": 1051505,
+            "UrbanPopulation": 22088,
+            "Gdp": 11891.015153255876389877924304
+          }
+        ],
+        "Cities": [
+          {
+            "Id": "POR_lisbon",
+            "RegionId": "POR_central",
+            "Name": "Lisbon",
+            "Population": 210624,
+            "Workforce": 94780,
+            "Employed": 53837,
+            "IndustrialWorkers": 7500,
+            "Artisans": 46337,
+            "Dependents": 115844,
+            "MigrationLastMonth": 192,
+            "LivingStandard": 10.978420590599099853866801624,
+            "Literacy": 25.018871759559976364959601718,
+            "Gdp": 20900.583221813648143801331595,
+            "Industries": {
+              "farm": 0,
+              "lumber": 1,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 1,
+              "textile": 1
+            },
+            "Production": {
+              "grain": 0,
+              "timber": 3.3442200358643308367463557376,
+              "coal": 0,
+              "iron": 0,
+              "tools": 2.9638244923772836026923532720,
+              "clothes": 4.6198576755307708960476703800
+            }
+          },
+          {
+            "Id": "POR_coimbra",
+            "RegionId": "POR_central",
+            "Name": "Coimbra",
+            "Population": 18032,
+            "Workforce": 8114,
+            "Employed": 6467,
+            "IndustrialWorkers": 2500,
+            "Artisans": 3967,
+            "Dependents": 9918,
+            "MigrationLastMonth": 16,
+            "LivingStandard": 11.153713678046824675454065160,
+            "Literacy": 25.018871759559976364959601718,
+            "Gdp": 7961.873674861008277003937662,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 10.906676266932888050690325565,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "POR_santarem",
+            "RegionId": "POR_central",
+            "Name": "Santar\u00E9m",
+            "Population": 10067,
+            "Workforce": 4530,
+            "Employed": 4530,
+            "IndustrialWorkers": 2316,
+            "Artisans": 2214,
+            "Dependents": 5537,
+            "MigrationLastMonth": 33,
+            "LivingStandard": 11.308698476892450303713799314,
+            "Literacy": 25.018871759559976364959601718,
+            "Gdp": 7350.4017766316828413300352503,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 10.069043529632442248397308562,
+              "timber": 0.0000,
+              "coal": 0.0000,
+              "iron": 0.0000,
+              "tools": 0.0000,
+              "clothes": 0.0000
+            }
+          },
+          {
+            "Id": "POR_porto",
+            "RegionId": "POR_north",
+            "Name": "Porto",
+            "Population": 65178,
+            "Workforce": 29330,
+            "Employed": 16839,
+            "IndustrialWorkers": 2500,
+            "Artisans": 14339,
+            "Dependents": 35848,
+            "MigrationLastMonth": 59,
+            "LivingStandard": 10.983088833301171198562744689,
+            "Literacy": 25.018871759559976364959601718,
+            "Gdp": 3661.9209392714422662372595327,
+            "Industries": {
+              "farm": 0,
+              "lumber": 1,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 0,
+              "timber": 3.3442200358643308367463557376,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "POR_braga",
+            "RegionId": "POR_north",
+            "Name": "Braga",
+            "Population": 16028,
+            "Workforce": 7212,
+            "Employed": 6026,
+            "IndustrialWorkers": 2500,
+            "Artisans": 3526,
+            "Dependents": 8816,
+            "MigrationLastMonth": 14,
+            "LivingStandard": 11.183236705536206968871424179,
+            "Literacy": 25.018871759559976364959601718,
+            "Gdp": 10387.287997663385282673582082,
+            "Industries": {
+              "farm": 0,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 1
+            },
+            "Production": {
+              "grain": 0,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 4.6198576755307708960476703800
+            }
+          },
+          {
+            "Id": "POR_guimaraes",
+            "RegionId": "POR_north",
+            "Name": "Guimar\u00E3es",
+            "Population": 8064,
+            "Workforce": 3628,
+            "Employed": 3628,
+            "IndustrialWorkers": 1854,
+            "Artisans": 1774,
+            "Dependents": 4436,
+            "MigrationLastMonth": 32,
+            "LivingStandard": 11.308698476892450303713799314,
+            "Literacy": 25.018871759559976364959601718,
+            "Gdp": 5499.7947256606691667755960546,
+            "Industries": {
+              "farm": 0,
+              "lumber": 0,
+              "coal_mine": 1,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 0.0000,
+              "timber": 0.0000,
+              "coal": 3.7669826888086775114901342840,
+              "iron": 0.0000,
+              "tools": 0.0000,
+              "clothes": 0.0000
+            }
+          },
+          {
+            "Id": "POR_evora",
+            "RegionId": "POR_south",
+            "Name": "\u00C9vora",
+            "Population": 14024,
+            "Workforce": 6310,
+            "Employed": 5585,
+            "IndustrialWorkers": 2500,
+            "Artisans": 3085,
+            "Dependents": 7714,
+            "MigrationLastMonth": 12,
+            "LivingStandard": 11.221130424496656194669696689,
+            "Literacy": 25.018871759559976364959601718,
+            "Gdp": 7961.873674861008277003937662,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 10.906676266932888050690325565,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "POR_faro",
+            "RegionId": "POR_south",
+            "Name": "Faro",
+            "Population": 8064,
+            "Workforce": 3628,
+            "Employed": 3628,
+            "IndustrialWorkers": 1854,
+            "Artisans": 1774,
+            "Dependents": 4436,
+            "MigrationLastMonth": 32,
+            "LivingStandard": 11.308698476892450303713799314,
+            "Literacy": 25.018871759559976364959601718,
+            "Gdp": 3929.1414783948681128739866415,
+            "Industries": {
+              "farm": 0,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 1,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 0.0000,
+              "timber": 0.0000,
+              "coal": 0.0000,
+              "iron": 3.2762347050344344002522818929,
+              "tools": 0.0000,
+              "clothes": 0.0000
+            }
+          }
+        ]
+      },
+      {
+        "Id": "BEL",
+        "Name": "Belgium",
+        "Adjective": "Belgian",
+        "Population": 4204620,
+        "Treasury": 18507.627273989952602267669499,
+        "Debt": 0,
+        "Gdp": 90783.43487679273181722071910,
+        "LivingStandard": 13.537748980877182867389420668,
+        "Literacy": 50.0900,
+        "Unrest": 8.883131492360456266843354552,
+        "DailyBalance": 114.761296816830584397854690,
+        "TaxRevenue": 65.184011816830584397854689763,
+        "Spending": 62.022715,
+        "DailyTradeBalance": 111.60,
+        "HouseholdIncome": 160.5604212694869354006806638,
+        "NeedsFulfilled": 1,
+        "Prestige": 30,
+        "TaxRate": 22,
+        "Goods": {
+          "grain": 560.33808501963451689024771890,
+          "timber": 273.49323831642549670419109332,
+          "coal": 283.73170296348496923835456208,
+          "iron": 204.18763860365591946319274222,
+          "tools": 355.32835306504154936683453088,
+          "clothes": 263.34014667049944676383133453
+        },
+        "Prices": {
+          "grain": 1.4372302902810870916891062473,
+          "timber": 1.4621371554764829337804853343,
+          "coal": 1.9225723315314396808802251102,
+          "iron": 2.5877315230977494162646260467,
+          "tools": 6.0360628042278708655932770829,
+          "clothes": 3.3601317950064245901356270507
+        },
+        "Production": {
+          "grain": 34.363427317201336408029576543,
+          "timber": 7.7250238266898176822110663856,
+          "coal": 8.753606713744118155262433162,
+          "iron": 7.3524689033780159840715281770,
+          "tools": 5.1644566878457841603194103496,
+          "clothes": 10.542053347116148968625409982
+        },
+        "Consumption": {
+          "grain": 33.636344,
+          "timber": 3.8237570626152613867731367832,
+          "coal": 4.8725436640629825228037917162,
+          "iron": 3.4429711252305227735462735664,
+          "tools": 0.7379437342981304278037786988,
+          "clothes": 6.7272688
+        },
+        "Industries": {
+          "farm": 3,
+          "lumber": 2,
+          "coal_mine": 3,
+          "iron_mine": 2,
+          "toolworks": 2,
+          "textile": 3
+        },
+        "Trade": {
+          "grain": 0,
+          "timber": -1,
+          "coal": -1,
+          "iron": -1,
+          "tools": -1,
+          "clothes": -1
+        },
+        "Construction": [
+          {
+            "CityId": "BEL_liege",
+            "IndustryId": "coal_mine",
+            "Name": "Coal mines",
+            "DaysRemaining": 15,
+            "TotalDays": 75
+          }
+        ],
+        "Reforms": [],
+        "Technologies": [],
+        "ResearchId": "mechanical_tools",
+        "ResearchProgress": 57.027450,
+        "Relations": {
+          "GBR": 10,
+          "PRU": 10,
+          "JAP": -10,
+          "FRA": 10,
+          "AUS": 10,
+          "RUS": 10,
+          "USA": 10,
+          "QNG": 10,
+          "OTT": 10,
+          "SPA": 10,
+          "POR": 10
+        },
+        "DiplomaticCooldowns": {
+          "GBR": 0,
+          "PRU": 0,
+          "JAP": 0,
+          "FRA": 0,
+          "AUS": 0,
+          "RUS": 0,
+          "USA": 0,
+          "QNG": 0,
+          "OTT": 0,
+          "SPA": 0,
+          "POR": 0
+        },
+        "TradePacts": [],
+        "MobilizedAgainst": "",
+        "History": [
+          {
+            "Date": "1836-01-01T00:00:00",
+            "Gdp": 264260,
+            "Treasury": 17000,
+            "LivingStandard": 10
+          },
+          {
+            "Date": "1836-02-01T00:00:00",
+            "Gdp": 82933.57933047004676277900797,
+            "Treasury": 15219.534330306668282411351656,
+            "LivingStandard": 12.038995230145755551813817454
+          },
+          {
+            "Date": "1836-03-01T00:00:00",
+            "Gdp": 90783.43487679273181722071910,
+            "Treasury": 18507.627273989952602267669499,
+            "LivingStandard": 13.537748980877182867389420668
+          }
+        ],
+        "Regions": [
+          {
+            "Id": "BEL_brabant",
+            "Name": "Brabant",
+            "RuralPopulation": 1245715,
+            "UrbanPopulation": 216573,
+            "Gdp": 42882.481412481660464093957081
+          },
+          {
+            "Id": "BEL_flanders",
+            "Name": "Flanders",
+            "RuralPopulation": 1245854,
+            "UrbanPopulation": 138312,
+            "Gdp": 26768.563376330817811722810075
+          },
+          {
+            "Id": "BEL_wallonia",
+            "Name": "Wallonia",
+            "RuralPopulation": 1245904,
+            "UrbanPopulation": 112262,
+            "Gdp": 21132.390087980253541403951944
+          }
+        ],
+        "Cities": [
+          {
+            "Id": "BEL_brussels",
+            "RegionId": "BEL_brabant",
+            "Name": "Brussels",
+            "Population": 110321,
+            "Workforce": 49644,
+            "Employed": 31770,
+            "IndustrialWorkers": 7500,
+            "Artisans": 24270,
+            "Dependents": 60677,
+            "MigrationLastMonth": 101,
+            "LivingStandard": 11.093719551219574081606488630,
+            "Literacy": 53.018871759559976364959601718,
+            "Gdp": 18099.619315366410486665534576,
+            "Industries": {
+              "farm": 0,
+              "lumber": 1,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 1,
+              "textile": 1
+            },
+            "Production": {
+              "grain": 0,
+              "timber": 3.8625119133449088411055331928,
+              "coal": 0,
+              "iron": 0,
+              "tools": 2.5822283439228920801597051748,
+              "clothes": 3.5140177823720496562084699940
+            }
+          },
+          {
+            "Id": "BEL_antwerp",
+            "RegionId": "BEL_brabant",
+            "Name": "Antwerp",
+            "Population": 80206,
+            "Workforce": 36092,
+            "Employed": 25145,
+            "IndustrialWorkers": 7500,
+            "Artisans": 17645,
+            "Dependents": 44114,
+            "MigrationLastMonth": 73,
+            "LivingStandard": 11.137156853053649948235183452,
+            "Literacy": 53.018871759559976364959601718,
+            "Gdp": 20522.773496426445808534038366,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 1,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 1
+            },
+            "Production": {
+              "grain": 11.454475772400445469343192181,
+              "timber": 0,
+              "coal": 2.9178689045813727184208110540,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 3.5140177823720496562084699940
+            }
+          },
+          {
+            "Id": "BEL_leuven",
+            "RegionId": "BEL_brabant",
+            "Name": "Leuven",
+            "Population": 26046,
+            "Workforce": 11720,
+            "Employed": 8230,
+            "IndustrialWorkers": 2500,
+            "Artisans": 5730,
+            "Dependents": 14326,
+            "MigrationLastMonth": 23,
+            "LivingStandard": 11.141318377639106589315975234,
+            "Literacy": 53.018871759559976364959601718,
+            "Gdp": 4260.0886006888041688943841388,
+            "Industries": {
+              "farm": 0,
+              "lumber": 0,
+              "coal_mine": 1,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 0,
+              "timber": 0,
+              "coal": 2.9178689045813727184208110540,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "BEL_ghent",
+            "RegionId": "BEL_flanders",
+            "Name": "Ghent",
+            "Population": 96236,
+            "Workforce": 43306,
+            "Employed": 31171,
+            "IndustrialWorkers": 10000,
+            "Artisans": 21171,
+            "Dependents": 52930,
+            "MigrationLastMonth": 88,
+            "LivingStandard": 11.154857491798069426950196873,
+            "Literacy": 53.018871759559976364959601718,
+            "Gdp": 22508.474775642013642828425936,
+            "Industries": {
+              "farm": 0,
+              "lumber": 1,
+              "coal_mine": 0,
+              "iron_mine": 1,
+              "toolworks": 1,
+              "textile": 1
+            },
+            "Production": {
+              "grain": 0,
+              "timber": 3.8625119133449088411055331928,
+              "coal": 0,
+              "iron": 3.6762344516890079920357640885,
+              "tools": 2.5822283439228920801597051748,
+              "clothes": 3.5140177823720496562084699940
+            }
+          },
+          {
+            "Id": "BEL_bruges",
+            "RegionId": "BEL_flanders",
+            "Name": "Bruges",
+            "Population": 42076,
+            "Workforce": 18934,
+            "Employed": 11756,
+            "IndustrialWorkers": 2500,
+            "Artisans": 9256,
+            "Dependents": 23142,
+            "MigrationLastMonth": 38,
+            "LivingStandard": 11.079077638421816232661483487,
+            "Literacy": 53.018871759559976364959601718,
+            "Gdp": 4260.0886006888041688943841388,
+            "Industries": {
+              "farm": 0,
+              "lumber": 0,
+              "coal_mine": 1,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 0,
+              "timber": 0,
+              "coal": 2.9178689045813727184208110540,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "BEL_liege",
+            "RegionId": "BEL_wallonia",
+            "Name": "Li\u00E8ge",
+            "Population": 65178,
+            "Workforce": 29330,
+            "Employed": 16839,
+            "IndustrialWorkers": 2500,
+            "Artisans": 14339,
+            "Dependents": 35848,
+            "MigrationLastMonth": 59,
+            "LivingStandard": 11.043265484354206069002812542,
+            "Literacy": 53.018871759559976364959601718,
+            "Gdp": 8361.767313852325192620530292,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 11.454475772400445469343192181,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "BEL_namur",
+            "RegionId": "BEL_wallonia",
+            "Name": "Namur",
+            "Population": 22040,
+            "Workforce": 9918,
+            "Employed": 7348,
+            "IndustrialWorkers": 2500,
+            "Artisans": 4848,
+            "Dependents": 12122,
+            "MigrationLastMonth": 20,
+            "LivingStandard": 11.170991450921153756579747808,
+            "Literacy": 53.018871759559976364959601718,
+            "Gdp": 8361.767313852325192620530292,
+            "Industries": {
+              "farm": 1,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 0,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 11.454475772400445469343192181,
+              "timber": 0,
+              "coal": 0,
+              "iron": 0,
+              "tools": 0,
+              "clothes": 0
+            }
+          },
+          {
+            "Id": "BEL_mons",
+            "RegionId": "BEL_wallonia",
+            "Name": "Mons",
+            "Population": 25044,
+            "Workforce": 11269,
+            "Employed": 8009,
+            "IndustrialWorkers": 2500,
+            "Artisans": 5509,
+            "Dependents": 13775,
+            "MigrationLastMonth": 22,
+            "LivingStandard": 11.147838601086213037797323881,
+            "Literacy": 53.018871759559976364959601718,
+            "Gdp": 4408.8554602756031561628913602,
+            "Industries": {
+              "farm": 0,
+              "lumber": 0,
+              "coal_mine": 0,
+              "iron_mine": 1,
+              "toolworks": 0,
+              "textile": 0
+            },
+            "Production": {
+              "grain": 0,
+              "timber": 0,
+              "coal": 0,
+              "iron": 3.6762344516890079920357640885,
+              "tools": 0,
+              "clothes": 0
+            }
+          }
+        ]
+      }
+    ],
+    "Log": [
+      "01 Jan 1836 \u00B7 A new decade begins. Build an economy, improve daily life, and guide your nation\u0027s reforms.",
+      "01 Jan 1836 \u00B7 Scenario: 12 countries, 96 cities, 1836\u20131846. Populations, regional groupings and economic outcomes are authored estimates, not census records.",
+      "01 Jan 1836 \u00B7 Reform enacted: Primary education.",
+      "01 Jan 1836 \u00B7 Diplomacy with United Kingdom: improve. Relations \u002B25.",
+      "01 Jan 1836 \u00B7 Construction commissioned in Suzhou: Commercial farms. 1,400 paid; materials reserved.",
+      "14 Feb 1836 \u00B7 Commercial farms completed in Suzhou. Local jobs and productive capacity expanded.",
+      "01 Mar 1836 \u00B7 Decision required: The petitions on your desk.",
+      "01 Mar 1836 \u00B7 The petitions on your desk: Fund local classrooms.",
+      "01 Mar 1836 \u00B7 Construction commissioned in Canton: Textile mills. 3,200 paid; materials reserved."
+    ],
+    "Finished": false,
+    "PendingEvent": null,
+    "CompletedEvents": [
+      "industrial_petition"
+    ],
+    "ExternalGoods": {
+      "grain": 80120.0,
+      "timber": 81320.0,
+      "coal": 81200.0,
+      "iron": 81200.0,
+      "tools": 81180.0,
+      "clothes": 80240.0
+    },
+    "ExternalTreasury": 1972292.00
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "RUS_nizhny",
+  "Name": "Nizhny Novgorod",
+  "CountryId": "RUS",
+  "RegionId": "RUS_central",
+  "Latitude": 56.33,
+  "Longitude": 44.01,
+  "ArchitectureProfile": "russian",
+  "Seed": 1687980704,
+  "IsPort": false,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

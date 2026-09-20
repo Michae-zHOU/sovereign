@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "PRU_danzig",
+  "Name": "Danzig",
+  "CountryId": "PRU",
+  "RegionId": "PRU_east",
+  "Latitude": 54.35,
+  "Longitude": 18.65,
+  "ArchitectureProfile": "central_european",
+  "Seed": 1434156888,
+  "IsPort": true,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

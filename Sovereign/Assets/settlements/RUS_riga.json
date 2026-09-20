@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "RUS_riga",
+  "Name": "Riga",
+  "CountryId": "RUS",
+  "RegionId": "RUS_baltic",
+  "Latitude": 56.95,
+  "Longitude": 24.11,
+  "ArchitectureProfile": "russian",
+  "Seed": 463473743,
+  "IsPort": true,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

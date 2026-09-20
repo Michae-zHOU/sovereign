@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "QNG_jinan",
+  "Name": "Jinan",
+  "CountryId": "QNG",
+  "RegionId": "QNG_shandong",
+  "Latitude": 36.664,
+  "Longitude": 117.022,
+  "ArchitectureProfile": "chinese",
+  "Seed": 826156518,
+  "IsPort": false,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "BEL_ghent",
+  "Name": "Ghent",
+  "CountryId": "BEL",
+  "RegionId": "BEL_flanders",
+  "Latitude": 51.05,
+  "Longitude": 3.72,
+  "ArchitectureProfile": "central_european",
+  "Seed": 864828827,
+  "IsPort": true,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

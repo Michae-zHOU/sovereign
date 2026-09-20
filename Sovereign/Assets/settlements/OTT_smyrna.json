@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "OTT_smyrna",
+  "Name": "Smyrna",
+  "CountryId": "OTT",
+  "RegionId": "OTT_anatolia",
+  "Latitude": 38.42,
+  "Longitude": 27.14,
+  "ArchitectureProfile": "ottoman",
+  "Seed": 2128588233,
+  "IsPort": true,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

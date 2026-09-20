@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "QNG_hangzhou",
+  "Name": "Hangzhou",
+  "CountryId": "QNG",
+  "RegionId": "QNG_zhejiang",
+  "Latitude": 30.27,
+  "Longitude": 120.15,
+  "ArchitectureProfile": "chinese",
+  "Seed": 179014770,
+  "IsPort": false,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "JAP_nagoya",
+  "Name": "Nagoya",
+  "CountryId": "JAP",
+  "RegionId": "JAP_central",
+  "Latitude": 35.18,
+  "Longitude": 136.91,
+  "ArchitectureProfile": "japanese",
+  "Seed": 941471016,
+  "IsPort": false,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

@@ -1,0 +1,15 @@
+{
+  "version": "0.9",
+  "asset": "region-landscape.png",
+  "generationMode": "built-in image_gen",
+  "useCase": "historical-scene",
+  "sourcePath": "C:/Users/micha/.codex/generated_images/01a0bd53-5fb6-7a01-8c82-d34e4d3498c3/exec-ea8ad293-ef83-4479-a532-c966558056eb.png",
+  "postProcessing": "None. Original generated PNG copied byte-for-byte.",
+  "purpose": "Generic fictional Jiangnan-inspired province overview banner; not a documented reconstruction of any real settlement.",
+  "prompt": "Use case: historical-scene. Asset type: a single original province-overview landscape banner for a Chinese nineteenth-century grand-strategy game UI. Primary request: a quiet Jiangnan-inspired rural landscape circa the nineteenth century, realistic hand-painted oil illustration, approximately 2.1:1 wide aspect ratio. Compose only a few large, clear forms: low soft blue-gray hills in the distance, broad muted olive rice paddies, one gently winding pale water channel, and a tiny distant cluster of only two or three white-plaster houses with simple gray tiled roofs. A pale ivory misty sky occupies the upper third. Restrained palette of gray-blue, olive, warm off-white; believable atmospheric depth, subtle fine painterly surface and natural light. Simplify detail so this reads instantly at 500 pixels wide. Serene, spacious, understated, softly lit. Entire image is landscape artwork, no surrounding UI. This is a fictional generic regional vignette, not a documentary reconstruction of any real settlement. No people, no animals, no boats, no extra buildings, no ornamental pagodas, no dramatic peaks, no detailed city, no dense vegetation, no text, no labels, no icons, no borders, no vignette frame, no logo, no watermark, no circular sun or moon. Use independently invented composition; do not reproduce a particular existing game image. Deliver a finished raster painting, not flat vector shapes or a polygonal 3D render.",
+  "dimensions": [
+    1816,
+    866
+  ],
+  "sha256": "7bf0f76eeeb67d2b0e5611fa779ed922b224830457b12d4588bf1399b0de98d8"
+}

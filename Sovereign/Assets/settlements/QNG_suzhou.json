@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "QNG_suzhou",
+  "Name": "Suzhou",
+  "CountryId": "QNG",
+  "RegionId": "QNG_jiangsu",
+  "Latitude": 31.3,
+  "Longitude": 120.59,
+  "ArchitectureProfile": "chinese",
+  "Seed": 948992262,
+  "IsPort": false,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "SPA_seville",
+  "Name": "Seville",
+  "CountryId": "SPA",
+  "RegionId": "SPA_atlantic",
+  "Latitude": 37.39,
+  "Longitude": -5.98,
+  "ArchitectureProfile": "iberian",
+  "Seed": 1716493482,
+  "IsPort": true,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

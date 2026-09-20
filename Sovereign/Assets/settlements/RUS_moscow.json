@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "RUS_moscow",
+  "Name": "Moscow",
+  "CountryId": "RUS",
+  "RegionId": "RUS_central",
+  "Latitude": 55.76,
+  "Longitude": 37.62,
+  "ArchitectureProfile": "russian",
+  "Seed": 1511775682,
+  "IsPort": false,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

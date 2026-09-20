@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "FRA_lyon",
+  "Name": "Lyon",
+  "CountryId": "FRA",
+  "RegionId": "FRA_east",
+  "Latitude": 45.76,
+  "Longitude": 4.84,
+  "ArchitectureProfile": "french",
+  "Seed": 183396359,
+  "IsPort": false,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

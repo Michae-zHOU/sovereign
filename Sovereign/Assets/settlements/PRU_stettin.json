@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "PRU_stettin",
+  "Name": "Stettin",
+  "CountryId": "PRU",
+  "RegionId": "PRU_central",
+  "Latitude": 53.43,
+  "Longitude": 14.55,
+  "ArchitectureProfile": "central_european",
+  "Seed": 776835488,
+  "IsPort": true,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

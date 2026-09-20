@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "JAP_edo",
+  "Name": "Edo",
+  "CountryId": "JAP",
+  "RegionId": "JAP_east",
+  "Latitude": 35.68,
+  "Longitude": 139.76,
+  "ArchitectureProfile": "japanese",
+  "Seed": 594159933,
+  "IsPort": true,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

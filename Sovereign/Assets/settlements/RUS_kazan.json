@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "RUS_kazan",
+  "Name": "Kazan",
+  "CountryId": "RUS",
+  "RegionId": "RUS_central",
+  "Latitude": 55.79,
+  "Longitude": 49.12,
+  "ArchitectureProfile": "russian",
+  "Seed": 1303103675,
+  "IsPort": false,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

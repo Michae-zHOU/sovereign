@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "POR_coimbra",
+  "Name": "Coimbra",
+  "CountryId": "POR",
+  "RegionId": "POR_central",
+  "Latitude": 40.2,
+  "Longitude": -8.41,
+  "ArchitectureProfile": "iberian",
+  "Seed": 2020264190,
+  "IsPort": false,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "SPA_zaragoza",
+  "Name": "Zaragoza",
+  "CountryId": "SPA",
+  "RegionId": "SPA_east",
+  "Latitude": 41.65,
+  "Longitude": -0.89,
+  "ArchitectureProfile": "iberian",
+  "Seed": 71696805,
+  "IsPort": false,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

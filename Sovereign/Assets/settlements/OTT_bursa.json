@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "OTT_bursa",
+  "Name": "Bursa",
+  "CountryId": "OTT",
+  "RegionId": "OTT_anatolia",
+  "Latitude": 40.19,
+  "Longitude": 29.06,
+  "ArchitectureProfile": "ottoman",
+  "Seed": 246113960,
+  "IsPort": false,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

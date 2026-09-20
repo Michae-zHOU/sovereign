@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "POR_evora",
+  "Name": "Évora",
+  "CountryId": "POR",
+  "RegionId": "POR_south",
+  "Latitude": 38.57,
+  "Longitude": -7.91,
+  "ArchitectureProfile": "iberian",
+  "Seed": 1376542392,
+  "IsPort": false,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

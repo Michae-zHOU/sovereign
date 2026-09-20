@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "QNG_guilin",
+  "Name": "Guilin",
+  "CountryId": "QNG",
+  "RegionId": "QNG_guangxi",
+  "Latitude": 25.281,
+  "Longitude": 110.296,
+  "ArchitectureProfile": "chinese",
+  "Seed": 136321298,
+  "IsPort": false,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

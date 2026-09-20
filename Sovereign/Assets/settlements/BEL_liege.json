@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "BEL_liege",
+  "Name": "Liège",
+  "CountryId": "BEL",
+  "RegionId": "BEL_wallonia",
+  "Latitude": 50.63,
+  "Longitude": 5.57,
+  "ArchitectureProfile": "central_european",
+  "Seed": 1754581985,
+  "IsPort": false,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "QNG_wuhu",
+  "Name": "Wuhu",
+  "CountryId": "QNG",
+  "RegionId": "QNG_anhui",
+  "Latitude": 31.326,
+  "Longitude": 118.376,
+  "ArchitectureProfile": "chinese",
+  "Seed": 1692430979,
+  "IsPort": true,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

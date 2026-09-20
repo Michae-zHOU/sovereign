@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "JAP_sendai",
+  "Name": "Sendai",
+  "CountryId": "JAP",
+  "RegionId": "JAP_east",
+  "Latitude": 38.27,
+  "Longitude": 140.87,
+  "ArchitectureProfile": "japanese",
+  "Seed": 773336437,
+  "IsPort": false,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

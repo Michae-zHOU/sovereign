@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "GBR_cardiff",
+  "Name": "Cardiff",
+  "CountryId": "GBR",
+  "RegionId": "GBR_west",
+  "Latitude": 51.48,
+  "Longitude": -3.18,
+  "ArchitectureProfile": "british",
+  "Seed": 1060259884,
+  "IsPort": true,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "AUS_graz",
+  "Name": "Graz",
+  "CountryId": "AUS",
+  "RegionId": "AUS_alpine",
+  "Latitude": 47.07,
+  "Longitude": 15.44,
+  "ArchitectureProfile": "central_european",
+  "Seed": 268584967,
+  "IsPort": false,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

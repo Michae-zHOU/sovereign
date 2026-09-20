@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "QNG_anqing",
+  "Name": "Anqing",
+  "CountryId": "QNG",
+  "RegionId": "QNG_anhui",
+  "Latitude": 30.505,
+  "Longitude": 117.047,
+  "ArchitectureProfile": "chinese",
+  "Seed": 896311594,
+  "IsPort": true,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

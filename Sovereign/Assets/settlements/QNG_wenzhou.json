@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "QNG_wenzhou",
+  "Name": "Wenzhou",
+  "CountryId": "QNG",
+  "RegionId": "QNG_zhejiang",
+  "Latitude": 28.015,
+  "Longitude": 120.655,
+  "ArchitectureProfile": "chinese",
+  "Seed": 1947005940,
+  "IsPort": true,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

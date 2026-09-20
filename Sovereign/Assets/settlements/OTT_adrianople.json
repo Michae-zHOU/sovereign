@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "OTT_adrianople",
+  "Name": "Adrianople",
+  "CountryId": "OTT",
+  "RegionId": "OTT_balkans",
+  "Latitude": 41.68,
+  "Longitude": 26.56,
+  "ArchitectureProfile": "ottoman",
+  "Seed": 1789726800,
+  "IsPort": false,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

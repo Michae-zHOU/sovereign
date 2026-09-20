@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "SPA_barcelona",
+  "Name": "Barcelona",
+  "CountryId": "SPA",
+  "RegionId": "SPA_east",
+  "Latitude": 41.39,
+  "Longitude": 2.17,
+  "ArchitectureProfile": "iberian",
+  "Seed": 1747644291,
+  "IsPort": true,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

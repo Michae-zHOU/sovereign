@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "SPA_valencia",
+  "Name": "Valencia",
+  "CountryId": "SPA",
+  "RegionId": "SPA_east",
+  "Latitude": 39.47,
+  "Longitude": -0.38,
+  "ArchitectureProfile": "iberian",
+  "Seed": 1686633141,
+  "IsPort": true,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

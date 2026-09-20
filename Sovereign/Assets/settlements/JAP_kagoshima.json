@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "JAP_kagoshima",
+  "Name": "Kagoshima",
+  "CountryId": "JAP",
+  "RegionId": "JAP_west",
+  "Latitude": 31.6,
+  "Longitude": 130.56,
+  "ArchitectureProfile": "japanese",
+  "Seed": 327110281,
+  "IsPort": true,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

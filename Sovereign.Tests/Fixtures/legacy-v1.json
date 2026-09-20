@@ -1,0 +1,372 @@
+{
+  "Format": "Sovereign.Save",
+  "Version": 1,
+  "Checksum": "8C3DEF0544E1ED5817F69D07DA65F94A66CE27277E3E0AF0DA45A297362CB272",
+  "State": {
+    "SaveVersion": 1,
+    "PlayerCountryId": "GBR",
+    "Date": "1836-03-01T00:00:00",
+    "DayNumber": 60,
+    "Countries": [
+      {
+        "Id": "GBR",
+        "Name": "Great Britain",
+        "Adjective": "British",
+        "Population": 16015657,
+        "Treasury": 18182.171308589588235805542629,
+        "Debt": 0,
+        "Gdp": 155814.01932315849790559501907,
+        "LivingStandard": 15.183371420382892499374693329,
+        "Literacy": 57.720,
+        "Unrest": 15.494072383402309918752271074,
+        "DailyBalance": 13.737959381580308961207517,
+        "TaxRevenue": 146.81492938158030896120751707,
+        "Spending": 133.076970,
+        "DailyTradeBalance": 0.0,
+        "HouseholdIncome": 275.83233492377075471194266381,
+        "NeedsFulfilled": 0.8229655174292027824530066969,
+        "Prestige": 70,
+        "TaxRate": 29,
+        "Goods": {
+          "grain": 1854.0295568587290652161951990,
+          "timber": 304.03937293903824862952946276,
+          "coal": 460.46858356423243790138597009,
+          "iron": 328.29406643763844984590277878,
+          "tools": 397.44980456150485830510209025,
+          "clothes": 513.54116550845414408841325032
+        },
+        "Prices": {
+          "grain": 1.7026458515299724684722195750,
+          "timber": 1.4520487821540057251689001117,
+          "coal": 1.9207238354249447024271140668,
+          "iron": 2.4224586960047836496057828922,
+          "tools": 5.9536735533392948392502766556,
+          "clothes": 4.0425757866157132665649554827
+        },
+        "Production": {
+          "grain": 112.31722550172240570817467601,
+          "timber": 7.945075802703933538806448184,
+          "coal": 3.4478886776453837284674994470,
+          "iron": 3.4128533354384457176765182998,
+          "tools": 3.5865868897722408835875555522,
+          "clothes": 21.217172043784127349354648185
+        },
+        "Consumption": {
+          "grain": 105.44093608034039733504950988,
+          "timber": 7.7855874682786884613031128851,
+          "coal": 2.6581803927310332211524549316,
+          "iron": 2.3910579265148272557250370348,
+          "tools": 1.4852020430648889144548253730,
+          "clothes": 21.088187216068079467009901977
+        },
+        "Industries": {
+          "farm": 9,
+          "lumber": 3,
+          "coal_mine": 4,
+          "iron_mine": 3,
+          "toolworks": 2,
+          "textile": 4
+        },
+        "Trade": {
+          "grain": 0,
+          "timber": 0,
+          "coal": 0,
+          "iron": 0,
+          "tools": 1,
+          "clothes": 0
+        },
+        "Construction": [
+          {
+            "IndustryId": "textile",
+            "Name": "Textile mills",
+            "DaysRemaining": 80,
+            "TotalDays": 80
+          }
+        ],
+        "Reforms": [
+          "primary_schools"
+        ],
+        "Technologies": [],
+        "ResearchId": "mechanical_tools",
+        "ResearchProgress": 59.61960,
+        "Relations": {
+          "PRU": 25,
+          "JAP": -10
+        },
+        "DiplomaticCooldowns": {
+          "PRU": 30,
+          "JAP": 0
+        },
+        "TradePacts": [],
+        "MobilizedAgainst": "",
+        "History": [
+          {
+            "Date": "1836-01-01T00:00:00",
+            "Gdp": 396025,
+            "Treasury": 24000,
+            "LivingStandard": 14
+          },
+          {
+            "Date": "1836-02-01T00:00:00",
+            "Gdp": 177732.10374450601898165923772,
+            "Treasury": 21702.293504971641022262084967,
+            "LivingStandard": 14.760790672008135039227902307
+          },
+          {
+            "Date": "1836-03-01T00:00:00",
+            "Gdp": 155814.01932315849790559501907,
+            "Treasury": 22282.171308589588235805542629,
+            "LivingStandard": 15.183371420382892499374693329
+          }
+        ]
+      },
+      {
+        "Id": "PRU",
+        "Name": "Prussia",
+        "Adjective": "Prussian",
+        "Population": 14014928,
+        "Treasury": 16521.474390640568535073431483,
+        "Debt": 0,
+        "Gdp": 166485.87887369052169132196513,
+        "LivingStandard": 14.349730978215148739754970191,
+        "Literacy": 60.720,
+        "Unrest": 11.221073292280278585699915042,
+        "DailyBalance": 88.413815058565197156424082,
+        "TaxRevenue": 125.08718505856519715642408159,
+        "Spending": 123.073370,
+        "DailyTradeBalance": 86.40,
+        "HouseholdIncome": 314.11709519869518153045386556,
+        "NeedsFulfilled": 0.9068396571458584307402876581,
+        "Prestige": 45,
+        "TaxRate": 22,
+        "Goods": {
+          "grain": 1263.4185216385608796830278087,
+          "timber": 295.87263703027446654215810428,
+          "coal": 280.44225295741800469995943780,
+          "iron": 197.07763121127295020256310171,
+          "tools": 330.48537184693227008470774049,
+          "clothes": 341.85360088539799840815646859
+        },
+        "Prices": {
+          "grain": 1.8988414611689046639995350959,
+          "timber": 1.4525959707956289776701361015,
+          "coal": 1.9225818914564995553776406786,
+          "iron": 2.6954529640621603533046387216,
+          "tools": 6.0830426824924198493934179964,
+          "clothes": 5.4745698898935209221804339251
+        },
+        "Production": {
+          "grain": 99.35353276700831664576966303,
+          "timber": 11.997622242251148018288707048,
+          "coal": 8.984826071856715675248284488,
+          "iron": 7.5942387102442660638289464825,
+          "tools": 5.7103804331108142042109122894,
+          "clothes": 20.189645719764850638623451986
+        },
+        "Consumption": {
+          "grain": 101.67249732136781085581368156,
+          "timber": 8.257991226955759579891992527,
+          "coal": 5.1581338773320997144731859223,
+          "iron": 3.8069202887405428028072748596,
+          "tools": 1.4132752003835395447036416390,
+          "clothes": 20.334499464273562171162736311
+        },
+        "Industries": {
+          "farm": 7,
+          "lumber": 3,
+          "coal_mine": 3,
+          "iron_mine": 2,
+          "toolworks": 2,
+          "textile": 3
+        },
+        "Trade": {
+          "grain": 0,
+          "timber": -1,
+          "coal": -1,
+          "iron": -1,
+          "tools": -1,
+          "clothes": 0
+        },
+        "Construction": [
+          {
+            "IndustryId": "coal_mine",
+            "Name": "Coal mines",
+            "DaysRemaining": 15,
+            "TotalDays": 75
+          }
+        ],
+        "Reforms": [
+          "primary_schools"
+        ],
+        "Technologies": [],
+        "ResearchId": "mechanical_tools",
+        "ResearchProgress": 63.21960,
+        "Relations": {
+          "GBR": 25,
+          "JAP": -10
+        },
+        "DiplomaticCooldowns": {
+          "GBR": 0,
+          "JAP": 0
+        },
+        "TradePacts": [],
+        "MobilizedAgainst": "",
+        "History": [
+          {
+            "Date": "1836-01-01T00:00:00",
+            "Gdp": 329960,
+            "Treasury": 18000,
+            "LivingStandard": 12
+          },
+          {
+            "Date": "1836-02-01T00:00:00",
+            "Gdp": 165628.42041412170708884726663,
+            "Treasury": 13973.416212702165605336894126,
+            "LivingStandard": 13.402201755006874621441757760
+          },
+          {
+            "Date": "1836-03-01T00:00:00",
+            "Gdp": 166485.87887369052169132196513,
+            "Treasury": 16521.474390640568535073431483,
+            "LivingStandard": 14.349730978215148739754970191
+          }
+        ]
+      },
+      {
+        "Id": "JAP",
+        "Name": "Japan",
+        "Adjective": "Japanese",
+        "Population": 31026169,
+        "Treasury": 17675.870263407665030090089779,
+        "Debt": 0,
+        "Gdp": 270236.81757372119901282804982,
+        "LivingStandard": 12.066513183266960364208996167,
+        "Literacy": 38.0900,
+        "Unrest": 20.952093980745959274257307534,
+        "DailyBalance": 100.594731787462686016359161,
+        "TaxRevenue": 210.32328678746268601635916141,
+        "Spending": 196.128555,
+        "DailyTradeBalance": 86.40,
+        "HouseholdIncome": 535.69442505342993636932730942,
+        "NeedsFulfilled": 0.7393052436061835684320778477,
+        "Prestige": 25,
+        "TaxRate": 22,
+        "Goods": {
+          "grain": 3634.4334092358845266232036437,
+          "timber": 501.80731473810736289364136557,
+          "coal": 221.92778794355274084070807648,
+          "iron": 184.04657065189696659409808869,
+          "tools": 289.59924466939153305589721328,
+          "clothes": 646.32045414411325221035093942
+        },
+        "Prices": {
+          "grain": 1.6053299715306975287595460901,
+          "timber": 1.4609547837750521522448301033,
+          "coal": 1.9597840462096427610822075095,
+          "iron": 2.9185900988004727443918754439,
+          "tools": 6.9987183787359736720697464581,
+          "clothes": 6.0857531492259881730117200756
+        },
+        "Production": {
+          "grain": 181.78852901949760882799041052,
+          "timber": 17.184940549499516004282509675,
+          "coal": 9.154230099934521081668966400,
+          "iron": 7.9152281616890020606035546788,
+          "tools": 6.4902112620844193473718390640,
+          "clothes": 35.960096267599550049122397754
+        },
+        "Consumption": {
+          "grain": 183.49976663128039365697896346,
+          "timber": 13.632139168483164386018464904,
+          "coal": 5.5556443947519978084302316932,
+          "iron": 4.3268075080562795649145593760,
+          "tools": 2.5172067387319685034385678428,
+          "clothes": 36.699953326256078731395792692
+        },
+        "Industries": {
+          "farm": 15,
+          "lumber": 4,
+          "coal_mine": 2,
+          "iron_mine": 2,
+          "toolworks": 2,
+          "textile": 5
+        },
+        "Trade": {
+          "grain": 0,
+          "timber": -1,
+          "coal": -1,
+          "iron": -1,
+          "tools": -1,
+          "clothes": 0
+        },
+        "Construction": [
+          {
+            "IndustryId": "coal_mine",
+            "Name": "Coal mines",
+            "DaysRemaining": 15,
+            "TotalDays": 75
+          }
+        ],
+        "Reforms": [],
+        "Technologies": [],
+        "ResearchId": "mechanical_tools",
+        "ResearchProgress": 49.827450,
+        "Relations": {
+          "GBR": -10,
+          "PRU": -10
+        },
+        "DiplomaticCooldowns": {
+          "GBR": 0,
+          "PRU": 0
+        },
+        "TradePacts": [],
+        "MobilizedAgainst": "",
+        "History": [
+          {
+            "Date": "1836-01-01T00:00:00",
+            "Gdp": 484720,
+            "Treasury": 16000,
+            "LivingStandard": 10
+          },
+          {
+            "Date": "1836-02-01T00:00:00",
+            "Gdp": 274474.95905698037930547073675,
+            "Treasury": 14753.990150496534946091909735,
+            "LivingStandard": 11.174212396822954049923523716
+          },
+          {
+            "Date": "1836-03-01T00:00:00",
+            "Gdp": 270236.81757372119901282804982,
+            "Treasury": 17675.870263407665030090089779,
+            "LivingStandard": 12.066513183266960364208996167
+          }
+        ]
+      }
+    ],
+    "Log": [
+      "01 Jan 1836 \u00B7 A new decade begins. Build an economy, improve daily life, and guide your nation\u0027s reforms.",
+      "01 Jan 1836 \u00B7 Prototype: 3 countries, 1836\u20131846. Economic data, borders and policy outcomes are simplified game estimates.",
+      "01 Jan 1836 \u00B7 Reform enacted: Primary education.",
+      "01 Jan 1836 \u00B7 Diplomacy with Prussia: improve. Relations \u002B25.",
+      "01 Jan 1836 \u00B7 Construction commissioned: Commercial farms. 1,400 paid; materials reserved.",
+      "14 Feb 1836 \u00B7 Commercial farms completed. Productive capacity expanded.",
+      "01 Mar 1836 \u00B7 Decision required: The petitions on your desk.",
+      "01 Mar 1836 \u00B7 The petitions on your desk: Fund local classrooms.",
+      "01 Mar 1836 \u00B7 Construction commissioned: Textile mills. 3,200 paid; materials reserved."
+    ],
+    "Finished": false,
+    "PendingEvent": null,
+    "CompletedEvents": [
+      "industrial_petition"
+    ],
+    "ExternalGoods": {
+      "grain": 80000,
+      "timber": 80240.0,
+      "coal": 80240.0,
+      "iron": 80240.0,
+      "tools": 80209.16607096402690508494452,
+      "clothes": 80000
+    },
+    "ExternalTreasury": 1995223.0078632748448528787323
+  }
+}

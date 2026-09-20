@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "FRA_lille",
+  "Name": "Lille",
+  "CountryId": "FRA",
+  "RegionId": "FRA_north",
+  "Latitude": 50.63,
+  "Longitude": 3.06,
+  "ArchitectureProfile": "french",
+  "Seed": 2114439729,
+  "IsPort": false,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

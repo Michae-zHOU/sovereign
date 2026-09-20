@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "PRU_konigsberg",
+  "Name": "Königsberg",
+  "CountryId": "PRU",
+  "RegionId": "PRU_east",
+  "Latitude": 54.71,
+  "Longitude": 20.51,
+  "ArchitectureProfile": "central_european",
+  "Seed": 345432656,
+  "IsPort": true,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "USA_stlouis",
+  "Name": "Saint Louis",
+  "CountryId": "USA",
+  "RegionId": "USA_interior",
+  "Latitude": 38.63,
+  "Longitude": -90.2,
+  "ArchitectureProfile": "american",
+  "Seed": 391667042,
+  "IsPort": false,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "QNG_xiamen",
+  "Name": "Xiamen",
+  "CountryId": "QNG",
+  "RegionId": "QNG_fujian",
+  "Latitude": 24.455,
+  "Longitude": 118.077,
+  "ArchitectureProfile": "chinese",
+  "Seed": 56632498,
+  "IsPort": true,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

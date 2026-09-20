@@ -1,0 +1,115 @@
+{
+  "version": "0.8",
+  "authoringTool": "Blender 4.5.3",
+  "topologySource": {
+    "repository": "https://github.com/makehumancommunity/makehuman",
+    "commit": "a8bc2d54ff0ac92e78ff71431b1023eda42bf482",
+    "license": "CC0-1.0"
+  },
+  "systemAssets": {
+    "url": "https://files2.makehumancommunity.org/asset_packs/makehuman_system_assets/makehuman_system_assets_cc0.zip",
+    "sha256": "b542127a8e25547c7c29c19f2d1d2adb9a664c80396ecd694095dbc8028a0107",
+    "license": "CC0-1.0"
+  },
+  "authoredModels": [
+    {
+      "identity": "daoguang",
+      "file": "daoguang.glb",
+      "bytes": 24847372,
+      "sha256": "f1cc9c10c503310fbc778a6ade7522fca2c62624823899107c7e340220c8da43",
+      "triangles": 239160,
+      "verticesWithUVSeams": 142230,
+      "meshes": 22,
+      "bones": 9,
+      "animations": [
+        "idle"
+      ],
+      "faceMorphs": [
+        "Blink",
+        "Speech"
+      ],
+      "likeness": "artistic reconstruction, not a verified facial likeness",
+      "hands": "MakeHuman anatomical topology, wrist/finger direction with adjusted palm roll, relaxed fingers, upper arm and forearm binding",
+      "wardrobe": "Full-length robe, relaxed arms, separate shoulder cape, standing collar, horse-hoof cuffs, belt, beads, hanging accessories and boots",
+      "texture": "source/imperial_dragon_brocade_v2.png and source/imperial_navy_brocade_v1.png; built-in imagegen; full prompts in source/TEXTURE-GENERATION-0.7.md and source/NAVY-TEXTURE-GENERATION-0.7.md"
+    },
+    {
+      "identity": "tokugawa_ienari",
+      "file": "tokugawa_ienari.glb",
+      "bytes": 8927652,
+      "sha256": "a49a4ed8efd07afd5afbf48b48e77a4b7a97fbb2c0b494a78b41fc3ba88e7c65",
+      "triangles": 92828,
+      "verticesWithUVSeams": 55644,
+      "meshes": 10,
+      "bones": 6,
+      "animations": [
+        "idle"
+      ],
+      "faceMorphs": [
+        "Blink",
+        "Speech"
+      ],
+      "likeness": "artistic reconstruction, not a verified facial likeness",
+      "hands": "anatomical skin mesh attached to forearm bones"
+    },
+    {
+      "identity": "tokugawa_ieyoshi",
+      "file": "tokugawa_ieyoshi.glb",
+      "bytes": 8028848,
+      "sha256": "0c1a279a194b9eed12d88a7241994ba18a182ccad74a666aef4fe54b9f93cedd",
+      "triangles": 92700,
+      "verticesWithUVSeams": 55584,
+      "meshes": 10,
+      "bones": 6,
+      "animations": [
+        "idle"
+      ],
+      "faceMorphs": [
+        "Blink",
+        "Speech"
+      ],
+      "likeness": "artistic reconstruction, not a verified facial likeness",
+      "hands": "anatomical skin mesh attached to forearm bones"
+    },
+    {
+      "identity": "victoria",
+      "file": "victoria.glb",
+      "bytes": 11791508,
+      "sha256": "65e2b621970f860440c2cf65abbcd1fdfe31e3d199d2f356ac3a3f122e3bc8af",
+      "triangles": 100728,
+      "verticesWithUVSeams": 61326,
+      "meshes": 16,
+      "bones": 6,
+      "animations": [
+        "idle"
+      ],
+      "faceMorphs": [
+        "Blink",
+        "Speech"
+      ],
+      "likeness": "artistic reconstruction, not a verified facial likeness",
+      "hands": "anatomical skin mesh attached to forearm bones"
+    },
+    {
+      "identity": "william_iv",
+      "file": "william_iv.glb",
+      "bytes": 9790464,
+      "sha256": "38d6cee8e3de5b040db36fff110de030dedca119edff233215f47c0375e3775d",
+      "triangles": 101786,
+      "verticesWithUVSeams": 61962,
+      "meshes": 13,
+      "bones": 6,
+      "animations": [
+        "idle"
+      ],
+      "faceMorphs": [
+        "Blink",
+        "Speech"
+      ],
+      "likeness": "artistic reconstruction, not a verified facial likeness",
+      "hands": "anatomical skin mesh attached to forearm bones"
+    }
+  ],
+  "proceduralFallbackIdentities": 15,
+  "revisionScope": "Daoguang face, attached beard, eye/skin materials, soft cape and subtle expression; four other anatomical GLBs retained from 0.6"
+}

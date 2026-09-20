@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "POR_braga",
+  "Name": "Braga",
+  "CountryId": "POR",
+  "RegionId": "POR_north",
+  "Latitude": 41.55,
+  "Longitude": -8.43,
+  "ArchitectureProfile": "iberian",
+  "Seed": 2080914398,
+  "IsPort": false,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

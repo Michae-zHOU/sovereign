@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "FRA_paris",
+  "Name": "Paris",
+  "CountryId": "FRA",
+  "RegionId": "FRA_north",
+  "Latitude": 48.86,
+  "Longitude": 2.35,
+  "ArchitectureProfile": "french",
+  "Seed": 1434078168,
+  "IsPort": false,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

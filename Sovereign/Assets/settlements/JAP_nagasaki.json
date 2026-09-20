@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "JAP_nagasaki",
+  "Name": "Nagasaki",
+  "CountryId": "JAP",
+  "RegionId": "JAP_west",
+  "Latitude": 32.75,
+  "Longitude": 129.88,
+  "ArchitectureProfile": "japanese",
+  "Seed": 1688939312,
+  "IsPort": true,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

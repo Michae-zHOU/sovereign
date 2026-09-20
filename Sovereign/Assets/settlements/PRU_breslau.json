@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "PRU_breslau",
+  "Name": "Breslau",
+  "CountryId": "PRU",
+  "RegionId": "PRU_east",
+  "Latitude": 51.11,
+  "Longitude": 17.04,
+  "ArchitectureProfile": "central_european",
+  "Seed": 1238518619,
+  "IsPort": false,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

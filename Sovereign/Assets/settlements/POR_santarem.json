@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "POR_santarem",
+  "Name": "Santarém",
+  "CountryId": "POR",
+  "RegionId": "POR_central",
+  "Latitude": 39.24,
+  "Longitude": -8.69,
+  "ArchitectureProfile": "iberian",
+  "Seed": 719799644,
+  "IsPort": false,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

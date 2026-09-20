@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "AUS_milan",
+  "Name": "Milan",
+  "CountryId": "AUS",
+  "RegionId": "AUS_adriatic",
+  "Latitude": 45.46,
+  "Longitude": 9.19,
+  "ArchitectureProfile": "central_european",
+  "Seed": 1768664590,
+  "IsPort": false,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

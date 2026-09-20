@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "AUS_venice",
+  "Name": "Venice",
+  "CountryId": "AUS",
+  "RegionId": "AUS_adriatic",
+  "Latitude": 45.44,
+  "Longitude": 12.33,
+  "ArchitectureProfile": "central_european",
+  "Seed": 1054553765,
+  "IsPort": true,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

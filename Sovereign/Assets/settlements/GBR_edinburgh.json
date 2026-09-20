@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "GBR_edinburgh",
+  "Name": "Edinburgh",
+  "CountryId": "GBR",
+  "RegionId": "GBR_north",
+  "Latitude": 55.95,
+  "Longitude": -3.19,
+  "ArchitectureProfile": "british",
+  "Seed": 725008341,
+  "IsPort": false,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

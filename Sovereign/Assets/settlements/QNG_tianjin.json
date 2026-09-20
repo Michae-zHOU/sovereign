@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "QNG_tianjin",
+  "Name": "Tianjin",
+  "CountryId": "QNG",
+  "RegionId": "QNG_zhili",
+  "Latitude": 39.13,
+  "Longitude": 117.2,
+  "ArchitectureProfile": "chinese",
+  "Seed": 635659985,
+  "IsPort": true,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

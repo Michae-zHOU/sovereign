@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "POR_porto",
+  "Name": "Porto",
+  "CountryId": "POR",
+  "RegionId": "POR_north",
+  "Latitude": 41.16,
+  "Longitude": -8.63,
+  "ArchitectureProfile": "iberian",
+  "Seed": 583224833,
+  "IsPort": true,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

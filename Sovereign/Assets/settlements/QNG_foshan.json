@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "QNG_foshan",
+  "Name": "Foshan",
+  "CountryId": "QNG",
+  "RegionId": "QNG_guangdong",
+  "Latitude": 23.031,
+  "Longitude": 113.112,
+  "ArchitectureProfile": "chinese",
+  "Seed": 1895769207,
+  "IsPort": false,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

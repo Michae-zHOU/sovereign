@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "OTT_baghdad",
+  "Name": "Baghdad",
+  "CountryId": "OTT",
+  "RegionId": "OTT_arab",
+  "Latitude": 33.32,
+  "Longitude": 44.37,
+  "ArchitectureProfile": "ottoman",
+  "Seed": 1489261690,
+  "IsPort": false,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

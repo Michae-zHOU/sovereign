@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "QNG_chengdu",
+  "Name": "Chengdu",
+  "CountryId": "QNG",
+  "RegionId": "QNG_sichuan",
+  "Latitude": 30.664,
+  "Longitude": 104.066,
+  "ArchitectureProfile": "chinese",
+  "Seed": 1039264826,
+  "IsPort": false,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

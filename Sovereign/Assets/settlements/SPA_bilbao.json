@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "SPA_bilbao",
+  "Name": "Bilbao",
+  "CountryId": "SPA",
+  "RegionId": "SPA_atlantic",
+  "Latitude": 43.26,
+  "Longitude": -2.94,
+  "ArchitectureProfile": "iberian",
+  "Seed": 832493205,
+  "IsPort": true,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

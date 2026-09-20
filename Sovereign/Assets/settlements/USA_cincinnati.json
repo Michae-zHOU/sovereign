@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "USA_cincinnati",
+  "Name": "Cincinnati",
+  "CountryId": "USA",
+  "RegionId": "USA_interior",
+  "Latitude": 39.1,
+  "Longitude": -84.51,
+  "ArchitectureProfile": "american",
+  "Seed": 1617189679,
+  "IsPort": false,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

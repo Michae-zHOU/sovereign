@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "QNG_yangzhou",
+  "Name": "Yangzhou",
+  "CountryId": "QNG",
+  "RegionId": "QNG_jiangsu",
+  "Latitude": 32.395,
+  "Longitude": 119.44,
+  "ArchitectureProfile": "chinese",
+  "Seed": 226496099,
+  "IsPort": false,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

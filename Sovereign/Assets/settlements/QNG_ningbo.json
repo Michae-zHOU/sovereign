@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "QNG_ningbo",
+  "Name": "Ningbo",
+  "CountryId": "QNG",
+  "RegionId": "QNG_zhejiang",
+  "Latitude": 29.873,
+  "Longitude": 121.551,
+  "ArchitectureProfile": "chinese",
+  "Seed": 286965245,
+  "IsPort": true,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

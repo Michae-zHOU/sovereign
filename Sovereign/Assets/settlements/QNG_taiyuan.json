@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "QNG_taiyuan",
+  "Name": "Taiyuan",
+  "CountryId": "QNG",
+  "RegionId": "QNG_shanxi",
+  "Latitude": 37.872,
+  "Longitude": 112.558,
+  "ArchitectureProfile": "chinese",
+  "Seed": 685705959,
+  "IsPort": false,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

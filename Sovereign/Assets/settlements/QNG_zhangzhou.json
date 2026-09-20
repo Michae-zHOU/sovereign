@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "QNG_zhangzhou",
+  "Name": "Zhangzhou",
+  "CountryId": "QNG",
+  "RegionId": "QNG_fujian",
+  "Latitude": 24.511,
+  "Longitude": 117.649,
+  "ArchitectureProfile": "chinese",
+  "Seed": 430292440,
+  "IsPort": false,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

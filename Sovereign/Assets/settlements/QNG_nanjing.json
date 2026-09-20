@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "QNG_nanjing",
+  "Name": "Nanjing",
+  "CountryId": "QNG",
+  "RegionId": "QNG_jiangsu",
+  "Latitude": 32.06,
+  "Longitude": 118.8,
+  "ArchitectureProfile": "chinese",
+  "Seed": 1574683271,
+  "IsPort": false,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

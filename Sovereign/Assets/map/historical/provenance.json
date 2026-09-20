@@ -1,0 +1,17 @@
+{
+  "SourceUrl": "https://github.com/aourednik/historical-basemaps",
+  "Commit": "da7a4b735ecef70aebdc9c73e409d8a2500d50f3",
+  "SourceYear": 1815,
+  "License": "GPL-3.0",
+  "RawFeatures": 436,
+  "NamedAtlasEntries": 313,
+  "UnassignedSourceFeatures": 101,
+  "ChineseNames": 163,
+  "UntranslatedNames": 151,
+  "TextureSize": [
+    4096,
+    2048
+  ],
+  "SourceSha256": "fb654f734583f550904cfa45f361e395c1a488c4960050da2632cb2ac7d1cd1e",
+  "FullyOverlappedEntries": []
+}

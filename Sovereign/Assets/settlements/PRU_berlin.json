@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "PRU_berlin",
+  "Name": "Berlin",
+  "CountryId": "PRU",
+  "RegionId": "PRU_central",
+  "Latitude": 52.52,
+  "Longitude": 13.4,
+  "ArchitectureProfile": "central_european",
+  "Seed": 1006474659,
+  "IsPort": false,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

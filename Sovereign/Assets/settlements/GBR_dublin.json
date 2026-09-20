@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "GBR_dublin",
+  "Name": "Dublin",
+  "CountryId": "GBR",
+  "RegionId": "GBR_west",
+  "Latitude": 53.35,
+  "Longitude": -6.26,
+  "ArchitectureProfile": "british",
+  "Seed": 27004909,
+  "IsPort": true,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

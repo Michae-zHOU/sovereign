@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "USA_washington",
+  "Name": "Washington",
+  "CountryId": "USA",
+  "RegionId": "USA_northeast",
+  "Latitude": 38.91,
+  "Longitude": -77.04,
+  "ArchitectureProfile": "american",
+  "Seed": 2077202795,
+  "IsPort": false,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

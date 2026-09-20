@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "BEL_bruges",
+  "Name": "Bruges",
+  "CountryId": "BEL",
+  "RegionId": "BEL_flanders",
+  "Latitude": 51.21,
+  "Longitude": 3.22,
+  "ArchitectureProfile": "central_european",
+  "Seed": 529865981,
+  "IsPort": false,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

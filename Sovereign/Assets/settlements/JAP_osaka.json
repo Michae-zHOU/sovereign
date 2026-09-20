@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "JAP_osaka",
+  "Name": "Ōsaka",
+  "CountryId": "JAP",
+  "RegionId": "JAP_central",
+  "Latitude": 34.69,
+  "Longitude": 135.5,
+  "ArchitectureProfile": "japanese",
+  "Seed": 1043957554,
+  "IsPort": true,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

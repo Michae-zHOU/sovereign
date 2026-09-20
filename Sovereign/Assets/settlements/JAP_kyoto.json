@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "JAP_kyoto",
+  "Name": "Kyōto",
+  "CountryId": "JAP",
+  "RegionId": "JAP_central",
+  "Latitude": 35.01,
+  "Longitude": 135.77,
+  "ArchitectureProfile": "japanese",
+  "Seed": 782650651,
+  "IsPort": false,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

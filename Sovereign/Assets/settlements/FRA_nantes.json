@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "FRA_nantes",
+  "Name": "Nantes",
+  "CountryId": "FRA",
+  "RegionId": "FRA_south",
+  "Latitude": 47.22,
+  "Longitude": -1.55,
+  "ArchitectureProfile": "french",
+  "Seed": 455832898,
+  "IsPort": true,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

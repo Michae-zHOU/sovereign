@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "QNG_canton",
+  "Name": "Canton",
+  "CountryId": "QNG",
+  "RegionId": "QNG_guangdong",
+  "Latitude": 23.13,
+  "Longitude": 113.26,
+  "ArchitectureProfile": "chinese",
+  "Seed": 985798911,
+  "IsPort": true,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

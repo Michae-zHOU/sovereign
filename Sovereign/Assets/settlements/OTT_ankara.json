@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "OTT_ankara",
+  "Name": "Ankara",
+  "CountryId": "OTT",
+  "RegionId": "OTT_anatolia",
+  "Latitude": 39.93,
+  "Longitude": 32.86,
+  "ArchitectureProfile": "ottoman",
+  "Seed": 2051331005,
+  "IsPort": false,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

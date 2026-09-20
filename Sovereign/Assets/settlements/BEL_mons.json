@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "BEL_mons",
+  "Name": "Mons",
+  "CountryId": "BEL",
+  "RegionId": "BEL_wallonia",
+  "Latitude": 50.45,
+  "Longitude": 3.95,
+  "ArchitectureProfile": "central_european",
+  "Seed": 61236346,
+  "IsPort": false,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

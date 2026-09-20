@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "POR_faro",
+  "Name": "Faro",
+  "CountryId": "POR",
+  "RegionId": "POR_south",
+  "Latitude": 37.02,
+  "Longitude": -7.93,
+  "ArchitectureProfile": "iberian",
+  "Seed": 1278766477,
+  "IsPort": true,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

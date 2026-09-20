@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "FRA_marseille",
+  "Name": "Marseille",
+  "CountryId": "FRA",
+  "RegionId": "FRA_south",
+  "Latitude": 43.3,
+  "Longitude": 5.37,
+  "ArchitectureProfile": "french",
+  "Seed": 1756460613,
+  "IsPort": true,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "BEL_antwerp",
+  "Name": "Antwerp",
+  "CountryId": "BEL",
+  "RegionId": "BEL_brabant",
+  "Latitude": 51.22,
+  "Longitude": 4.4,
+  "ArchitectureProfile": "central_european",
+  "Seed": 928939476,
+  "IsPort": true,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "QNG_jiujiang",
+  "Name": "Jiujiang",
+  "CountryId": "QNG",
+  "RegionId": "QNG_jiangxi",
+  "Latitude": 29.729,
+  "Longitude": 115.993,
+  "ArchitectureProfile": "chinese",
+  "Seed": 1225861471,
+  "IsPort": true,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

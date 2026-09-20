@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "QNG_beijing",
+  "Name": "Beijing",
+  "CountryId": "QNG",
+  "RegionId": "QNG_zhili",
+  "Latitude": 39.9,
+  "Longitude": 116.41,
+  "ArchitectureProfile": "chinese",
+  "Seed": 273701590,
+  "IsPort": false,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

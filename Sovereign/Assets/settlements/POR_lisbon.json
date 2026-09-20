@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "POR_lisbon",
+  "Name": "Lisbon",
+  "CountryId": "POR",
+  "RegionId": "POR_central",
+  "Latitude": 38.72,
+  "Longitude": -9.14,
+  "ArchitectureProfile": "iberian",
+  "Seed": 91759712,
+  "IsPort": true,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "PRU_essen",
+  "Name": "Essen",
+  "CountryId": "PRU",
+  "RegionId": "PRU_west",
+  "Latitude": 51.46,
+  "Longitude": 7.01,
+  "ArchitectureProfile": "central_european",
+  "Seed": 647388139,
+  "IsPort": false,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

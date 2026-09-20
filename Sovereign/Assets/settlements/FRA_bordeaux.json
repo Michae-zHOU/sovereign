@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "FRA_bordeaux",
+  "Name": "Bordeaux",
+  "CountryId": "FRA",
+  "RegionId": "FRA_south",
+  "Latitude": 44.84,
+  "Longitude": -0.58,
+  "ArchitectureProfile": "french",
+  "Seed": 813086935,
+  "IsPort": true,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

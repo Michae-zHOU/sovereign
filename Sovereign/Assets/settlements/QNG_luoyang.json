@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "QNG_luoyang",
+  "Name": "Luoyang",
+  "CountryId": "QNG",
+  "RegionId": "QNG_henan",
+  "Latitude": 34.683,
+  "Longitude": 112.477,
+  "ArchitectureProfile": "chinese",
+  "Seed": 521181757,
+  "IsPort": false,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "AUS_prague",
+  "Name": "Prague",
+  "CountryId": "AUS",
+  "RegionId": "AUS_alpine",
+  "Latitude": 50.08,
+  "Longitude": 14.44,
+  "ArchitectureProfile": "central_european",
+  "Seed": 539850289,
+  "IsPort": false,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

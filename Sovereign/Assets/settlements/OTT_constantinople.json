@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "OTT_constantinople",
+  "Name": "Constantinople",
+  "CountryId": "OTT",
+  "RegionId": "OTT_balkans",
+  "Latitude": 41.01,
+  "Longitude": 28.97,
+  "ArchitectureProfile": "ottoman",
+  "Seed": 333174480,
+  "IsPort": true,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

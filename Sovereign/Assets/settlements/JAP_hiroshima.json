@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "JAP_hiroshima",
+  "Name": "Hiroshima",
+  "CountryId": "JAP",
+  "RegionId": "JAP_west",
+  "Latitude": 34.39,
+  "Longitude": 132.46,
+  "ArchitectureProfile": "japanese",
+  "Seed": 1853263063,
+  "IsPort": true,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

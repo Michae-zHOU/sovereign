@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "USA_philadelphia",
+  "Name": "Philadelphia",
+  "CountryId": "USA",
+  "RegionId": "USA_northeast",
+  "Latitude": 39.95,
+  "Longitude": -75.16,
+  "ArchitectureProfile": "american",
+  "Seed": 381801330,
+  "IsPort": true,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

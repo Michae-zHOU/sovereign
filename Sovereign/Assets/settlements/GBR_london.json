@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "GBR_london",
+  "Name": "London",
+  "CountryId": "GBR",
+  "RegionId": "GBR_south",
+  "Latitude": 51.51,
+  "Longitude": -0.13,
+  "ArchitectureProfile": "british",
+  "Seed": 16397081,
+  "IsPort": true,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

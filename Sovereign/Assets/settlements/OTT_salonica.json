@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "OTT_salonica",
+  "Name": "Salonica",
+  "CountryId": "OTT",
+  "RegionId": "OTT_balkans",
+  "Latitude": 40.64,
+  "Longitude": 22.94,
+  "ArchitectureProfile": "ottoman",
+  "Seed": 1247504083,
+  "IsPort": true,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

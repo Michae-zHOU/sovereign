@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "QNG_zhenjiang",
+  "Name": "Zhenjiang",
+  "CountryId": "QNG",
+  "RegionId": "QNG_jiangsu",
+  "Latitude": 32.212,
+  "Longitude": 119.449,
+  "ArchitectureProfile": "chinese",
+  "Seed": 1375038484,
+  "IsPort": true,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

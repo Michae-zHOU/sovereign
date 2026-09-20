@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "QNG_wuchang",
+  "Name": "Wuchang",
+  "CountryId": "QNG",
+  "RegionId": "QNG_hubei",
+  "Latitude": 30.546,
+  "Longitude": 114.301,
+  "ArchitectureProfile": "chinese",
+  "Seed": 480110425,
+  "IsPort": true,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

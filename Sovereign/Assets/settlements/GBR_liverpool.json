@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "GBR_liverpool",
+  "Name": "Liverpool",
+  "CountryId": "GBR",
+  "RegionId": "GBR_north",
+  "Latitude": 53.41,
+  "Longitude": -2.98,
+  "ArchitectureProfile": "british",
+  "Seed": 2127767411,
+  "IsPort": true,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}

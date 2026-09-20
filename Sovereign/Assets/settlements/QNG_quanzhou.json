@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Id": "QNG_quanzhou",
+  "Name": "Quanzhou",
+  "CountryId": "QNG",
+  "RegionId": "QNG_fujian",
+  "Latitude": 24.908,
+  "Longitude": 118.587,
+  "ArchitectureProfile": "chinese",
+  "Seed": 698078371,
+  "IsPort": true,
+  "ValidFrom": "1836-01-01T00:00:00",
+  "ValidToExclusive": "1846-01-02T00:00:00",
+  "AuthoredScenePath": ""
+}
