@@ -121,9 +121,9 @@ def fit_proxy(path,base):
     assert len(mapping)==len(verts),(str(path),len(mapping),len(verts))
     return mapping,uv,faces
 
-def create_skin(vs,uv,faces,groups,skinmat):
+def create_skin(vs,uv,faces,groups,skinmat,neck_crop=None):
     # Neck/head only; no concealed full body is shipped or rendered.
-    selected=[f for f,g in zip(faces,groups) if g=='body' and min(vs[x[0]][1]*S+OFFSET for x in f)>(1.82 if S<.2 else 1.68) and max(abs(vs[x[0]][0]*S) for x in f)<(.14 if S<.2 else .213)]
+    selected=[f for f,g in zip(faces,groups) if g=='body' and min(vs[x[0]][1]*S+OFFSET for x in f)>(neck_crop if neck_crop is not None else (1.82 if S<.2 else 1.68)) and max(abs(vs[x[0]][0]*S) for x in f)<(.14 if S<.2 else .213)]
     indices=sorted(set(x[0] for f in selected for x in f));remap={v:i for i,v in enumerate(indices)}
     ob=meshobj('Anatomical face and neck',[vec(vs[i]) for i in indices],[[remap[x[0]] for x in f] for f in selected],skinmat,[[uv[x[1]] for x in f] for f in selected])
     ob.shape_key_add(name='Basis')

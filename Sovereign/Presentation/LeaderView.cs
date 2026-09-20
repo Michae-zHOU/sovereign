@@ -15,6 +15,9 @@ public partial class LeaderView : Node3D
     // Only the explicit offline capture command sets this; PNG encoding must not speed up the recorded animation.
     public double AnimationCaptureStepSeconds { get; set; }
     public bool UsesAuthoredModel { get; private set; }
+    /// <summary>Observable lifecycle counters for regression checks; no cache of inactive figures is retained.</summary>
+    public int ModelBuildCount { get; private set; }
+    public string LoadedModelKey { get; private set; } = "";
     /// <summary>Centers the same animated model for an embedded, independently rendered portrait viewport.</summary>
     public bool CompactPortrait { get; set; }
     public bool PreferRealisticPortrait { get; set; } = false;
@@ -28,12 +31,16 @@ public partial class LeaderView : Node3D
     private readonly Dictionary<string, StandardMaterial3D> _materials = new();
     private string _appearance = "", _country = "";
     private int _age = -1;
+    private int _loadedProceduralAge = -1;
+    private ulong _loadedResourceStamp;
     private float _yaw = -.12f, _pitch = .035f, _distance = 2.95f, _smoothDistance = 2.95f;
     private bool _orbiting;
     private double _elapsed;
     private Vector3 _focus = new(0, 1.78f, 0), _targetFocus = new(0, 1.78f, 0);
     private float _modelBottom = .83f, _modelTop = 2.5f;
-    public bool HasFullFigure => _modelTop - _modelBottom > 1.9f;
+    private Aabb _figureBounds, _faceBounds;
+    private bool _hasFaceBounds;
+    public bool HasFullFigure { get; private set; }
     public string Framing { get; private set; } = "three_quarter";
     // Restore our additive pose before sampling idle. Models need not key every bone on every track.
     private readonly Dictionary<int, Quaternion> _gestureBasePose = new();
@@ -42,11 +49,11 @@ public partial class LeaderView : Node3D
     private Skeleton3D? _skeleton;
     private MeshInstance3D? _animatedFace;
     private Node3D? _fallbackHead;
-    private int _headBone = -1, _speechShape = -1, _leftForearm = -1, _rightForearm = -1;
+    private int _headBone = -1, _speechShape = -1, _blinkShape = -1, _leftForearm = -1, _rightForearm = -1;
     private string _gesture = "";
     private double _gestureTime, _gestureDuration;
-    public bool HasSkeletalAnimation => UsesAuthoredModel && _skeleton != null;
-    public bool HasFacialAnimation => _animatedFace != null && _speechShape >= 0;
+    public bool HasSkeletalAnimation => !IsPortraitMode && UsesAuthoredModel && _skeleton != null;
+    public bool HasFacialAnimation => !IsPortraitMode && _animatedFace != null && _speechShape >= 0 && _blinkShape >= 0;
 
     /// <summary>Dialogue feedback animates real head/neck geometry and facial morphs, not a portrait card.</summary>
     public void TriggerGesture(string gesture)
@@ -70,13 +77,13 @@ public partial class LeaderView : Node3D
         {
             nod = _gesture switch
             {
-                "greeting" => -.095f * envelope,
-                "agree" => Mathf.Sin(phase * Mathf.Tau * 2) * envelope * .065f,
-                "talk" => Mathf.Sin((float)_gestureTime * 2.7f) * envelope * .018f,
+                "greeting" => -.045f * envelope,
+                "agree" => Mathf.Sin(phase * Mathf.Tau * 1.5f) * envelope * .038f,
+                "talk" => Mathf.Sin((float)_gestureTime * 2.7f) * envelope * .012f,
                 _ => 0
             };
-            if (_gesture == "refuse") turn = Mathf.Sin(phase * Mathf.Tau * 1.7f) * envelope * .11f;
-            if (_gesture == "talk") speech = (.15f + .65f * Math.Abs(Mathf.Sin((float)_gestureTime * 9.3f))) * envelope;
+            if (_gesture == "refuse") turn = Mathf.Sin(phase * Mathf.Tau * 1.7f) * envelope * .060f;
+            if (_gesture == "talk") speech = (.07f + .42f * Math.Abs(Mathf.Sin((float)_gestureTime * 9.3f))) * envelope;
         }
         if (_skeleton != null && _headBone >= 0)
         {
@@ -86,7 +93,7 @@ public partial class LeaderView : Node3D
         }
         if (_skeleton != null)
         {
-            float hand = phase < 1 && _gesture is "talk" or "greeting" ? envelope * .085f : 0;
+            float hand = phase < 1 && _gesture is "talk" or "greeting" ? envelope * .032f : 0;
             ApplyArmGesture(_leftForearm, hand);
             ApplyArmGesture(_rightForearm, hand * .6f);
         }
@@ -111,12 +118,22 @@ public partial class LeaderView : Node3D
         float bottom = Framing switch
         {
             "full" => _modelBottom - .04f,
+            "face" when _hasFaceBounds => _faceBounds.Position.Y + _faceBounds.Size.Y * .06f,
             "face" => _modelTop - Math.Min(.78f, height * .54f),
             _ => HasFullFigure ? _modelBottom + height * .28f : _modelBottom
         };
-        float top = _modelTop + .045f;
-        _targetFocus = new Vector3(0, (bottom + top) * .5f, .025f);
-        _distance = (top - bottom) / (2 * Mathf.Tan(Mathf.DegToRad(_camera.Fov * .5f))) * (CompactPortrait ? 1.06f : 1.18f);
+        float top = Framing == "face" && _hasFaceBounds
+            ? _faceBounds.End.Y + _faceBounds.Size.Y * .10f : _modelTop + .045f;
+        // A face close-up follows anatomical bounds, so tall court crowns do not push the face out of frame.
+        float centerX = _hasFaceBounds && Framing == "face" ? _faceBounds.GetCenter().X : _figureBounds.GetCenter().X;
+        float centerZ = _hasFaceBounds && Framing == "face" ? _faceBounds.GetCenter().Z : .025f;
+        _targetFocus = new Vector3(centerX, (bottom + top) * .5f, centerZ);
+        var viewportSize = GetViewport().GetVisibleRect().Size;
+        float availableWidth = CompactPortrait ? viewportSize.X : viewportSize.X - Math.Min(550, viewportSize.X * .45f);
+        float aspect = Math.Max(.25f, availableWidth / Math.Max(1, viewportSize.Y));
+        float halfTangent = Mathf.Tan(Mathf.DegToRad(_camera.Fov * .5f));
+        float width = Framing == "face" && _hasFaceBounds ? _faceBounds.Size.X * 1.12f : _figureBounds.Size.X;
+        _distance = Math.Max((top - bottom) / (2 * halfTangent), width / (2 * halfTangent * aspect)) * (CompactPortrait ? 1.06f : 1.15f);
         if (immediate) { _focus = _targetFocus; _smoothDistance = _distance; }
     }
 
@@ -134,6 +151,8 @@ public partial class LeaderView : Node3D
     private void MeasureAuthoredFigure(Node3D model)
     {
         float bottom = float.PositiveInfinity, top = float.NegativeInfinity;
+        Vector3 minimum = Vector3.One * float.PositiveInfinity, maximum = Vector3.One * float.NegativeInfinity;
+        _hasFaceBounds = false;
         var pending = new Stack<Node>(); pending.Push(model);
         while (pending.Count > 0)
         {
@@ -143,14 +162,31 @@ public partial class LeaderView : Node3D
                 var bounds = mesh.GetAabb();
                 for (int i = 0; i < 8; i++)
                 {
-                    float y = _portrait.ToLocal(mesh.ToGlobal(bounds.GetEndpoint(i))).Y;
-                    bottom = Math.Min(bottom, y); top = Math.Max(top, y);
+                    var point = _portrait.ToLocal(mesh.ToGlobal(bounds.GetEndpoint(i)));
+                    bottom = Math.Min(bottom, point.Y); top = Math.Max(top, point.Y);
+                    minimum = minimum.Min(point); maximum = maximum.Max(point);
+                }
+                if (mesh == _animatedFace)
+                {
+                    Vector3 faceMin = Vector3.One * float.PositiveInfinity, faceMax = Vector3.One * float.NegativeInfinity;
+                    for (int i = 0; i < 8; i++)
+                    {
+                        var point = _portrait.ToLocal(mesh.ToGlobal(bounds.GetEndpoint(i)));
+                        faceMin = faceMin.Min(point); faceMax = faceMax.Max(point);
+                    }
+                    _faceBounds = new Aabb(faceMin, faceMax - faceMin);
+                    _hasFaceBounds = _faceBounds.Size.Y > .05f && _faceBounds.Size.Y < 1.2f;
                 }
             }
             foreach (Node child in node.GetChildren()) pending.Push(child);
         }
         if (float.IsFinite(bottom) && float.IsFinite(top) && top - bottom > .3f)
-        { _modelBottom = bottom; _modelTop = top; }
+        {
+            _modelBottom = bottom; _modelTop = top; _figureBounds = new Aabb(minimum, maximum - minimum);
+            // The authoring contract puts feet on Y=0. A child can be a full figure below 1.9m.
+            HasFullFigure = bottom <= Math.Max(.14f, (top - bottom) * .08f)
+                && (!_hasFaceBounds || top - bottom > _faceBounds.Size.Y * 2.0f);
+        }
     }
 
     private void BindAuthoredAnimation(Node3D model)
@@ -162,7 +198,7 @@ public partial class LeaderView : Node3D
             if (node is AnimationPlayer player) _authoredAnimation = player;
             if (node is Skeleton3D skeleton) _skeleton = skeleton;
             if (node is MeshInstance3D mesh && mesh.FindBlendShapeByName("Speech") >= 0)
-            { _animatedFace = mesh; _speechShape = mesh.FindBlendShapeByName("Speech"); }
+            { _animatedFace = mesh; _speechShape = mesh.FindBlendShapeByName("Speech"); _blinkShape = mesh.FindBlendShapeByName("Blink"); }
             foreach (Node child in node.GetChildren()) pending.Push(child);
         }
         _headBone = _skeleton?.FindBone("Head") ?? -1;
@@ -224,16 +260,19 @@ public partial class LeaderView : Node3D
         _camera.Environment = new Godot.Environment
         {
             BackgroundMode = Godot.Environment.BGMode.Color, BackgroundColor = new Color("141b1e"),
-            AmbientLightSource = Godot.Environment.AmbientSource.Color, AmbientLightColor = new Color("d1d8d9"), AmbientLightEnergy = .21f,
+            AmbientLightSource = Godot.Environment.AmbientSource.Color, AmbientLightColor = new Color("c5d0db"), AmbientLightEnergy = .12f,
             TonemapMode = Godot.Environment.ToneMapper.Filmic,
-            SsaoEnabled = true, SsaoIntensity = .8f, SsaoRadius = .12f, SsaoDetail = .65f,
+            SsaoEnabled = true, SsaoIntensity = .55f, SsaoRadius = .10f, SsaoDetail = .55f,
             GlowEnabled = false,
             AdjustmentEnabled = true, AdjustmentContrast = 1.04f, AdjustmentSaturation = .92f
         };
         AddChild(_camera);
-        AddPortraitLight(new Vector3(-2.8f, 3.8f, 3.7f), new Color("fff0dc"), 2.7f, 65, true);
-        AddPortraitLight(new Vector3(2.2f, 2.8f, 2.8f), new Color("c7d7e8"), .95f, 70, false);
-        AddPortraitLight(new Vector3(1.5f, 3.5f, -1.1f), new Color("efce9e"), 2.2f, 65, true);
+        // A neutral side key describes cheek and nose planes; a restrained cool fill keeps the
+        // shadowed eye readable without washing out the face or doubling the skin's warm albedo.
+        AddPortraitLight(new Vector3(-3.2f, 3.4f, 3.6f), new Color("fffaf5"), 3.0f, 65, true, .55f);
+        // Keep the reflected fill source small: a broad source covers the iris with a white crescent.
+        AddPortraitLight(new Vector3(2.3f, 2.5f, 3.7f), new Color("d9e5f5"), .38f, 70, false, .04f, .35f);
+        AddPortraitLight(new Vector3(1.5f, 3.2f, -1.1f), new Color("d7e3f0"), 1.1f, 65, false, .4f, .4f);
         // This is explicitly a 2D illustration gallery. The independent 3D viewport remains available.
         var illustrationLayer = new CanvasLayer { Layer = 2 }; AddChild(illustrationLayer);
         _portraitCanvas = new Control { Visible = false, MouseFilter = Control.MouseFilterEnum.Ignore };
@@ -251,14 +290,25 @@ public partial class LeaderView : Node3D
     public void ShowLeader(string appearanceKey, string countryId, int age)
     {
         if (age < 0) age = VisualAges.TryGetValue(appearanceKey, out int visualAge) ? visualAge : 45;
+        age = Math.Clamp(age, 0, 110);
         bool usePortrait = appearanceKey == "daoguang" && PreferRealisticPortrait;
-        bool changed = _appearance != appearanceKey || _country != countryId || _age != age || IsPortraitMode != usePortrait;
+        string modelKey = ResolveModelKey(appearanceKey, age);
+        string modelPath = $"res://Assets/leaders/{modelKey}.glb";
+        ulong resourceStamp = Godot.FileAccess.FileExists(modelPath) ? Godot.FileAccess.GetModifiedTime(modelPath) : 0;
+        bool changed = _appearance != appearanceKey || IsPortraitMode != usePortrait;
+        bool rebuild = _portrait == null || LoadedModelKey != modelKey || _loadedResourceStamp != resourceStamp
+            || (!UsesAuthoredModel && _loadedProceduralAge != age);
+        _appearance = appearanceKey; _country = countryId; _age = age;
         IsPortraitMode = usePortrait;
-        if (changed)
+        if (!usePortrait && rebuild)
         {
-            _appearance = appearanceKey; _country = countryId; _age = Math.Clamp(age, 0, 110);
-            if (!usePortrait) BuildPortrait();
-            else { UsesAuthoredModel = false; _realisticPortrait.Texture = GD.Load<Texture2D>("res://Assets/portraits/daoguang-realistic-v1.png"); }
+            BuildPortrait();
+            LoadedModelKey = modelKey; _loadedProceduralAge = age; _loadedResourceStamp = resourceStamp;
+        }
+        if (usePortrait && _realisticPortrait.Texture == null)
+            _realisticPortrait.Texture = GD.Load<Texture2D>("res://Assets/portraits/daoguang-realistic-v1.png");
+        if (changed || rebuild)
+        {
             _yaw = -.10f; _pitch = 0; SetFraming("three_quarter", true);
         }
         IsOpen = true; Visible = true; _camera.Current = true;
@@ -266,6 +316,9 @@ public partial class LeaderView : Node3D
         if (_portrait != null) _portrait.Visible = !usePortrait;
         UpdateCamera();
     }
+
+    private static string ResolveModelKey(string appearanceKey, int age) =>
+        appearanceKey == "isabella_ii" && age >= 11 ? "isabella_ii_adolescent" : appearanceKey;
 
     public void HideLeader()
     {
@@ -276,13 +329,15 @@ public partial class LeaderView : Node3D
 
     public override void _Process(double delta)
     {
-        if (!IsOpen || IsPortraitMode) return;
+        if (!IsOpen || !IsVisibleInTree() || IsPortraitMode) return;
         if (AnimationCaptureStepSeconds > 0) delta = Math.Min(AnimationCaptureStepSeconds, .1);
+        else delta = Math.Clamp(delta, 0, .1);
         _elapsed += delta;
         _smoothDistance = Mathf.Lerp(_smoothDistance, _distance, 1 - Mathf.Exp(-(float)delta * 8));
         _focus = _focus.Lerp(_targetFocus, 1 - Mathf.Exp(-(float)delta * 8));
         // A restrained breathing idle keeps the portrait from reading as a museum mannequin.
-        _portrait.Rotation = new Vector3(0, Mathf.Sin((float)_elapsed * .26f) * .009f, Mathf.Sin((float)_elapsed * .39f) * .0015f);
+        _portrait.Rotation = UsesAuthoredModel ? Vector3.Zero
+            : new Vector3(0, Mathf.Sin((float)_elapsed * .26f) * .009f, Mathf.Sin((float)_elapsed * .39f) * .0015f);
         double blinkTime = _elapsed % 5.2;
         float blink = blinkTime > 4.92 ? (float)Math.Sin((blinkTime - 4.92) / .28 * Math.PI) : 0;
         foreach (var lid in _eyelids) { lid.Visible = blink > .6f; }
@@ -319,11 +374,11 @@ public partial class LeaderView : Node3D
         _cabinet.Rotation = new Vector3(0, _yaw, 0);
     }
 
-    private void AddPortraitLight(Vector3 position, Color color, float energy, float angle, bool shadow)
+    private void AddPortraitLight(Vector3 position, Color color, float energy, float angle, bool shadow, float size, float specular = 1)
     {
         var light = new SpotLight3D { Position = position, LightColor = color, LightEnergy = energy,
-            SpotRange = 10, SpotAngle = angle, SpotAttenuation = 1.05f, ShadowEnabled = shadow, ShadowBias = .02f,
-            ShadowNormalBias = .035f, LightSize = .65f };
+            SpotRange = 10, SpotAngle = angle, SpotAttenuation = 1.05f, ShadowEnabled = shadow, ShadowBias = .06f,
+            ShadowNormalBias = .12f, LightSize = size, LightSpecular = specular };
         _cabinet.AddChild(light); light.LookAt(new Vector3(0, 1.4f, 0), Vector3.Up);
     }
 
@@ -393,17 +448,20 @@ public partial class LeaderView : Node3D
 
     private void BuildPortrait()
     {
+        ModelBuildCount++;
         _eyelids.Clear();
         _gestureBasePose.Clear(); _modelBottom = .83f; _modelTop = 2.5f;
+        _figureBounds = new Aabb(new Vector3(-.60f, .83f, -.25f), new Vector3(1.2f, 1.67f, .55f));
+        _hasFaceBounds = HasFullFigure = false;
         _authoredAnimation = null; _skeleton = null; _animatedFace = null; _fallbackHead = null;
-        _headBone = _speechShape = _leftForearm = _rightForearm = -1; _gesture = ""; _gestureTime = _gestureDuration = 0;
+        _headBone = _speechShape = _blinkShape = _leftForearm = _rightForearm = -1; _gesture = ""; _gestureTime = _gestureDuration = 0;
         if (_portrait != null) { RemoveChild(_portrait); _portrait.QueueFree(); }
         _portrait = new Node3D(); AddChild(_portrait);
         UsesAuthoredModel = false;
         // Authoring contract: meters, Y up, face toward +Z, origin at the gallery floor.
         // The gallery measures authored bounds and supplies separate full-figure and close-up framing.
         // Materials, rig and idle animation remain in the GLB.
-        string authoredPath = $"res://Assets/leaders/{_appearance}.glb";
+        string authoredPath = $"res://Assets/leaders/{ResolveModelKey(_appearance, _age)}.glb";
         if (ResourceLoader.Exists(authoredPath))
         {
             var packed = ResourceLoader.Load<PackedScene>(authoredPath);
@@ -413,6 +471,7 @@ public partial class LeaderView : Node3D
                 if (authored is Node3D model)
                 {
                     _portrait.AddChild(model); UsesAuthoredModel = true;
+                    RefineAuthoredMaterials(model);
                     BindAuthoredAnimation(model);
                     MeasureAuthoredFigure(model);
                     return;
@@ -465,6 +524,52 @@ public partial class LeaderView : Node3D
         // Child ruler representation has a shorter bust and rounder facial proportions; the historical
         // regency belongs in the UI's dated office metadata, not in this decorative presentation layer.
         if (child) body.Scale = new Vector3(.94f, .94f, .94f);
+    }
+
+    private void RefineAuthoredMaterials(Node3D model)
+    {
+        foreach (var node in model.FindChildren("*", "MeshInstance3D", true, false))
+        {
+            if (node is not MeshInstance3D mesh || mesh.Mesh == null) continue;
+            for (int surface = 0; surface < mesh.Mesh.GetSurfaceCount(); surface++)
+            {
+                if (mesh.GetActiveMaterial(surface) is not StandardMaterial3D source) continue;
+                string name = source.ResourceName.ToLowerInvariant();
+                if (name.StartsWith("cc0 fitted "))
+                {
+                    // GLB alpha-depth-prepass sorting leaves black triangles where strand cards overlap.
+                    // Sample coverage preserves texture cutouts with the project's 4x MSAA; a local
+                    // override leaves the imported material, two-sided shading and shadows intact.
+                    var hair = (StandardMaterial3D)source.Duplicate();
+                    hair.Transparency = BaseMaterial3D.TransparencyEnum.AlphaScissor;
+                    hair.AlphaScissorThreshold = .20f;
+                    hair.AlphaAntialiasingMode = BaseMaterial3D.AlphaAntiAliasing.AlphaToCoverage;
+                    hair.AlphaAntialiasingEdge = .30f;
+                    mesh.SetSurfaceOverrideMaterial(surface, hair);
+                    continue;
+                }
+                if (name.Contains("skin"))
+                {
+                    // Preserve authored color, detail normals and texture maps. These scalar values
+                    // leave a restrained skin sheen without the former broad, chalky highlight.
+                    var skin = (StandardMaterial3D)source.Duplicate();
+                    skin.Metallic = 0;
+                    skin.MetallicSpecular = .35f;
+                    skin.Roughness = .56f;
+                    mesh.SetSurfaceOverrideMaterial(surface, skin);
+                    continue;
+                }
+                if (!name.Contains("iris") && !name.Contains("sclera") && !name.Contains("cornea")) continue;
+                // Keep authored iris/sclera color, vertex tint and pupil. The current Daoguang study
+                // uses a small reflected fill source; retain the existing finish on other portraits.
+                // Overrides are per instance: never mutate a cached GLB material shared by another viewport.
+                var local = (StandardMaterial3D)source.Duplicate();
+                local.Metallic = 0;
+                local.MetallicSpecular = _appearance == "daoguang" ? .30f : Math.Min(source.MetallicSpecular, .22f);
+                local.Roughness = _appearance == "daoguang" ? .12f : Math.Clamp(source.Roughness, .28f, .34f);
+                mesh.SetSurfaceOverrideMaterial(surface, local);
+            }
+        }
     }
 
     private void BuildHead(Node3D root, Portrait p, Vector3 scale, bool child)

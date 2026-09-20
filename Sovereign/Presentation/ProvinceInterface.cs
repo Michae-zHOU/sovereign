@@ -139,7 +139,7 @@ public partial class Main
                 var panel = ProvinceBlock(grid, 2); panel.CustomMinimumSize = new Vector2(112, 0);
                 var column = VBox(panel, 2);
                 var name = ProvinceLabel(definition.Name, 13, Cream, true); name.HorizontalAlignment = HorizontalAlignment.Center; column.AddChild(name);
-                var picture = new TextureRect { Texture = ConstructionPicture(definition.Id), CustomMinimumSize = new Vector2(0, 104),
+                var picture = new TextureRect { Texture = ConstructionBackdrop(definition.Id), CustomMinimumSize = new Vector2(0, 104),
                     ExpandMode = TextureRect.ExpandModeEnum.IgnoreSize, StretchMode = TextureRect.StretchModeEnum.KeepAspectCovered,
                     MouseFilter = Control.MouseFilterEnum.Ignore }; column.AddChild(picture);
                 var actions = Row(column, 2); var level = ProvinceLabel($"{levels}" + (pending > 0 ? $" +{pending}" : ""), 19, Gold, true);

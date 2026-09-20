@@ -37,7 +37,7 @@ public partial class Main : Node3D
 
     public override void _Ready()
     {
-        Localization.Initialize(); GetWindow().Title = "万国纪元 · 大清篇 0.10";
+        Localization.Initialize(); GetWindow().Title = "万国纪元 · 大清篇 0.14";
         _engine = SimulationEngine.NewGame(_choice);
         _map = new WorldMap(); AddChild(_map);
         _city = new CityView(); AddChild(_city);
@@ -69,6 +69,8 @@ public partial class Main : Node3D
         if (captureIndex >= 0 && captureIndex + 1 < captureArgs.Length) CapturePreview(captureArgs[captureIndex + 1]);
         int clipIndex = Array.IndexOf(captureArgs, "--leader-clip");
         if (clipIndex >= 0 && clipIndex + 1 < captureArgs.Length) CaptureLeaderClip(captureArgs[clipIndex + 1]);
+        int galleryIndex = Array.IndexOf(captureArgs, "--leader-gallery");
+        if (galleryIndex >= 0 && galleryIndex + 1 < captureArgs.Length) CaptureLeaderGallery(captureArgs[galleryIndex + 1]);
     }
 
     private StyleBoxFlat Style(Color bg, Color? border = null, int radius = 3, int pad = 12)
@@ -146,7 +148,9 @@ public partial class Main : Node3D
     {
         if (_rebuild || _quitting) return; _rebuild = true;
         int leftScroll = _leftScroll.ScrollVertical, rightScroll = _rightScroll.ScrollVertical;
-        string focused = GetViewport().GuiGetFocusOwner() is Button focusButton ? focusButton.Text : "";
+        var focusButton = GetViewport().GuiGetFocusOwner() as Button;
+        string focused = focusButton?.Text ?? "";
+        string focusKey = focusButton?.GetMeta("focus_key", "").AsString() ?? "";
         try
         {
         SuspendEmbeddedPortrait(); _atlasSelector = null; Clear(_right); var p = _engine.Player;
@@ -176,7 +180,9 @@ public partial class Main : Node3D
             if (_quitting || !IsInstanceValid(_leftScroll) || !IsInstanceValid(_rightScroll)) return;
             if (!string.IsNullOrEmpty(focused))
             {
-                var match = ButtonsBelow(_left).Concat(ButtonsBelow(_right)).FirstOrDefault(b => b.Text == focused && !b.Disabled && b.IsVisibleInTree());
+                var match = ButtonsBelow(_left).Concat(ButtonsBelow(_right)).FirstOrDefault(b =>
+                    (focusKey.Length > 0 ? b.GetMeta("focus_key", "").AsString() == focusKey : b.Text == focused)
+                    && !b.Disabled && b.IsVisibleInTree());
                 match?.GrabFocus();
             }
             _leftScroll.ScrollVertical = leftScroll; _rightScroll.ScrollVertical = rightScroll;
@@ -223,15 +229,24 @@ public partial class Main : Node3D
     }
     private void Diplomacy()
     {
-        _right.AddChild(Para("选择国家查看外交条件，或觐见当前在位领袖。会谈中的正式提案会改变本局关系、国库与贸易。", 14, Ink));
+        IllustratedHeader(_right, "diplomacy", "外交与列国", "使节往来 · 贸易协定 · 国际关系");
+        _right.AddChild(Para("选择国家查看交涉条件，或觐见在位领袖。正式提案会改变关系、国库与贸易。", 13, Muted));
         foreach (var c in _engine.State.Countries.Where(c => c.Id != _engine.Player.Id))
         {
-            _right.AddChild(L(c.Name, 22, Ink, true));
-            Pair(_right, "当前领袖", Localization.Tr(HistoricalLeaders.Get(c.Id, _engine.State.Date).Name));
-            Pair(_right, "Relations", _engine.Player.Relations.GetValueOrDefault(c.Id).ToString("+0;-0;0"), true);
-            var row = Row(_right, 5);
+            var card = CabinetPanel(_right, "cabinet-row", 10); var body = VBox(card, 7);
+            var identity = Row(body, 12); identity.AddChild(CountryFlag(c.Id, 76, 48));
+            var name = VBox(identity, 3); name.SizeFlagsHorizontal = Control.SizeFlags.ExpandFill;
+            name.AddChild(L(c.Name, 21, Gold, true));
+            name.AddChild(Para(Localization.Tr(HistoricalLeaders.Get(c.Id, _engine.State.Date).Name), 13, Cream));
+            int relation = _engine.Player.Relations.GetValueOrDefault(c.Id);
+            var relationBox = VBox(identity, 2); relationBox.AddChild(L("关系", 11, Muted));
+            relationBox.AddChild(L(relation.ToString("+0;-0;0"), 23, relation >= 0 ? Green : Red));
+            body.AddChild(Para(_engine.Player.TradePacts.Contains(c.Id) ? "贸易协定已生效" : "尚未签订贸易协定", 12, Muted));
+            var row = Row(body, 5);
             var detail = SmallButton("国家与外交", () => InspectCountry(c.Id)); detail.SizeFlagsHorizontal = Control.SizeFlags.ExpandFill; row.AddChild(detail);
-            var meeting = SmallButton("觐见领袖", () => MeetLeader(c.Id)); meeting.SizeFlagsHorizontal = Control.SizeFlags.ExpandFill; row.AddChild(meeting); Rule(_right, true);
+            detail.SetMeta("focus_key", "diplomacy:" + c.Id + ":country");
+            var meeting = SmallButton("觐见领袖", () => MeetLeader(c.Id)); meeting.SizeFlagsHorizontal = Control.SizeFlags.ExpandFill; row.AddChild(meeting);
+            meeting.SetMeta("focus_key", "diplomacy:" + c.Id + ":meeting");
         }
         _right.AddChild(Para("This slice models diplomatic pressure and its costs. Territorial conquest and full military campaigns belong to later milestones.", 12, new Color("717566")));
     }
@@ -370,7 +385,7 @@ public partial class Main : Node3D
             foreach (var panel in _modal.GetChildren().OfType<PanelContainer>()) panel.AddThemeStyleboxOverride("panel", Style(new Color(0.055f, 0.11f, 0.14f, 0.89f), Gold, 4, 32));
         }
         var title = L("SOVEREIGN", 66, Cream, true); title.HorizontalAlignment = HorizontalAlignment.Center; v.AddChild(title);
-        var subtitle = L("THE INDUSTRIAL CENTURY  /  FIRST PLAYABLE", 12, Gold); subtitle.HorizontalAlignment = HorizontalAlignment.Center; v.AddChild(subtitle);
+        var subtitle = L("工业世纪 / 大清篇 0.14", 14, Gold); subtitle.HorizontalAlignment = HorizontalAlignment.Center; v.AddChild(subtitle);
         var intro = L("Choose a nation. Shape a generation.", 30, Cream, true); intro.HorizontalAlignment = HorizontalAlignment.Center; v.AddChild(intro);
         var selected = GeographyCatalog.Countries.First(c => c.Id == _choice);
         var chooser = new GridContainer { Columns = 4 }; chooser.AddThemeConstantOverride("h_separation", 10); chooser.AddThemeConstantOverride("v_separation", 8); v.AddChild(chooser);
@@ -420,7 +435,7 @@ public partial class Main : Node3D
             ("02  Follow the consequences", "Start time with Space or the speed controls. Watch goods, public finances and living standards. Use Markets to import shortages or export a surplus."),
             ("03  治理与改革", "在政治页调整税率、组织政府并提出法案。法律须通过阶段审议，再以官僚预算维持机构。研究解锁新的生产方式，需要到建筑页面选择启用。"),
             ("04  Drill into your country", "Open Atlas to choose a country, region, and city. Enter any city in 3D, inspect population and jobs, and construct local industries. Housing, Industry, Civic, and Waterfront buttons move to districts. Click map city markers to inspect them."),
-            ("05  历史人物", "人物档案依日期显示在任领袖与资料出处。道光、英国和日本的五位人物已使用带骨骼动画的模型；其他角色仍为占位造型。可切换全身和面容视角，并进行外交会谈。"),
+            ("05  历史人物", "人物档案依日期显示在任领袖与资料出处。当前12国的20位历史领袖均有全身骨骼模型、眨眼与交谈动作；伊莎贝拉二世分儿童和少女阶段。可切换全身、面容视角，并进行外交会谈。造型仍为历史资料基础上的美术重建。"),
             ("05  Keep your progress", "Save with F5, load with F9. Saves live in the game's Windows application-data folder. This milestone ends on 1 January 1846.") })
         { v.AddChild(L(heading, 21, Gold, true)); v.AddChild(Para(body, 15)); }
         v.AddChild(Para("当前为原创简化开发版：12国、128城、6类商品，战役至1846年。已接入职业阶层、利益集团、法律和私人投资；完整文化宗教、世界贸易、战争与全球历史内容仍待开发。", 13, Muted));
@@ -477,6 +492,8 @@ public partial class Main : Node3D
         if (args.Contains("--atlas")) ExploreCountry(_engine.Player.Id);
         if (args.Contains("--closed")) { _drawerOpen = false; UpdateCabinetVisibility(); }
         if (args.Contains("--population")) { _tab = "Population"; RefreshPanels(); }
+        if (args.Contains("--population-overview")) { _popView = "overview"; ShowTab("Population"); }
+        if (args.Contains("--diplomacy")) ShowTab("Diplomacy");
         if (args.Contains("--world-index")) ShowTab("WorldIndex");
         if (args.Contains("--construction"))
         {

@@ -1,5 +1,5 @@
 {
-  "version": "0.8",
+  "version": "0.13",
   "authoringTool": "Blender 4.5.3",
   "topologySource": {
     "repository": "https://github.com/makehumancommunity/makehuman",
@@ -13,103 +13,495 @@
   },
   "authoredModels": [
     {
-      "identity": "daoguang",
-      "file": "daoguang.glb",
-      "bytes": 24847372,
-      "sha256": "f1cc9c10c503310fbc778a6ade7522fca2c62624823899107c7e340220c8da43",
-      "triangles": 239160,
-      "verticesWithUVSeams": 142230,
-      "meshes": 22,
+      "identity": "william_iv",
+      "file": "william_iv.glb",
+      "bytes": 16619020,
+      "sha256": "8db02ac9ccd50cb845c05e95f02bba25fde5fbc366574b30a373254202b73467",
+      "triangles": 238850,
+      "verticesWithUVSeams": 136967,
+      "meshes": 15,
       "bones": 9,
+      "artRevision": "0.11",
+      "authoringScript": "source/build_leaders_11.py",
       "animations": [
         "idle"
       ],
       "faceMorphs": [
         "Blink",
+        "Expression",
         "Speech"
       ],
-      "likeness": "artistic reconstruction, not a verified facial likeness",
-      "hands": "MakeHuman anatomical topology, wrist/finger direction with adjusted palm roll, relaxed fingers, upper arm and forearm binding",
-      "wardrobe": "Full-length robe, relaxed arms, separate shoulder cape, standing collar, horse-hoof cuffs, belt, beads, hanging accessories and boots",
-      "texture": "source/imperial_dragon_brocade_v2.png and source/imperial_navy_brocade_v1.png; built-in imagegen; full prompts in source/TEXTURE-GENERATION-0.7.md and source/NAVY-TEXTURE-GENERATION-0.7.md"
-    },
-    {
-      "identity": "tokugawa_ienari",
-      "file": "tokugawa_ienari.glb",
-      "bytes": 8927652,
-      "sha256": "a49a4ed8efd07afd5afbf48b48e77a4b7a97fbb2c0b494a78b41fc3ba88e7c65",
-      "triangles": 92828,
-      "verticesWithUVSeams": 55644,
-      "meshes": 10,
-      "bones": 6,
-      "animations": [
-        "idle"
-      ],
-      "faceMorphs": [
-        "Blink",
-        "Speech"
-      ],
-      "likeness": "artistic reconstruction, not a verified facial likeness",
-      "hands": "anatomical skin mesh attached to forearm bones"
-    },
-    {
-      "identity": "tokugawa_ieyoshi",
-      "file": "tokugawa_ieyoshi.glb",
-      "bytes": 8028848,
-      "sha256": "0c1a279a194b9eed12d88a7241994ba18a182ccad74a666aef4fe54b9f93cedd",
-      "triangles": 92700,
-      "verticesWithUVSeams": 55584,
-      "meshes": 10,
-      "bones": 6,
-      "animations": [
-        "idle"
-      ],
-      "faceMorphs": [
-        "Blink",
-        "Speech"
-      ],
-      "likeness": "artistic reconstruction, not a verified facial likeness",
-      "hands": "anatomical skin mesh attached to forearm bones"
+      "fullFigure": true,
+      "likeness": "Artistic reconstruction; not a verified facial likeness or scan",
+      "visualStage": "fixed campaign-era stage"
     },
     {
       "identity": "victoria",
       "file": "victoria.glb",
-      "bytes": 11791508,
-      "sha256": "65e2b621970f860440c2cf65abbcd1fdfe31e3d199d2f356ac3a3f122e3bc8af",
-      "triangles": 100728,
-      "verticesWithUVSeams": 61326,
-      "meshes": 16,
-      "bones": 6,
+      "bytes": 14802700,
+      "sha256": "3fe6ef6a216945c1942aa3a1afd6095eabded2caebfe3cee112cffa66152d762",
+      "triangles": 202862,
+      "verticesWithUVSeams": 112159,
+      "meshes": 13,
+      "bones": 9,
+      "artRevision": "0.11",
+      "authoringScript": "source/build_leaders_11.py",
       "animations": [
         "idle"
       ],
       "faceMorphs": [
         "Blink",
+        "Expression",
         "Speech"
       ],
-      "likeness": "artistic reconstruction, not a verified facial likeness",
-      "hands": "anatomical skin mesh attached to forearm bones"
+      "fullFigure": true,
+      "likeness": "Artistic reconstruction; not a verified facial likeness or scan",
+      "visualStage": "fixed campaign-era stage"
     },
     {
-      "identity": "william_iv",
-      "file": "william_iv.glb",
-      "bytes": 9790464,
-      "sha256": "38d6cee8e3de5b040db36fff110de030dedca119edff233215f47c0375e3775d",
-      "triangles": 101786,
-      "verticesWithUVSeams": 61962,
-      "meshes": 13,
-      "bones": 6,
+      "identity": "frederick_william_iii",
+      "file": "frederick_william_iii.glb",
+      "bytes": 16782260,
+      "sha256": "77f4843681a4763a61510586c2c7fb58472272d1de406ae84ec92c740bb3a521",
+      "triangles": 247718,
+      "verticesWithUVSeams": 141322,
+      "meshes": 12,
+      "bones": 9,
+      "artRevision": "0.11",
+      "authoringScript": "source/build_leaders_11.py",
       "animations": [
         "idle"
       ],
       "faceMorphs": [
         "Blink",
+        "Expression",
         "Speech"
       ],
-      "likeness": "artistic reconstruction, not a verified facial likeness",
-      "hands": "anatomical skin mesh attached to forearm bones"
+      "fullFigure": true,
+      "likeness": "Artistic reconstruction; not a verified facial likeness or scan",
+      "visualStage": "fixed campaign-era stage"
+    },
+    {
+      "identity": "frederick_william_iv",
+      "file": "frederick_william_iv.glb",
+      "bytes": 15950812,
+      "sha256": "d6ec0a43631fb23bd387b0b36bc1b801757de204f685b191e17d9c577961a528",
+      "triangles": 250428,
+      "verticesWithUVSeams": 142441,
+      "meshes": 12,
+      "bones": 9,
+      "artRevision": "0.11",
+      "authoringScript": "source/build_leaders_11.py",
+      "animations": [
+        "idle"
+      ],
+      "faceMorphs": [
+        "Blink",
+        "Expression",
+        "Speech"
+      ],
+      "fullFigure": true,
+      "likeness": "Artistic reconstruction; not a verified facial likeness or scan",
+      "visualStage": "fixed campaign-era stage"
+    },
+    {
+      "identity": "tokugawa_ienari",
+      "file": "tokugawa_ienari.glb",
+      "bytes": 14773964,
+      "sha256": "2183c328ce36fabb3a7e7d30d5512da95169f333453be4b0d6dc256e98719a84",
+      "triangles": 216368,
+      "verticesWithUVSeams": 120749,
+      "meshes": 11,
+      "bones": 9,
+      "artRevision": "0.11",
+      "authoringScript": "source/build_leaders_11.py",
+      "animations": [
+        "idle"
+      ],
+      "faceMorphs": [
+        "Blink",
+        "Expression",
+        "Speech"
+      ],
+      "fullFigure": true,
+      "likeness": "Artistic reconstruction; not a verified facial likeness or scan",
+      "visualStage": "fixed campaign-era stage"
+    },
+    {
+      "identity": "tokugawa_ieyoshi",
+      "file": "tokugawa_ieyoshi.glb",
+      "bytes": 13862940,
+      "sha256": "989d7782890dbfa1a45892f3204e282b62d7ec5618a078617c05496ad021033a",
+      "triangles": 215920,
+      "verticesWithUVSeams": 120473,
+      "meshes": 11,
+      "bones": 9,
+      "artRevision": "0.11",
+      "authoringScript": "source/build_leaders_11.py",
+      "animations": [
+        "idle"
+      ],
+      "faceMorphs": [
+        "Blink",
+        "Expression",
+        "Speech"
+      ],
+      "fullFigure": true,
+      "likeness": "Artistic reconstruction; not a verified facial likeness or scan",
+      "visualStage": "fixed campaign-era stage"
+    },
+    {
+      "identity": "louis_philippe",
+      "file": "louis_philippe.glb",
+      "bytes": 16341084,
+      "sha256": "95f710513f28b12a1036caba06b216676f10eaf17840c7cfe015354f8bb5e0da",
+      "triangles": 240572,
+      "verticesWithUVSeams": 137388,
+      "meshes": 15,
+      "bones": 9,
+      "artRevision": "0.11",
+      "authoringScript": "source/build_leaders_11.py",
+      "animations": [
+        "idle"
+      ],
+      "faceMorphs": [
+        "Blink",
+        "Expression",
+        "Speech"
+      ],
+      "fullFigure": true,
+      "likeness": "Artistic reconstruction; not a verified facial likeness or scan",
+      "visualStage": "fixed campaign-era stage"
+    },
+    {
+      "identity": "ferdinand_i",
+      "file": "ferdinand_i.glb",
+      "bytes": 14119220,
+      "sha256": "3441ded1c292f770bfe3bf1a59318208207830a48550c47d33696ba23bb86980",
+      "triangles": 202370,
+      "verticesWithUVSeams": 110440,
+      "meshes": 12,
+      "bones": 9,
+      "artRevision": "0.11",
+      "authoringScript": "source/build_leaders_11.py",
+      "animations": [
+        "idle"
+      ],
+      "faceMorphs": [
+        "Blink",
+        "Expression",
+        "Speech"
+      ],
+      "fullFigure": true,
+      "likeness": "Artistic reconstruction; not a verified facial likeness or scan",
+      "visualStage": "fixed campaign-era stage"
+    },
+    {
+      "identity": "nicholas_i",
+      "file": "nicholas_i.glb",
+      "bytes": 16107772,
+      "sha256": "a20f1083b0b957f148f8e0a5928eef2aa9d89ea97857852f21cf00a1207809fe",
+      "triangles": 248434,
+      "verticesWithUVSeams": 141788,
+      "meshes": 13,
+      "bones": 9,
+      "artRevision": "0.11",
+      "authoringScript": "source/build_leaders_11.py",
+      "animations": [
+        "idle"
+      ],
+      "faceMorphs": [
+        "Blink",
+        "Expression",
+        "Speech"
+      ],
+      "fullFigure": true,
+      "likeness": "Artistic reconstruction; not a verified facial likeness or scan",
+      "visualStage": "fixed campaign-era stage"
+    },
+    {
+      "identity": "andrew_jackson",
+      "file": "andrew_jackson.glb",
+      "bytes": 14463644,
+      "sha256": "33c4457109fc0e82503ad4e5caefb2d03430d7e0854e8b1b6ffec748fe480688",
+      "triangles": 193244,
+      "verticesWithUVSeams": 105438,
+      "meshes": 13,
+      "bones": 9,
+      "artRevision": "0.11",
+      "authoringScript": "source/build_leaders_11.py",
+      "animations": [
+        "idle"
+      ],
+      "faceMorphs": [
+        "Blink",
+        "Expression",
+        "Speech"
+      ],
+      "fullFigure": true,
+      "likeness": "Artistic reconstruction; not a verified facial likeness or scan",
+      "visualStage": "fixed campaign-era stage"
+    },
+    {
+      "identity": "martin_van_buren",
+      "file": "martin_van_buren.glb",
+      "bytes": 18912908,
+      "sha256": "5dc143299a6bdc161b32f36934313e98e28c9aa4b3a0bd8fd33e5a4ba983abb1",
+      "triangles": 297526,
+      "verticesWithUVSeams": 177178,
+      "meshes": 14,
+      "bones": 9,
+      "artRevision": "0.11",
+      "authoringScript": "source/build_leaders_11.py",
+      "animations": [
+        "idle"
+      ],
+      "faceMorphs": [
+        "Blink",
+        "Expression",
+        "Speech"
+      ],
+      "fullFigure": true,
+      "likeness": "Artistic reconstruction; not a verified facial likeness or scan",
+      "visualStage": "fixed campaign-era stage"
+    },
+    {
+      "identity": "william_henry_harrison",
+      "file": "william_henry_harrison.glb",
+      "bytes": 14543860,
+      "sha256": "ab115f770a421595ba3e55c8efcc28beaf9bf42fb673b91e7cb391811e6de4fe",
+      "triangles": 190950,
+      "verticesWithUVSeams": 104627,
+      "meshes": 13,
+      "bones": 9,
+      "artRevision": "0.11",
+      "authoringScript": "source/build_leaders_11.py",
+      "animations": [
+        "idle"
+      ],
+      "faceMorphs": [
+        "Blink",
+        "Expression",
+        "Speech"
+      ],
+      "fullFigure": true,
+      "likeness": "Artistic reconstruction; not a verified facial likeness or scan",
+      "visualStage": "fixed campaign-era stage"
+    },
+    {
+      "identity": "john_tyler",
+      "file": "john_tyler.glb",
+      "bytes": 13679868,
+      "sha256": "2241fb97b9c55eec2a009d5b6b2f99b77d632ac5fe451cab9658fac28c01054c",
+      "triangles": 190646,
+      "verticesWithUVSeams": 104435,
+      "meshes": 13,
+      "bones": 9,
+      "artRevision": "0.11",
+      "authoringScript": "source/build_leaders_11.py",
+      "animations": [
+        "idle"
+      ],
+      "faceMorphs": [
+        "Blink",
+        "Expression",
+        "Speech"
+      ],
+      "fullFigure": true,
+      "likeness": "Artistic reconstruction; not a verified facial likeness or scan",
+      "visualStage": "fixed campaign-era stage"
+    },
+    {
+      "identity": "james_polk",
+      "file": "james_polk.glb",
+      "bytes": 13642240,
+      "sha256": "0f21f2975ebba0e7d347715da2a5b44a63c15fb3b226d4541f395951da18c8ea",
+      "triangles": 190630,
+      "verticesWithUVSeams": 104427,
+      "meshes": 13,
+      "bones": 9,
+      "artRevision": "0.11",
+      "authoringScript": "source/build_leaders_11.py",
+      "animations": [
+        "idle"
+      ],
+      "faceMorphs": [
+        "Blink",
+        "Expression",
+        "Speech"
+      ],
+      "fullFigure": true,
+      "likeness": "Artistic reconstruction; not a verified facial likeness or scan",
+      "visualStage": "fixed campaign-era stage"
+    },
+    {
+      "identity": "daoguang",
+      "file": "daoguang.glb",
+      "bytes": 37358860,
+      "sha256": "3a3c7d6ac9f79476707246ce9632090e6f2798a42dbbabd1c65e4eca8a132245",
+      "triangles": 505256,
+      "verticesWithUVSeams": 303414,
+      "meshes": 31,
+      "bones": 11,
+      "artRevision": "0.13",
+      "authoringScript": "source/build_leaders_13.py",
+      "animations": [
+        "idle"
+      ],
+      "faceMorphs": [
+        "Blink",
+        "Expression",
+        "Speech"
+      ],
+      "fullFigure": true,
+      "likeness": "Artistic reconstruction; not a verified facial likeness or scan",
+      "visualStage": "fixed campaign-era stage"
+    },
+    {
+      "identity": "mahmud_ii",
+      "file": "mahmud_ii.glb",
+      "bytes": 23747244,
+      "sha256": "4487e39ae2d45ea99962dc941089dba3c585ef5dda0fa86d87c81d7f029e91f1",
+      "triangles": 403498,
+      "verticesWithUVSeams": 249313,
+      "meshes": 14,
+      "bones": 9,
+      "artRevision": "0.11",
+      "authoringScript": "source/build_leaders_11.py",
+      "animations": [
+        "idle"
+      ],
+      "faceMorphs": [
+        "Blink",
+        "Expression",
+        "Speech"
+      ],
+      "fullFigure": true,
+      "likeness": "Artistic reconstruction; not a verified facial likeness or scan",
+      "visualStage": "fixed campaign-era stage"
+    },
+    {
+      "identity": "abdulmejid_i",
+      "file": "abdulmejid_i.glb",
+      "bytes": 13766228,
+      "sha256": "1e2d8eadd2e66d18c0729cf9ad4662bfb444db495e2f0170855e5177d7983d91",
+      "triangles": 191666,
+      "verticesWithUVSeams": 105171,
+      "meshes": 13,
+      "bones": 9,
+      "artRevision": "0.11",
+      "authoringScript": "source/build_leaders_11.py",
+      "animations": [
+        "idle"
+      ],
+      "faceMorphs": [
+        "Blink",
+        "Expression",
+        "Speech"
+      ],
+      "fullFigure": true,
+      "likeness": "Artistic reconstruction; not a verified facial likeness or scan",
+      "visualStage": "fixed campaign-era stage"
+    },
+    {
+      "identity": "isabella_ii",
+      "file": "isabella_ii.glb",
+      "bytes": 14884288,
+      "sha256": "92ab4cbeaee76bb58ab8433d29f5b53b3981cc815bca98710a4edc6ea3458baf",
+      "triangles": 203918,
+      "verticesWithUVSeams": 112799,
+      "meshes": 13,
+      "bones": 9,
+      "artRevision": "0.11",
+      "authoringScript": "source/build_leaders_11.py",
+      "animations": [
+        "idle"
+      ],
+      "faceMorphs": [
+        "Blink",
+        "Expression",
+        "Speech"
+      ],
+      "fullFigure": true,
+      "likeness": "Artistic reconstruction; not a verified facial likeness or scan",
+      "visualStage": "age 5"
+    },
+    {
+      "identity": "isabella_ii_adolescent",
+      "file": "isabella_ii_adolescent.glb",
+      "bytes": 14852936,
+      "sha256": "57b4152ae064a8700aaeea93019c148b6db606446a62d087e5b7d59be2fcc865",
+      "triangles": 203886,
+      "verticesWithUVSeams": 112790,
+      "meshes": 13,
+      "bones": 9,
+      "artRevision": "0.11",
+      "authoringScript": "source/build_leaders_11.py",
+      "animations": [
+        "idle"
+      ],
+      "faceMorphs": [
+        "Blink",
+        "Expression",
+        "Speech"
+      ],
+      "fullFigure": true,
+      "likeness": "Artistic reconstruction; not a verified facial likeness or scan",
+      "visualStage": "age 13; selected at age 11+"
+    },
+    {
+      "identity": "maria_ii",
+      "file": "maria_ii.glb",
+      "bytes": 14733812,
+      "sha256": "9cdf41544c6288df9387317dacb15e19221003038f9bb420a84f988a87a216a1",
+      "triangles": 203246,
+      "verticesWithUVSeams": 112420,
+      "meshes": 13,
+      "bones": 9,
+      "artRevision": "0.11",
+      "authoringScript": "source/build_leaders_11.py",
+      "animations": [
+        "idle"
+      ],
+      "faceMorphs": [
+        "Blink",
+        "Expression",
+        "Speech"
+      ],
+      "fullFigure": true,
+      "likeness": "Artistic reconstruction; not a verified facial likeness or scan",
+      "visualStage": "fixed campaign-era stage"
+    },
+    {
+      "identity": "leopold_i",
+      "file": "leopold_i.glb",
+      "bytes": 15266492,
+      "sha256": "fdf423b39c7268218d9baaa0ddeebad2634c72ed402833b37364594c8e3742a1",
+      "triangles": 231660,
+      "verticesWithUVSeams": 131342,
+      "meshes": 15,
+      "bones": 9,
+      "artRevision": "0.11",
+      "authoringScript": "source/build_leaders_11.py",
+      "animations": [
+        "idle"
+      ],
+      "faceMorphs": [
+        "Blink",
+        "Expression",
+        "Speech"
+      ],
+      "fullFigure": true,
+      "likeness": "Artistic reconstruction; not a verified facial likeness or scan",
+      "visualStage": "fixed campaign-era stage"
     }
   ],
-  "proceduralFallbackIdentities": 15,
-  "revisionScope": "Daoguang face, attached beard, eye/skin materials, soft cape and subtle expression; four other anatomical GLBs retained from 0.6"
+  "proceduralFallbackIdentities": 0,
+  "revisionScope": "Daoguang middle-age skin albedo, restrained follicle tint, dimensional beard, fitted cap fibres and softer textile collar, band and cape. Animation and lighting retain the 0.12 baseline; other 19 historical identities retain their 0.11 meshes.",
+  "authoredIdentities": 20,
+  "authoredAgeVariants": 21,
+  "authoringEntryPoint": "source/build_leaders_13.py",
+  "artReference": "source/HISTORICAL-ART-DIRECTION-0.11.md",
+  "otherLeadersAuthoringEntryPoint": "source/build_leaders_11.py",
+  "daoguangArtReference": "source/DAOGUANG-ART-DIRECTION-0.12.md"
 }

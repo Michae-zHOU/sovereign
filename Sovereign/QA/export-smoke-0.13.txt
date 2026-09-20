@@ -1,0 +1,4 @@
+Godot Engine v4.5.1.stable.mono.official.f62fdbde1 - https://godotengine.org
+
+ZH_REVIEW 按F5保存，按F9读取。存档位于Windows游戏应用数据目录。当前版本于1846年1月1日结束。
+SOVEREIGN_SMOKE_PASS date=1836-03-01 build=True

@@ -45,13 +45,65 @@ public partial class Main
         return texture;
     }
 
+    // Backdrop atlas: two columns, four rows, in the same order as these IDs.
+    // Dedicated images take priority; unknown types use the existing site scene.
+    private Texture2D ConstructionBackdrop(string id)
+    {
+        int index = id switch
+        {
+            "farm" => 0, "lumber" => 1, "coal_mine" => 2, "iron_mine" => 3,
+            "toolworks" => 4, "textile" => 5, ConstructionCatalog.SectorId => 6,
+            ConstructionCatalog.RailwayId => 7, _ => -1
+        };
+        if (index < 0) return ConstructionPicture(ConstructionCatalog.SectorId);
+        string key = "backdrop:" + id;
+        if (_constructionPictures.TryGetValue(key, out var cached)) return cached;
+        string path = $"res://Assets/illustrations/panels/building-{id}.png";
+        Texture2D? texture = ResourceLoader.Exists(path) ? GD.Load<Texture2D>(path) : null;
+        const string atlasPath = "res://Assets/illustrations/panels/building-scenes.png";
+        if (texture == null && ResourceLoader.Exists(atlasPath))
+        {
+            var atlas = GD.Load<Texture2D>(atlasPath);
+            if (atlas != null && atlas.GetWidth() >= 2 && atlas.GetHeight() >= 4)
+            {
+                var cell = new Vector2(atlas.GetWidth() / 2f, atlas.GetHeight() / 4f);
+                texture = new AtlasTexture { Atlas = atlas, FilterClip = true,
+                    Region = new Rect2(new Vector2(index % 2, index / 2) * cell, cell) };
+            }
+        }
+        texture ??= ConstructionPicture(id == ConstructionCatalog.RailwayId ? ConstructionCatalog.SectorId : id);
+        _constructionPictures[key] = texture;
+        return texture;
+    }
+
+    private Control ConstructionScene(string id, int height = 88, string? badge = null)
+    {
+        var frame = new PanelContainer { CustomMinimumSize = new Vector2(0, height),
+            SizeFlagsHorizontal = Control.SizeFlags.ExpandFill, MouseFilter = Control.MouseFilterEnum.Ignore };
+        frame.AddThemeStyleboxOverride("panel", Style(new Color("171d20"), new Color("837151"), 0, 2));
+        var viewport = new Control { CustomMinimumSize = new Vector2(0, height - 4), ClipContents = true,
+            MouseFilter = Control.MouseFilterEnum.Ignore };
+        frame.AddChild(viewport);
+        var picture = new TextureRect { Texture = ConstructionBackdrop(id), ExpandMode = TextureRect.ExpandModeEnum.IgnoreSize,
+            StretchMode = TextureRect.StretchModeEnum.KeepAspectCovered, MouseFilter = Control.MouseFilterEnum.Ignore };
+        viewport.AddChild(picture); picture.SetAnchorsAndOffsetsPreset(Control.LayoutPreset.FullRect);
+        if (!string.IsNullOrEmpty(badge))
+        {
+            var plaque = new PanelContainer { Position = new Vector2(8, 8), MouseFilter = Control.MouseFilterEnum.Ignore };
+            plaque.AddThemeStyleboxOverride("panel", Style(new Color("222a30"), new Color("a99366"), 1, 4));
+            plaque.AddChild(ConstructionText(badge, 12, Cream)); viewport.AddChild(plaque);
+        }
+        return frame;
+    }
+
     private Control ConstructionThumbnail(string buildingId, int width = 84, int height = 84)
     {
         var frame = new PanelContainer { CustomMinimumSize = new Vector2(width, height), SizeFlagsHorizontal = Control.SizeFlags.ShrinkBegin,
             SizeFlagsVertical = Control.SizeFlags.ShrinkCenter, MouseFilter = Control.MouseFilterEnum.Ignore };
         frame.AddThemeStyleboxOverride("panel", Style(new Color("171d20"), new Color("837151"), 0, 2));
-        frame.AddChild(new TextureRect { Texture = ConstructionPicture(buildingId), ExpandMode = TextureRect.ExpandModeEnum.IgnoreSize,
-            StretchMode = TextureRect.StretchModeEnum.KeepAspectCentered, CustomMinimumSize = new Vector2(width - 4, height - 4),
+        frame.ClipContents = true;
+        frame.AddChild(new TextureRect { Texture = ConstructionBackdrop(buildingId), ExpandMode = TextureRect.ExpandModeEnum.IgnoreSize,
+            StretchMode = TextureRect.StretchModeEnum.KeepAspectCovered, CustomMinimumSize = new Vector2(width - 4, height - 4),
             MouseFilter = Control.MouseFilterEnum.Ignore });
         return frame;
     }
@@ -170,8 +222,8 @@ public partial class Main
 
     private Control AddConstructionIndustryRow(Control parent, CountryState country, CityState[] cities, IndustryDefinition definition, bool cityOnly = false)
     {
-        var group = VBox(parent, 1); group.SizeFlagsHorizontal = Control.SizeFlags.ExpandFill;
-        var card = CabinetPanel(group, "cabinet-row", 3); var row = Row(card, 7);
+        var group = VBox(parent, 3); group.SizeFlagsHorizontal = Control.SizeFlags.ExpandFill;
+        var card = CabinetPanel(group, "cabinet-row", 5);
         int levels = cities.Sum(city => city.Industries[definition.Id]);
         var cityIds = cities.Select(city => city.Id).ToHashSet();
         int pending = country.Construction.Count(project => project.IndustryId == definition.Id && cityIds.Contains(project.CityId));
@@ -183,12 +235,26 @@ public partial class Main
         if (activeMethods.Length == 0) activeMethods = new[] { ProductionCatalog.Get(definition.Id, ProductionCatalog.DefaultMethodId) };
         string recipeSummary = (activeMethods.Length > 1 ? "混合生产方式：" : "生产方式：") + string.Join("、", activeMethods.Select(method => method.Name));
         long employment = ConstructionIndustryEmployment(cities, definition.Id);
-        var picture = new Control { CustomMinimumSize = new Vector2(84, 84), MouseFilter = Control.MouseFilterEnum.Ignore };
-        var image = ConstructionThumbnail(definition.Id); picture.AddChild(image); image.SetAnchorsAndOffsetsPreset(Control.LayoutPreset.FullRect); row.AddChild(picture);
-        var badge = new PanelContainer { Position = new Vector2(2, 60), CustomMinimumSize = new Vector2(29, 22), MouseFilter = Control.MouseFilterEnum.Ignore };
-        badge.AddThemeStyleboxOverride("panel", Style(new Color("272d32"), new Color("a99366"), 1, 2));
-        var badgeText = ConstructionText(levels.ToString(), 13, Cream); badgeText.HorizontalAlignment = HorizontalAlignment.Center; badge.AddChild(badgeText); picture.AddChild(badge);
-        var body = VBox(row, 3); body.SizeFlagsHorizontal = Control.SizeFlags.ExpandFill;
+        Control bodyParent;
+        if (cityOnly)
+        {
+            var layout = VBox(card, 6);
+            layout.AddChild(ConstructionScene(definition.Id, 80,
+                $"{levels} 级" + (pending > 0 ? $"  ·  +{pending} 在建" : "")));
+            bodyParent = layout;
+        }
+        else
+        {
+            card.CustomMinimumSize = new Vector2(0, 118);
+            var row = Row(card, 8);
+            var picture = ConstructionScene(definition.Id, 104, $"{levels} 级");
+            picture.CustomMinimumSize = new Vector2(94, 104);
+            picture.SizeFlagsHorizontal = Control.SizeFlags.ShrinkBegin;
+            picture.SizeFlagsVertical = Control.SizeFlags.ShrinkCenter;
+            row.AddChild(picture);
+            bodyParent = row;
+        }
+        var body = VBox(bodyParent, cityOnly ? 4 : 3); body.SizeFlagsHorizontal = Control.SizeFlags.ExpandFill;
         var heading = Row(body, 6);
         string type = definition.Id, region = _constructionRegion;
         bool expanded = !cityOnly && _constructionExpanded.Contains(type);
@@ -201,7 +267,15 @@ public partial class Main
         title.TooltipText = cityOnly ? "在地图上定位此城市" : "展开各城市的生产方式、工资、利润和所有权"; heading.AddChild(title);
         var value = ConstructionText(Money(profit), 16, profit > 0m ? Green : profit < 0m ? Red : Muted);
         value.TooltipText = "最近一日建筑利润，已扣投入成本与实付工资"; heading.AddChild(value);
-        body.AddChild(ConstructionText($"就业 {Compact(employment)}  ·  工资 {Money(wages)}/日" + (pending > 0 ? $"  ·  +{pending} 在建" : ""), 10, Muted, expand: true));
+        body.AddChild(ConstructionText($"就业 {Compact(employment)}  ·  工资 {Money(wages)}/日" +
+            (!cityOnly && pending > 0 ? $"  ·  +{pending} 在建" : ""), 11, Muted, expand: true));
+        if (!cityOnly)
+        {
+            var methodRow = Row(body, 4);
+            var methodLabel = ConstructionText(recipeSummary, 11, Muted, expand: true);
+            methodLabel.TooltipText = recipeSummary; methodRow.AddChild(methodLabel);
+            methodRow.AddChild(ConstructionText($"{ConstructionCatalog.Costs[type]:0} 点/级", 11, Gold));
+        }
         var chips = Row(body, 5);
         chips.AddChild(ConstructionCommodityChip(definition.Produces, $"产出：{Localization.Tr(Title(definition.Produces))} {Compact(production)}/日\n最近一日各城市实物产出合计\n{recipeSummary}", true));
         var inputGoods = activeMethods.SelectMany(method => method.Inputs.Keys).Distinct().ToArray();
@@ -212,6 +286,7 @@ public partial class Main
                 chips.AddChild(ConstructionCommodityChip(input, $"投入商品：{Localization.Tr(Title(input))}\n{recipeSummary}\n不同城市用量随配方和就业变化，每级配方见展开详情。"));
         }
         chips.AddChild(new Control { SizeFlagsHorizontal = Control.SizeFlags.ExpandFill });
+        if (cityOnly) chips.AddChild(ConstructionText($"{ConstructionCatalog.Costs[type]:0} 点/级", 11, Gold));
         var add = ConstructionAddButton(() => {
             if (cityOnly) Act(() => _engine.BuildInCity(cities[0].Id, type));
             else ChooseConstructionLocations(type, region);
@@ -246,7 +321,9 @@ public partial class Main
 
     private void AddConstructionCityDetail(Control parent, CountryState country, CityState city, IndustryDefinition definition)
     {
-        var card = CabinetPanel(parent, "cabinet-row", 3); var detail = VBox(card, 5); var row = Row(detail, 6);
+        var card = CabinetPanel(parent, "cabinet-row", 5); var detail = VBox(card, 6);
+        detail.AddChild(ConstructionScene(definition.Id, 64));
+        var row = Row(detail, 6);
         var name = ConstructionButton(city.Name, () => _map.FocusCity(city.Id)); name.CustomMinimumSize = new Vector2(0, 26); name.SizeFlagsHorizontal = Control.SizeFlags.ExpandFill;
         name.Alignment = HorizontalAlignment.Left; name.TextOverrunBehavior = TextServer.OverrunBehavior.TrimEllipsis; row.AddChild(name);
         row.AddChild(ConstructionText($"{city.Industries[definition.Id]}级", 12, Gold));

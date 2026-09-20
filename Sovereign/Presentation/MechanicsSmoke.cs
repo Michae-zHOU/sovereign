@@ -48,6 +48,42 @@ public partial class Main
             Check(_engine.Player.Pops.Sum(pop => pop.Population) == _engine.Player.Population, "Population UI state does not reconcile");
             AuditChinese(_ui);
 
+            // Repeated diplomatic button captions must preserve the selected country after rebuilding.
+            int populationScroll = _rightScroll.ScrollVertical;
+            string diplomacyDigest = _engine.CanonicalDigest();
+            try
+            {
+                Navigate("Diplomacy");
+                for (int frame = 0; frame < 3; frame++) await ToSignal(GetTree(), SceneTree.SignalName.ProcessFrame);
+                var foreignCountries = _engine.State.Countries.Where(country => country.Id != _engine.Player.Id).ToArray();
+                Check(foreignCountries.Length > 1, "Diplomacy focus regression needs more than one foreign country");
+                string targetCountry = foreignCountries[1].Id;
+                foreach (string action in new[] { "country", "meeting" })
+                {
+                    string focusKey = "diplomacy:" + targetCountry + ":" + action;
+                    var button = Find(_right, candidateButton => candidateButton.GetMeta("focus_key", "").AsString() == focusKey);
+                    Check(ButtonsBelow(_right).Count(candidateButton => candidateButton.Text == button.Text) > 1, "Diplomacy focus regression needs repeated button captions");
+                    ulong originalInstance = button.GetInstanceId();
+                    button.GrabFocus();
+                    Check(GetViewport().GuiGetFocusOwner() == button, "Could not focus diplomacy action " + focusKey);
+                    RefreshPanels();
+                    for (int frame = 0; frame < 3; frame++) await ToSignal(GetTree(), SceneTree.SignalName.ProcessFrame);
+                    var restoredFocus = GetViewport().GuiGetFocusOwner() as Button;
+                    Check(restoredFocus != null && restoredFocus.GetInstanceId() != originalInstance &&
+                        restoredFocus.GetMeta("focus_key", "").AsString() == focusKey,
+                        "Diplomacy refresh moved keyboard focus away from " + focusKey);
+                    Check(_tab == "Diplomacy", "Focusing a diplomacy action unexpectedly navigated away");
+                }
+                Check(_engine.CanonicalDigest() == diplomacyDigest, "Diplomacy focus checks changed the campaign state");
+                AuditChinese(_ui);
+            }
+            finally
+            {
+                Navigate("Population");
+                for (int frame = 0; frame < 3; frame++) await ToSignal(GetTree(), SceneTree.SignalName.ProcessFrame);
+                _rightScroll.ScrollVertical = populationScroll;
+            }
+
             Navigate("Industry");
             string farmTitle = Localization.Tr(Catalog.Industries.Single(industry => industry.Id == "farm").Name);
             var farmCity = _engine.Player.Cities.Where(city => city.Industries["farm"] > 0).OrderByDescending(city => city.Industries["farm"]).ThenBy(city => city.Id).First();
@@ -111,7 +147,7 @@ public partial class Main
             Check(_engine.CanonicalDigest() == digest && _engine.Player.LawEnactment?.LawId == candidate.Id &&
                 _engine.GetCity(farmCity.Id).Buildings["farm"].MethodId == "mechanized" && _engine.Player.TaxRate == 35, "UI save/load lost law progress, production method or fiscal state");
             AuditChinese(_ui);
-            GD.Print("SOVEREIGN_MECHANICS_UI_PASS market-import=True population=True production-method=True government=True law-deliberation=True institution-budget=True fiscal-tax=True private-toggle=True railway-queue=True chinese-audit=True save-load=True");
+            GD.Print("SOVEREIGN_MECHANICS_UI_PASS market-import=True population=True diplomacy-focus=True production-method=True government=True law-deliberation=True institution-budget=True fiscal-tax=True private-toggle=True railway-queue=True chinese-audit=True save-load=True");
         }
         catch (Exception ex) { exitCode = 1; GD.PushError(ex.ToString()); }
         finally

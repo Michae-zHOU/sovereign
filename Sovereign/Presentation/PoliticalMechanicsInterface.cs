@@ -8,7 +8,7 @@ namespace Sovereign.Presentation;
 
 public partial class Main
 {
-    private string _politicalView = "laws", _politicalLawGroup = "economy";
+    private string _politicalView = "overview", _politicalLawGroup = "economy";
     private HashSet<string>? _governmentDraft;
     private SimulationEngine? _politicsDraftEngine;
     private string _politicsDraftCountryId = "";
@@ -20,23 +20,25 @@ public partial class Main
         {
             _governmentDraft = null; _politicsDraftEngine = _engine; _politicsDraftCountryId = c.Id;
         }
-        var header = Row(box, 12);
-        var status = VBox(header, 5); status.SizeFlagsHorizontal = Control.SizeFlags.ExpandFill;
-        var heading = L("政府与立法", 23, Gold, true);
-        heading.MouseFilter = Control.MouseFilterEnum.Pass;
-        heading.TooltipText = "政治权重、官僚点和立法概率为原创平衡参数；大清的“农奴制”等制度分类是玩法简化，不代表精确历史制度复刻。";
-        status.AddChild(heading);
-        status.AddChild(Para("人口的财富、职业和现行法律决定政治力量。联合政府决定能提出哪些改革。", 14, Muted));
-        var numbers = VBox(header, 3);
-        Pair(numbers, "合法性", $"{c.Legitimacy:0.0} / 100", valueColor: c.Legitimacy >= 50 ? Green : Gold);
-        Pair(numbers, "官僚预算", $"{c.BureaucracyUsed} / {c.BureaucracyCapacity}");
-        Pair(numbers, "机构支出", Money(c.InstitutionSpending) + " / 日");
+        if (_politicalView == "overview")
+        {
+            var heading = Row(box, 12);
+            var title = L("朝政概览", 26, Gold, true); title.SizeFlagsHorizontal = Control.SizeFlags.ExpandFill; heading.AddChild(title);
+            heading.AddChild(L(Localization.Date(_engine.State.Date), 14, Muted));
+        }
+        else IllustratedHeader(box, "politics", "政府与立法", Localization.Tr(c.Name) + " · 权力、制度与改革", 176);
+        var status = CabinetPanel(box, "cabinet-row", 9);
+        EconomyFigures(status, ("合法性", $"{c.Legitimacy:0.0} / 100", c.Legitimacy >= 50 ? Green : Gold),
+            ("官僚预算", $"{c.BureaucracyUsed} / {c.BureaucracyCapacity}", Cream),
+            ("机构支出 / 日", Money(c.InstitutionSpending), Cream));
+        status.TooltipText = "人口财富、职业与法律决定政治力量；这些权重与制度分类是原创玩法简化。";
         var navigation = Row(box, 5);
-        foreach (var (id, label) in new[] { ("laws", "法律"), ("government", "组阁与集团"), ("institutions", "机构"), ("budget", "财政") })
+        foreach (var (id, label) in new[] { ("overview", "概览"), ("laws", "法律"), ("government", "组阁与集团"), ("institutions", "机构"), ("budget", "财政") })
         {
             string tab = id; var button = B(label, () => { _politicalView = tab; RefreshPanels(); }, _politicalView == id);
             button.SizeFlagsHorizontal = Control.SizeFlags.ExpandFill; navigation.AddChild(button);
         }
+        if (_politicalView == "overview") { PoliticalOverviewPanel(box); return; }
         if (c.LawEnactment is { } enactment) PoliticalEnactmentPanel(box, enactment);
         else box.AddChild(Para(c.LastLawOutcome, 14, Muted));
         Rule(box);
@@ -44,6 +46,93 @@ public partial class Main
         else if (_politicalView == "institutions") PoliticalInstitutionsPanel(box);
         else if (_politicalView == "budget") PoliticalBudgetPanel(box);
         else PoliticalLawsPanel(box);
+    }
+
+    private void PoliticalOverviewPanel(VBoxContainer box)
+    {
+        var c = _engine.Player;
+        Button PageButton(string text, string page)
+        {
+            var button = B(text, () => { _politicalView = page; _rightScroll.ScrollVertical = 0; RefreshPanels(); });
+            button.SizeFlagsHorizontal = Control.SizeFlags.ExpandFill;
+            button.SetMeta("focus_key", "politics:overview:" + page);
+            return button;
+        }
+
+        var columns = Row(box, 12); columns.SizeFlagsHorizontal = Control.SizeFlags.ExpandFill;
+        var leaderCard = CabinetPanel(columns, "cabinet-row", 12);
+        leaderCard.SizeFlagsHorizontal = Control.SizeFlags.ExpandFill; leaderCard.SizeFlagsStretchRatio = 1;
+        var leaderBox = VBox(leaderCard, 8);
+        leaderBox.AddChild(L("国家领袖", 20, Gold, true));
+        var portrait = LeaderPortrait(c.Id, 220, 300);
+        portrait.SizeFlagsHorizontal = Control.SizeFlags.ShrinkCenter; leaderBox.AddChild(portrait);
+        var leader = HistoricalLeaders.Get(c.Id, _engine.State.Date);
+        var leaderName = Para(leader.Name, 24, Cream); leaderName.HorizontalAlignment = HorizontalAlignment.Center; leaderBox.AddChild(leaderName);
+        var leaderTitle = Para(leader.Title, 15, Gold); leaderTitle.HorizontalAlignment = HorizontalAlignment.Center; leaderBox.AddChild(leaderTitle);
+        if (!string.IsNullOrWhiteSpace(leader.SecondaryOffice)) leaderBox.AddChild(Para(leader.SecondaryOffice, 12, Muted));
+        leaderBox.AddChild(Para("现行政体 · " + PoliticalCatalog.FindLaw(c.Laws["governance"]).Name, 14, Muted));
+        var inspect = B("查看可动三维人物", () => OpenLeader(c.Id), true);
+        inspect.SetMeta("focus_key", "politics:overview:leader:" + c.Id); leaderBox.AddChild(inspect);
+
+        var groupsCard = CabinetPanel(columns, "cabinet-row", 12);
+        groupsCard.SizeFlagsHorizontal = Control.SizeFlags.ExpandFill; groupsCard.SizeFlagsStretchRatio = 1.65f;
+        var groupsBox = VBox(groupsCard, 8);
+        groupsBox.AddChild(L("利益集团", 20, Gold, true));
+        groupsBox.AddChild(Para("执政联盟 · " + PoliticalGroupNames(c.GovernmentGroups), 13, Muted));
+        var groups = new GridContainer { Columns = 2, SizeFlagsHorizontal = Control.SizeFlags.ExpandFill };
+        groups.AddThemeConstantOverride("h_separation", 8); groups.AddThemeConstantOverride("v_separation", 8); groupsBox.AddChild(groups);
+        foreach (var definition in PoliticalCatalog.InterestGroups)
+        {
+            var group = c.InterestGroups.Single(state => state.Id == definition.Id);
+            bool governing = c.GovernmentGroups.Contains(group.Id);
+            var card = CabinetPanel(groups, "cabinet-row", 8); card.SizeFlagsHorizontal = Control.SizeFlags.ExpandFill;
+            var content = VBox(card, 4);
+            var identity = Row(content, 6);
+            var symbol = PoliticalGroupPicture(group.Id); symbol.CustomMinimumSize = new Vector2(44, 44); identity.AddChild(symbol);
+            var text = VBox(identity, 2); text.SizeFlagsHorizontal = Control.SizeFlags.ExpandFill;
+            var name = L(definition.Name, 15, Cream, true); name.ClipText = true; name.TextOverrunBehavior = TextServer.OverrunBehavior.TrimEllipsis;
+            text.AddChild(name);
+            text.AddChild(L(governing ? "执政" : "在野", 12, governing ? Green : Muted));
+            card.TooltipText = definition.Name + " · " + definition.Description;
+            Pair(content, "政治力量", $"{group.Clout:0.0}%");
+            Meter(content, (double)group.Clout, governing ? Gold : Muted);
+            Pair(content, "满意度", $"{group.Approval:+0.0;-0.0;0.0}", valueColor: group.Approval >= 0 ? Green : Red);
+        }
+        groupsBox.AddChild(PageButton("管理执政联盟", "government"));
+
+        var stateCard = CabinetPanel(columns, "cabinet-row", 12);
+        stateCard.SizeFlagsHorizontal = Control.SizeFlags.ExpandFill; stateCard.SizeFlagsStretchRatio = 1;
+        var stateBox = VBox(stateCard, 7);
+        stateBox.AddChild(L("民意与政治状态", 20, Gold, true));
+        long population = c.Pops.Sum(pop => pop.Population);
+        decimal radicalPopulation = c.Pops.Sum(pop => pop.Radicals * pop.Population);
+        decimal loyalPopulation = c.Pops.Sum(pop => pop.Loyalists * pop.Population);
+        decimal radicalShare = radicalPopulation / Math.Max(1L, population);
+        decimal loyalShare = loyalPopulation / Math.Max(1L, population);
+        Pair(stateBox, "激进派", $"{radicalShare:0.0%}", valueColor: Red);
+        Meter(stateBox, (double)(radicalShare * 100m), Red);
+        stateBox.AddChild(Para("约 " + Compact(radicalPopulation) + " 人", 13, Muted));
+        Pair(stateBox, "忠诚派", $"{loyalShare:0.0%}", valueColor: Green);
+        Meter(stateBox, (double)(loyalShare * 100m), Green);
+        stateBox.AddChild(Para("约 " + Compact(loyalPopulation) + " 人 · 按人口群体人数加权", 13, Muted));
+        Rule(stateBox);
+        stateBox.AddChild(L("法律审议", 18, Gold, true));
+        if (c.LawEnactment is { } enactment)
+        {
+            stateBox.AddChild(Para(PoliticalCatalog.FindLaw(enactment.LawId).Name, 17, Cream));
+            stateBox.AddChild(Para($"阶段 {enactment.Stage} / 3 · 挫折 {enactment.Setbacks} / 3", 13, Muted));
+            Meter(stateBox, 100d * enactment.DaysInStage / Math.Max(1, enactment.StageDays), Gold);
+            stateBox.AddChild(Para($"本轮进度 {enactment.DaysInStage} / {enactment.StageDays} 天", 13, Muted));
+        }
+        else stateBox.AddChild(Para("当前没有正在审议的法案。", 14, Muted));
+        stateBox.AddChild(PageButton("查看法律与改革", "laws"));
+        Rule(stateBox);
+        stateBox.AddChild(L("公共机构", 18, Gold, true));
+        int activeInstitutions = c.InstitutionLevels.Count(entry => entry.Value > 0);
+        Pair(stateBox, "已启用", $"{activeInstitutions} / {PoliticalCatalog.InstitutionDefinitions.Count} 项");
+        Pair(stateBox, "机构总级数", c.InstitutionLevels.Values.Sum().ToString());
+        stateBox.AddChild(PageButton("管理公共机构", "institutions"));
+        stateBox.AddChild(PageButton("查看公共财政", "budget"));
     }
 
     private void PoliticalEnactmentPanel(VBoxContainer box, LawEnactmentState enactment)
@@ -101,18 +190,21 @@ public partial class Main
         var c = _engine.Player;
         _governmentDraft ??= new HashSet<string>(c.GovernmentGroups);
         box.AddChild(Para("选择1至4个利益集团组成政府，然后提交改组。政府须包含支持目标法律的集团。君主专制还需要地主或军队参与。", 14, Muted));
-        var grid = new GridContainer { Columns = 2, SizeFlagsHorizontal = Control.SizeFlags.ExpandFill };
+        var grid = new GridContainer { Columns = 4, SizeFlagsHorizontal = Control.SizeFlags.ExpandFill };
         grid.AddThemeConstantOverride("h_separation", 8); grid.AddThemeConstantOverride("v_separation", 8); box.AddChild(grid);
         foreach (var definition in PoliticalCatalog.InterestGroups)
         {
             var group = c.InterestGroups.Single(g => g.Id == definition.Id);
             var card = CabinetPanel(grid, "cabinet-row", 10); card.SizeFlagsHorizontal = Control.SizeFlags.ExpandFill;
             var content = VBox(card, 4); string id = definition.Id;
-            var heading = new CheckBox { Text = definition.Name, ButtonPressed = _governmentDraft.Contains(id) };
+            var identity = Row(content, 7); identity.AddChild(PoliticalGroupPicture(id));
+            var heading = new CheckBox { Text = definition.Name, ButtonPressed = _governmentDraft.Contains(id),
+                SizeFlagsHorizontal = Control.SizeFlags.ExpandFill, TextOverrunBehavior = TextServer.OverrunBehavior.TrimEllipsis,
+                TooltipText = definition.Name + " · " + definition.Description };
             heading.AddThemeFontSizeOverride("font_size", 16); heading.AddThemeFontOverride("font", _body);
             heading.AddThemeColorOverride("font_color", Cream);
             heading.Toggled += selected => { if (selected) _governmentDraft!.Add(id); else _governmentDraft!.Remove(id); };
-            content.AddChild(heading);
+            identity.AddChild(heading);
             Pair(content, "政治力量", $"{group.Clout:0.0}%"); Meter(content, (double)group.Clout, Gold);
             Pair(content, "满意度", $"{group.Approval:+0.0;-0.0;0.0} / 20", valueColor: group.Approval >= 0 ? Green : Red);
             content.AddChild(Para(c.GovernmentGroups.Contains(id) ? "当前执政" : "当前在野", 13, c.GovernmentGroups.Contains(id) ? Green : Muted));

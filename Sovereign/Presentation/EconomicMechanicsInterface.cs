@@ -9,6 +9,7 @@ namespace Sovereign.Presentation;
 public partial class Main
 {
     private string _marketPage = "orders", _marketRegion = "", _popRegion = "";
+    private string _popView = "details";
 
     private void EconomyFigures(Control parent, params (string Caption, string Value, Color Color)[] values)
     {
@@ -89,6 +90,7 @@ public partial class Main
         var cities = country.Cities.Where(city => city.RegionId == region.Id).Select(city => city.Id).ToHashSet();
         int pendingRailways = country.Construction.Count(project => project.IndustryId == ConstructionCatalog.RailwayId && cities.Contains(project.CityId));
         var panel = CabinetPanel(parent, "cabinet-row", 7); var body = VBox(panel, 6);
+        body.AddChild(ConstructionScene(ConstructionCatalog.RailwayId, 100));
         body.AddChild(ConstructionText(Localization.Tr(region.Name) + " · 市场接入", 18, Cream, true));
         EconomyFigures(body, ("基础设施 / 已用", $"{region.Infrastructure:0.#} / {region.InfrastructureUsage:0.#}", Cream),
             ("市场接入", $"{region.MarketAccess:0.0%}", region.MarketAccess >= 1m ? Green : Gold),
@@ -128,6 +130,15 @@ public partial class Main
     {
         var country = _engine.Player;
         if (_popRegion.Length > 0 && country.Regions.All(r => r.Id != _popRegion)) _popRegion = "";
+        string scope = _popRegion.Length == 0 ? Localization.Tr(country.Name) : Localization.Tr(country.Regions.First(r => r.Id == _popRegion).Name);
+        IllustratedHeader(_right, "population", "人口与阶层", scope + " · 生活、财富与生计", 132);
+        var tabs = Row(_right, 3);
+        foreach (var (id, name) in new[] { ("overview", "概览"), ("details", "阶层明细") })
+        {
+            var button = SmallButton(name, () => { _popView = id; _rightScroll.ScrollVertical = 0; RefreshPanels(); }, _popView == id);
+            button.SizeFlagsHorizontal = Control.SizeFlags.ExpandFill;
+            tabs.AddChild(button);
+        }
         EconomyRegionSelector(_right, country, _popRegion, id => { _popRegion = id; _rightScroll.ScrollVertical = 0; RefreshPanels(); }, true);
         var pops = country.Pops.Where(p => _popRegion.Length == 0 || p.RegionId == _popRegion).ToArray();
         long population = pops.Sum(p => p.Population);
@@ -135,8 +146,72 @@ public partial class Main
         EconomyFigures(body, ("人口", Compact(population), Cream), ("劳动力", Compact(pops.Sum(p => p.Workforce)), Cream),
             ("平均财富", population > 0 ? (pops.Sum(p => p.Wealth * p.Population) / population).ToString("0.0") : "—", Gold));
         _right.AddChild(Para("各阶层包含就业人口与家属。所得已扣税，农民包含自给产出折值；财富与识字率按人口加权。", 12, Muted));
-        PopRows(_right, pops);
+        if (_popView == "overview") PopStrataOverview(_right, pops);
+        else PopRows(_right, pops);
         if (_popRegion.Length > 0) _right.AddChild(SmallButton("查看该地区 →", () => SelectRegion(_popRegion)));
+    }
+
+    private void PopStrataOverview(Control parent, PopGroup[] pops)
+    {
+        long totalPopulation = pops.Sum(p => p.Population);
+        decimal fulfilled = totalPopulation > 0 ? pops.Sum(p => p.NeedsFulfilled * p.Population) / totalPopulation : 0m;
+        var wellbeing = Row(parent, 6);
+        wellbeing.AddChild(ConstructionText("生活状况 · 需求满足", 12, Muted, expand: true));
+        wellbeing.AddChild(ConstructionText(totalPopulation > 0 ? fulfilled.ToString("0.0%") : "—", 16, fulfilled >= .8m ? Green : Gold));
+        Meter(parent, (double)(fulfilled * 100m), fulfilled >= .8m ? Green : Gold);
+
+        var columns = Row(parent, 6);
+        columns.SizeFlagsHorizontal = Control.SizeFlags.ExpandFill;
+        var strata = new[]
+        {
+            (Name: "劳动阶层", Portrait: "peasants", Professions: new[] { "peasants", "laborers", "unemployed" }),
+            (Name: "中间阶层", Portrait: "machinists", Professions: new[] { "machinists", "shopkeepers" }),
+            (Name: "富裕阶层", Portrait: "capitalists", Professions: new[] { "capitalists", "aristocrats" })
+        };
+        foreach (var stratum in strata)
+        {
+            var cohort = pops.Where(p => stratum.Professions.Contains(p.ProfessionId)).ToArray();
+            long population = cohort.Sum(p => p.Population);
+            decimal Mean(Func<PopGroup, decimal> value) => population > 0 ? cohort.Sum(p => value(p) * p.Population) / population : 0m;
+            decimal wealth = Mean(p => p.Wealth), needs = Mean(p => p.NeedsFulfilled);
+            decimal income = cohort.Sum(p => p.DailyIncome), taxes = cohort.Sum(p => p.DailyTaxes);
+            string professions = string.Join("、", stratum.Professions.Select(id => PopulationCatalog.Professions[id]));
+            var card = CabinetPanel(columns, "cabinet-row", 6);
+            card.SizeFlagsHorizontal = Control.SizeFlags.ExpandFill;
+            card.SizeFlagsStretchRatio = 1;
+            card.ClipContents = true;
+            card.TooltipText = $"{stratum.Name}：{professions}\n人口 {population:N0} 人\n人口加权财富 {wealth:0.00} · 需求满足 {needs:0.0%}\n税后日收入 £{income:N2} · 日缴税 £{taxes:N2}";
+            var body = VBox(card, 6);
+            var title = ConstructionText(stratum.Name, 16, Gold, true, true);
+            title.HorizontalAlignment = HorizontalAlignment.Center; body.AddChild(title);
+            body.AddChild(new TextureRect
+            {
+                Texture = PopulationPortrait(stratum.Portrait), CustomMinimumSize = new Vector2(0, 136),
+                SizeFlagsHorizontal = Control.SizeFlags.ExpandFill,
+                ExpandMode = TextureRect.ExpandModeEnum.IgnoreSize, StretchMode = TextureRect.StretchModeEnum.KeepAspectCovered,
+                MouseFilter = Control.MouseFilterEnum.Ignore
+            });
+            var members = Para(professions, 11, Muted);
+            members.HorizontalAlignment = HorizontalAlignment.Center;
+            members.CustomMinimumSize = new Vector2(0, 38); body.AddChild(members);
+            Figure(body, "人口", Compact(population) + " 人", Cream);
+            Figure(body, "平均财富", population > 0 ? wealth.ToString("0.0") : "—", Gold);
+            Rule(body);
+            Figure(body, "税后收入 / 日", Money(income), Cream);
+            Figure(body, "缴税 / 日", Money(taxes), Gold);
+            Figure(body, "需求满足", population > 0 ? needs.ToString("0.0%") : "—", needs >= .8m ? Green : Gold);
+            Meter(body, (double)(needs * 100m), needs >= .8m ? Green : Gold);
+        }
+        parent.AddChild(Para("三栏按职业作玩法分类，不对应精确历史阶级，也不按当前财富重新归类。图像为代表职业示意；数值汇总当前筛选人口，财富和需求满足按人口加权。", 11, Muted));
+
+        void Figure(Control column, string caption, string value, Color color)
+        {
+            var entry = VBox(column, 1);
+            var label = ConstructionText(caption, 11, Muted, expand: true);
+            label.HorizontalAlignment = HorizontalAlignment.Center; entry.AddChild(label);
+            var number = ConstructionText(value, 16, color, expand: true);
+            number.HorizontalAlignment = HorizontalAlignment.Center; entry.AddChild(number);
+        }
     }
 
     private void PopRows(Control parent, IEnumerable<PopGroup> source)
@@ -147,18 +222,33 @@ public partial class Main
             var cohort = groups.Where(p => p.ProfessionId == profession.Key).ToArray();
             long population = cohort.Sum(p => p.Population);
             decimal Mean(Func<PopGroup, decimal> value) => population > 0 ? cohort.Sum(p => value(p) * p.Population) / population : 0m;
-            var panel = CabinetPanel(parent, "cabinet-row", 6); var body = VBox(panel, 5); var heading = Row(body, 7);
-            heading.AddChild(new TextureRect { Texture = UiIcon(profession.Key is "capitalists" or "aristocrats" ? "leadership" : profession.Key == "machinists" ? "industry" : "population"),
-                CustomMinimumSize = new Vector2(27, 27), ExpandMode = TextureRect.ExpandModeEnum.IgnoreSize, StretchMode = TextureRect.StretchModeEnum.KeepAspectCentered });
-            heading.AddChild(ConstructionText(profession.Value, 18, Cream, true, true));
-            heading.AddChild(ConstructionText(Compact(population) + " 人", 17, Gold));
-            EconomyFigures(body, ("财富", population > 0 ? Mean(p => p.Wealth).ToString("0.0") : "—", Gold),
+            var panel = CabinetPanel(parent, "cabinet-row", 7); var body = VBox(panel, 7); var identity = Row(body, 10);
+            var portrait = new PanelContainer
+            {
+                CustomMinimumSize = new Vector2(80, 96), SizeFlagsHorizontal = Control.SizeFlags.ShrinkBegin,
+                SizeFlagsVertical = Control.SizeFlags.ShrinkBegin, MouseFilter = Control.MouseFilterEnum.Ignore,
+                TooltipText = profession.Value
+            };
+            portrait.AddThemeStyleboxOverride("panel", Style(new Color("171d20"), new Color("837151"), 0, 2));
+            portrait.AddChild(new TextureRect
+            {
+                Texture = PopulationPortrait(profession.Key), CustomMinimumSize = new Vector2(76, 92),
+                ExpandMode = TextureRect.ExpandModeEnum.IgnoreSize, StretchMode = TextureRect.StretchModeEnum.KeepAspectCovered,
+                MouseFilter = Control.MouseFilterEnum.Ignore
+            });
+            identity.AddChild(portrait);
+            var summary = VBox(identity, 4); summary.SizeFlagsHorizontal = Control.SizeFlags.ExpandFill;
+            summary.AddChild(ConstructionText(profession.Value, 18, Cream, true, true));
+            var count = ConstructionText(Compact(population) + " 人", 20, Gold, expand: true);
+            count.TooltipText = profession.Value + $" · {population:N0} 人，包含该阶层人口与家属";
+            summary.AddChild(count);
+            EconomyFigures(summary, ("财富", population > 0 ? Mean(p => p.Wealth).ToString("0.0") : "—", Gold),
                 ("识字率", $"{Mean(p => p.Literacy):0.0}%", Cream), ("激进派", $"{Mean(p => p.Radicals):0.0%}", Red));
             EconomyFigures(body, ("税后收入 / 日", Money(cohort.Sum(p => p.DailyIncome)), Cream),
                 ("消费支出 / 日", Money(cohort.Sum(p => p.DailyExpenses)), Cream), ("缴税 / 日", Money(cohort.Sum(p => p.DailyTaxes)), Gold));
             var need = Mean(p => p.NeedsFulfilled);
             Meter(body, (double)(need * 100m), need > .8m ? Green : Gold);
-            body.AddChild(ConstructionText($"需求满足 {need:0.0%}  ·  忠诚派 {Mean(p => p.Loyalists):0.0%}  ·  劳动力 {Compact(cohort.Sum(p => p.Workforce))}", 11, Muted, expand: true));
+            body.AddChild(Para($"需求满足 {need:0.0%}  ·  忠诚派 {Mean(p => p.Loyalists):0.0%}  ·  劳动力 {Compact(cohort.Sum(p => p.Workforce))}", 11, Muted));
         }
     }
 
